@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zZj-Y6-2ma">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="1E7-os-K7s">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mWW-E4-f7I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tableViewController id="oOL-jd-8WQ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Root View Controller" id="Dil-pu-hOa"/>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="92" y="7"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="C9D-3R-MYl">
+            <objects>
+                <navigationController id="zZj-Y6-2ma" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lzZ-HC-Hdy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="oOL-jd-8WQ" kind="relationship" relationship="rootViewController" id="i6o-WR-mUv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hdN-Po-em0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-650" y="7"/>
+        </scene>
+    </scenes>
+</document>
