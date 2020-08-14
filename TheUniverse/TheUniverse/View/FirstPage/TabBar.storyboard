@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="-1288" y="-530"/>
         </scene>
-        <!--Planet-->
+        <!--Planets-->
         <scene sceneID="pUa-Lc-vCB">
             <objects>
-                <viewControllerPlaceholder storyboardName="Planet" id="Lba-Jp-qhW" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Planets" id="Lba-Jp-qhW" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="cqS-bk-6lj"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CQA-dV-aYR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
