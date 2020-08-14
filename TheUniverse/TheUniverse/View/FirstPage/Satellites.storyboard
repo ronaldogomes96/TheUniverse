@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="12Y-Np-MdY">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Satellites-->
+        <scene sceneID="64V-fA-vP1">
+            <objects>
+                <tableViewController id="PwH-ZB-Xsm" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="11N-Wq-Kvt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="PwH-ZB-Xsm" id="gop-jp-w7n"/>
+                            <outlet property="delegate" destination="PwH-ZB-Xsm" id="qS6-Bm-ci3"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Satélites" image="moon.zzz.fill" catalog="system" id="A2i-ra-cmv"/>
+                    <navigationItem key="navigationItem" title="Satellites" id="T7j-qV-o4I"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="09O-jx-9wK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-30" y="92"/>
+        </scene>
+        <!--Satellities-->
+        <scene sceneID="srl-a8-Usl">
+            <objects>
+                <navigationController id="12Y-Np-MdY" userLabel="Satellities" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="P8p-Gy-vgz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="PwH-ZB-Xsm" kind="relationship" relationship="rootViewController" id="7nl-yC-jjX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9dW-AT-up2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-949" y="92"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="moon.zzz.fill" catalog="system" width="116" height="128"/>
+    </resources>
+</document>
