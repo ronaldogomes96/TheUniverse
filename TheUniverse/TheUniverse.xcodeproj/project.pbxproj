@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		770A633C24E6BD730072A235 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 770A633B24E6BD730072A235 /* .swiftlint.yml */; };
+		770A634024E6CA600072A235 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770A633F24E6CA600072A235 /* Colors.swift */; };
 		77397BF424BCD47A005EEF22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77397BF324BCD47A005EEF22 /* AppDelegate.swift */; };
 		77397BF624BCD47A005EEF22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77397BF524BCD47A005EEF22 /* SceneDelegate.swift */; };
 		77397BF824BCD47A005EEF22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77397BF724BCD47A005EEF22 /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		770A633B24E6BD730072A235 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		770A633F24E6CA600072A235 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		77397BF024BCD47A005EEF22 /* TheUniverse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheUniverse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77397BF324BCD47A005EEF22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77397BF524BCD47A005EEF22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,14 @@
 				773BFA3F24E58DDA0099B855 /* Stars.storyboard */,
 			);
 			path = FirstPage;
+			sourceTree = "<group>";
+		};
+		770A633E24E6CA390072A235 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				770A633F24E6CA600072A235 /* Colors.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		77397BE724BCD47A005EEF22 = {
@@ -150,6 +160,7 @@
 			children = (
 				77397BFE24BCD47B005EEF22 /* LaunchScreen.storyboard */,
 				770A633D24E6C4DF0072A235 /* FirstPage */,
+				770A633E24E6CA390072A235 /* Utils */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -326,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77397BF824BCD47A005EEF22 /* ViewController.swift in Sources */,
+				770A634024E6CA600072A235 /* Colors.swift in Sources */,
 				77397BF424BCD47A005EEF22 /* AppDelegate.swift in Sources */,
 				77397BF624BCD47A005EEF22 /* SceneDelegate.swift in Sources */,
 			);
