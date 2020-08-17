@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct CelestialBody: Decodable{
+struct CelestialBody: Decodable {
     let planets: Planets
     let satellites: Satellites
     let stars: Stars
