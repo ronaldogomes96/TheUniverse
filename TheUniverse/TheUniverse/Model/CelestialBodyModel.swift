@@ -9,9 +9,9 @@
 import Foundation
 
 enum ListOfCelestialBody: String {
-    case planets = "planets"
-    case satellites = "satellites"
-    case stars = "stars"
+    case planets
+    case satellites
+    case stars
 }
 
 class CelestialBodyModel {
@@ -19,7 +19,6 @@ class CelestialBodyModel {
     func getListOfNamesAndImagesOfCelestialBody(from celestialBodyType: ListOfCelestialBody) -> ([String], [String])? {
 
         let celestialBodyData = getCelestialBodyFromJson()
-        //let celestialBodyName = celestialBodyData.
         let celestialBodyName: [String]
         let celestialBodyImageName: [String]
 
