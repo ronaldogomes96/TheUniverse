@@ -49,6 +49,8 @@
                ReferencedContainer = "container:TheUniverse.xcodeproj">
             </BuildableReference>
          </TestableReference>
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <Testables>
       </Testables>
    </TestAction>
    <LaunchAction
