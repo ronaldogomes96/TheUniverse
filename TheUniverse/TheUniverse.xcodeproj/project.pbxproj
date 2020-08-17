@@ -11,11 +11,15 @@
 		770A634024E6CA600072A235 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770A633F24E6CA600072A235 /* Colors.swift */; };
 		770A634224E6CC2D0072A235 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770A634124E6CC2D0072A235 /* Fonts.swift */; };
 		770A634424E6DC2F0072A235 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770A634324E6DC2F0072A235 /* TabBarViewController.swift */; };
+		770A634824E6DF1B0072A235 /* PlanetSatelliteStarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770A634724E6DF1B0072A235 /* PlanetSatelliteStarTableViewController.swift */; };
 		77397BF424BCD47A005EEF22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77397BF324BCD47A005EEF22 /* AppDelegate.swift */; };
 		77397BF624BCD47A005EEF22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77397BF524BCD47A005EEF22 /* SceneDelegate.swift */; };
 		77397BFD24BCD47B005EEF22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77397BFC24BCD47B005EEF22 /* Assets.xcassets */; };
 		77397C0024BCD47B005EEF22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77397BFE24BCD47B005EEF22 /* LaunchScreen.storyboard */; };
 		77397C1624BCD47C005EEF22 /* TheUniverseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77397C1524BCD47C005EEF22 /* TheUniverseUITests.swift */; };
+		7739DC3D24E8F1ED00C51E70 /* celestialBody.json in Resources */ = {isa = PBXBuildFile; fileRef = 7739DC3C24E8F1ED00C51E70 /* celestialBody.json */; };
+		7739DC3F24E8F7F900C51E70 /* CelestialBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7739DC3E24E8F7F900C51E70 /* CelestialBody.swift */; };
+		7739DC4124E8FCF300C51E70 /* CelestialBodyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7739DC4024E8FCF300C51E70 /* CelestialBodyModel.swift */; };
 		773BFA3A24E58C600099B855 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 773BFA3924E58C600099B855 /* TabBar.storyboard */; };
 		773BFA3C24E58DA60099B855 /* Planets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 773BFA3B24E58DA60099B855 /* Planets.storyboard */; };
 		773BFA3E24E58DC90099B855 /* Satellites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 773BFA3D24E58DC90099B855 /* Satellites.storyboard */; };
@@ -44,6 +48,7 @@
 		770A633F24E6CA600072A235 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		770A634124E6CC2D0072A235 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		770A634324E6DC2F0072A235 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = TheUniverse/Controller/FisrtPage/TabBarViewController.swift; sourceTree = SOURCE_ROOT; };
+		770A634724E6DF1B0072A235 /* PlanetSatelliteStarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetSatelliteStarTableViewController.swift; sourceTree = "<group>"; };
 		77397BF024BCD47A005EEF22 /* TheUniverse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheUniverse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77397BF324BCD47A005EEF22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77397BF524BCD47A005EEF22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +60,9 @@
 		77397C1124BCD47C005EEF22 /* TheUniverseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheUniverseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77397C1524BCD47C005EEF22 /* TheUniverseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheUniverseUITests.swift; sourceTree = "<group>"; };
 		77397C1724BCD47C005EEF22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7739DC3C24E8F1ED00C51E70 /* celestialBody.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = celestialBody.json; sourceTree = "<group>"; };
+		7739DC3E24E8F7F900C51E70 /* CelestialBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialBody.swift; sourceTree = "<group>"; };
+		7739DC4024E8FCF300C51E70 /* CelestialBodyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialBodyModel.swift; sourceTree = "<group>"; };
 		773BFA3924E58C600099B855 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		773BFA3B24E58DA60099B855 /* Planets.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Planets.storyboard; sourceTree = "<group>"; };
 		773BFA3D24E58DC90099B855 /* Satellites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Satellites.storyboard; sourceTree = "<group>"; };
@@ -110,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				770A634324E6DC2F0072A235 /* TabBarViewController.swift */,
+				770A634724E6DF1B0072A235 /* PlanetSatelliteStarTableViewController.swift */,
 			);
 			path = FisrtPage;
 			sourceTree = "<group>";
@@ -187,8 +196,19 @@
 		77397C2524BCD6C3005EEF22 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7739DC3824E8F07800C51E70 /* Data */,
+				7739DC3E24E8F7F900C51E70 /* CelestialBody.swift */,
+				7739DC4024E8FCF300C51E70 /* CelestialBodyModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		7739DC3824E8F07800C51E70 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				7739DC3C24E8F1ED00C51E70 /* celestialBody.json */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +322,7 @@
 				770A633C24E6BD730072A235 /* .swiftlint.yml in Resources */,
 				773BFA3A24E58C600099B855 /* TabBar.storyboard in Resources */,
 				773BFA3E24E58DC90099B855 /* Satellites.storyboard in Resources */,
+				7739DC3D24E8F1ED00C51E70 /* celestialBody.json in Resources */,
 				77397BFD24BCD47B005EEF22 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,9 +368,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7739DC4124E8FCF300C51E70 /* CelestialBodyModel.swift in Sources */,
 				770A634224E6CC2D0072A235 /* Fonts.swift in Sources */,
 				770A634024E6CA600072A235 /* Colors.swift in Sources */,
+				7739DC3F24E8F7F900C51E70 /* CelestialBody.swift in Sources */,
 				77397BF424BCD47A005EEF22 /* AppDelegate.swift in Sources */,
+				770A634824E6DF1B0072A235 /* PlanetSatelliteStarTableViewController.swift in Sources */,
 				770A634424E6DC2F0072A235 /* TabBarViewController.swift in Sources */,
 				77397BF624BCD47A005EEF22 /* SceneDelegate.swift in Sources */,
 			);
