@@ -12,15 +12,12 @@ class CelestialBodyTableViewController: UITableViewController {
 
     var celestialBodyNames: [String]?
     var celestialBodyImageNames: [String]?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        tableView.backgroundColor = .defaultBlack
+        tableView.register(CelestialBodyTableViewCell.self, forCellReuseIdentifier: "celestialBodyCell")
     }
 
     // MARK: - Table view data source
@@ -30,15 +27,19 @@ class CelestialBodyTableViewController: UITableViewController {
         return celestialBodyNames!.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier:
+            "celestialBodyCell", for: indexPath) as? CelestialBodyTableViewCell
 
-        // Configure the cell...
+        cell!.celestialBodyName = celestialBodyNames![indexPath.row]
+        cell!.celestialBodyImage = UIImage(named: celestialBodyImageNames![indexPath.row])
 
-        return cell
+        return cell!
     }
-    */
+
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200.0
+    }
 
     /*
     // Override to support conditional editing of the table view.

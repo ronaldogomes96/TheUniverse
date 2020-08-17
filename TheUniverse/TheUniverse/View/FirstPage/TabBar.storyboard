@@ -16,9 +16,12 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Lba-Jp-qhW" kind="relationship" relationship="viewControllers" id="2nl-ct-eig"/>
-                        <segue destination="tzG-Qi-UhP" kind="relationship" relationship="viewControllers" id="mUB-9q-UZd"/>
-                        <segue destination="3QO-OW-3sV" kind="relationship" relationship="viewControllers" id="MIF-Sf-kwr"/>
+                        <segue destination="Lba-Jp-qhW" kind="show" identifier="planets" id="Lr2-Er-1J1"/>
+                        <segue destination="Lba-Jp-qhW" kind="relationship" relationship="viewControllers" id="zqO-gm-CwE"/>
+                        <segue destination="tzG-Qi-UhP" kind="show" identifier="satellites" id="bWq-tK-nlU"/>
+                        <segue destination="tzG-Qi-UhP" kind="relationship" relationship="viewControllers" id="fpB-g0-SW6"/>
+                        <segue destination="3QO-OW-3sV" kind="show" identifier="stars" id="6YI-f7-7oc"/>
+                        <segue destination="3QO-OW-3sV" kind="relationship" relationship="viewControllers" id="T6c-2O-2dU"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cTW-Rt-hVe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -30,6 +33,7 @@
             <objects>
                 <viewControllerPlaceholder storyboardName="Planets" id="Lba-Jp-qhW" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="cqS-bk-6lj"/>
+                    <navigationItem key="navigationItem" id="Fer-Ge-2xY"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CQA-dV-aYR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -40,6 +44,7 @@
             <objects>
                 <viewControllerPlaceholder storyboardName="Satellites" id="tzG-Qi-UhP" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Hv3-WQ-zuW"/>
+                    <navigationItem key="navigationItem" id="aLI-aM-mqD"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hoa-ia-mxR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -50,10 +55,16 @@
             <objects>
                 <viewControllerPlaceholder storyboardName="Stars" id="3QO-OW-3sV" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="kjB-A1-8mo"/>
+                    <navigationItem key="navigationItem" id="NL8-J4-PUp"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oeg-xT-19e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-546" y="-302"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="6YI-f7-7oc"/>
+        <segue reference="bWq-tK-nlU"/>
+        <segue reference="Lr2-Er-1J1"/>
+    </inferredMetricsTieBreakers>
 </document>
