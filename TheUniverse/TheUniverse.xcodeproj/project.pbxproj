@@ -23,18 +23,11 @@
 		773BFA3C24E58DA60099B855 /* Planets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 773BFA3B24E58DA60099B855 /* Planets.storyboard */; };
 		773BFA3E24E58DC90099B855 /* Satellites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 773BFA3D24E58DC90099B855 /* Satellites.storyboard */; };
 		773BFA4024E58DDA0099B855 /* Stars.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 773BFA3F24E58DDA0099B855 /* Stars.storyboard */; };
-		774E485D24E9D87A001FBF37 /* CelestialBodyModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774E485C24E9D87A001FBF37 /* CelestialBodyModelTests.swift */; };
+		77DC2D6724EAC6A4004275A4 /* CelestialBodyModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DC2D6624EAC6A4004275A4 /* CelestialBodyModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		77397C0724BCD47B005EEF22 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 77397BE824BCD47A005EEF22 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 77397BEF24BCD47A005EEF22;
-			remoteInfo = TheUniverse;
-		};
-		77397C1224BCD47C005EEF22 /* PBXContainerItemProxy */ = {
+		77DC2D6124EAC61E004275A4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 77397BE824BCD47A005EEF22 /* Project object */;
 			proxyType = 1;
@@ -55,10 +48,6 @@
 		77397BFC24BCD47B005EEF22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77397BFF24BCD47B005EEF22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77397C0124BCD47B005EEF22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		77397C0624BCD47B005EEF22 /* TheUniverseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheUniverseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		77397C0C24BCD47B005EEF22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		77397C1124BCD47C005EEF22 /* TheUniverseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheUniverseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		77397C1724BCD47C005EEF22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7739DC3C24E8F1ED00C51E70 /* celestialBody.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = celestialBody.json; sourceTree = "<group>"; };
 		7739DC3E24E8F7F900C51E70 /* CelestialBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialBody.swift; sourceTree = "<group>"; };
 		7739DC4024E8FCF300C51E70 /* CelestialBodyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialBodyModel.swift; sourceTree = "<group>"; };
@@ -66,7 +55,9 @@
 		773BFA3B24E58DA60099B855 /* Planets.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Planets.storyboard; sourceTree = "<group>"; };
 		773BFA3D24E58DC90099B855 /* Satellites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Satellites.storyboard; sourceTree = "<group>"; };
 		773BFA3F24E58DDA0099B855 /* Stars.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Stars.storyboard; sourceTree = "<group>"; };
-		774E485C24E9D87A001FBF37 /* CelestialBodyModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialBodyModelTests.swift; sourceTree = "<group>"; };
+		77DC2D5C24EAC61E004275A4 /* TheUniverseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheUniverseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		77DC2D6024EAC61E004275A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77DC2D6624EAC6A4004275A4 /* CelestialBodyModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialBodyModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,14 +68,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		77397C0324BCD47B005EEF22 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		77397C0E24BCD47C005EEF22 /* Frameworks */ = {
+		77DC2D5924EAC61E004275A4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -127,8 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				77397BF224BCD47A005EEF22 /* TheUniverse */,
-				77397C0924BCD47B005EEF22 /* TheUniverseTests */,
-				77397C1424BCD47C005EEF22 /* TheUniverseUITests */,
+				77DC2D5D24EAC61E004275A4 /* TheUniverseTests */,
 				77397BF124BCD47A005EEF22 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -137,8 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				77397BF024BCD47A005EEF22 /* TheUniverse.app */,
-				77397C0624BCD47B005EEF22 /* TheUniverseTests.xctest */,
-				77397C1124BCD47C005EEF22 /* TheUniverseUITests.xctest */,
+				77DC2D5C24EAC61E004275A4 /* TheUniverseTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,23 +138,6 @@
 				77397C0124BCD47B005EEF22 /* Info.plist */,
 			);
 			path = TheUniverse;
-			sourceTree = "<group>";
-		};
-		77397C0924BCD47B005EEF22 /* TheUniverseTests */ = {
-			isa = PBXGroup;
-			children = (
-				77397C0C24BCD47B005EEF22 /* Info.plist */,
-				774E485C24E9D87A001FBF37 /* CelestialBodyModelTests.swift */,
-			);
-			path = TheUniverseTests;
-			sourceTree = "<group>";
-		};
-		77397C1424BCD47C005EEF22 /* TheUniverseUITests */ = {
-			isa = PBXGroup;
-			children = (
-				77397C1724BCD47C005EEF22 /* Info.plist */,
-			);
-			path = TheUniverseUITests;
 			sourceTree = "<group>";
 		};
 		77397C2324BCD6B2005EEF22 /* View */ = {
@@ -211,6 +176,15 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		77DC2D5D24EAC61E004275A4 /* TheUniverseTests */ = {
+			isa = PBXGroup;
+			children = (
+				77DC2D6024EAC61E004275A4 /* Info.plist */,
+				77DC2D6624EAC6A4004275A4 /* CelestialBodyModelTests.swift */,
+			);
+			path = TheUniverseTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -232,41 +206,23 @@
 			productReference = 77397BF024BCD47A005EEF22 /* TheUniverse.app */;
 			productType = "com.apple.product-type.application";
 		};
-		77397C0524BCD47B005EEF22 /* TheUniverseTests */ = {
+		77DC2D5B24EAC61E004275A4 /* TheUniverseTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 77397C1D24BCD47C005EEF22 /* Build configuration list for PBXNativeTarget "TheUniverseTests" */;
+			buildConfigurationList = 77DC2D6324EAC61E004275A4 /* Build configuration list for PBXNativeTarget "TheUniverseTests" */;
 			buildPhases = (
-				77397C0224BCD47B005EEF22 /* Sources */,
-				77397C0324BCD47B005EEF22 /* Frameworks */,
-				77397C0424BCD47B005EEF22 /* Resources */,
+				77DC2D5824EAC61E004275A4 /* Sources */,
+				77DC2D5924EAC61E004275A4 /* Frameworks */,
+				77DC2D5A24EAC61E004275A4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				77397C0824BCD47B005EEF22 /* PBXTargetDependency */,
+				77DC2D6224EAC61E004275A4 /* PBXTargetDependency */,
 			);
 			name = TheUniverseTests;
 			productName = TheUniverseTests;
-			productReference = 77397C0624BCD47B005EEF22 /* TheUniverseTests.xctest */;
+			productReference = 77DC2D5C24EAC61E004275A4 /* TheUniverseTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		77397C1024BCD47C005EEF22 /* TheUniverseUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 77397C2024BCD47C005EEF22 /* Build configuration list for PBXNativeTarget "TheUniverseUITests" */;
-			buildPhases = (
-				77397C0D24BCD47C005EEF22 /* Sources */,
-				77397C0E24BCD47C005EEF22 /* Frameworks */,
-				77397C0F24BCD47C005EEF22 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				77397C1324BCD47C005EEF22 /* PBXTargetDependency */,
-			);
-			name = TheUniverseUITests;
-			productName = TheUniverseUITests;
-			productReference = 77397C1124BCD47C005EEF22 /* TheUniverseUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -274,20 +230,16 @@
 		77397BE824BCD47A005EEF22 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1150;
+				LastSwiftUpdateCheck = 1160;
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = "Ronaldo Gomes";
 				TargetAttributes = {
 					77397BEF24BCD47A005EEF22 = {
 						CreatedOnToolsVersion = 11.5;
 					};
-					77397C0524BCD47B005EEF22 = {
-						CreatedOnToolsVersion = 11.5;
+					77DC2D5B24EAC61E004275A4 = {
+						CreatedOnToolsVersion = 11.6;
 						LastSwiftMigration = 1160;
-						TestTargetID = 77397BEF24BCD47A005EEF22;
-					};
-					77397C1024BCD47C005EEF22 = {
-						CreatedOnToolsVersion = 11.5;
 						TestTargetID = 77397BEF24BCD47A005EEF22;
 					};
 				};
@@ -306,8 +258,7 @@
 			projectRoot = "";
 			targets = (
 				77397BEF24BCD47A005EEF22 /* TheUniverse */,
-				77397C0524BCD47B005EEF22 /* TheUniverseTests */,
-				77397C1024BCD47C005EEF22 /* TheUniverseUITests */,
+				77DC2D5B24EAC61E004275A4 /* TheUniverseTests */,
 			);
 		};
 /* End PBXProject section */
@@ -328,14 +279,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		77397C0424BCD47B005EEF22 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		77397C0F24BCD47C005EEF22 /* Resources */ = {
+		77DC2D5A24EAC61E004275A4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -380,33 +324,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		77397C0224BCD47B005EEF22 /* Sources */ = {
+		77DC2D5824EAC61E004275A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				774E485D24E9D87A001FBF37 /* CelestialBodyModelTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		77397C0D24BCD47C005EEF22 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				77DC2D6724EAC6A4004275A4 /* CelestialBodyModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		77397C0824BCD47B005EEF22 /* PBXTargetDependency */ = {
+		77DC2D6224EAC61E004275A4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 77397BEF24BCD47A005EEF22 /* TheUniverse */;
-			targetProxy = 77397C0724BCD47B005EEF22 /* PBXContainerItemProxy */;
-		};
-		77397C1324BCD47C005EEF22 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 77397BEF24BCD47A005EEF22 /* TheUniverse */;
-			targetProxy = 77397C1224BCD47C005EEF22 /* PBXContainerItemProxy */;
+			targetProxy = 77DC2D6124EAC61E004275A4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -572,16 +504,15 @@
 			};
 			name = Release;
 		};
-		77397C1E24BCD47C005EEF22 /* Debug */ = {
+		77DC2D6424EAC61E004275A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69Y77S7YQP;
 				INFOPLIST_FILE = TheUniverseTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -589,7 +520,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ronaldogomes.TheUniverseTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "TheUniverseTests/TheUniverseTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -597,16 +527,15 @@
 			};
 			name = Debug;
 		};
-		77397C1F24BCD47C005EEF22 /* Release */ = {
+		77DC2D6524EAC61E004275A4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69Y77S7YQP;
 				INFOPLIST_FILE = TheUniverseTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -614,50 +543,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ronaldogomes.TheUniverseTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "TheUniverseTests/TheUniverseTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TheUniverse.app/TheUniverse";
-			};
-			name = Release;
-		};
-		77397C2124BCD47C005EEF22 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 69Y77S7YQP;
-				INFOPLIST_FILE = TheUniverseUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ronaldogomes.TheUniverseUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TheUniverse;
-			};
-			name = Debug;
-		};
-		77397C2224BCD47C005EEF22 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 69Y77S7YQP;
-				INFOPLIST_FILE = TheUniverseUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ronaldogomes.TheUniverseUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TheUniverse;
 			};
 			name = Release;
 		};
@@ -682,20 +570,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		77397C1D24BCD47C005EEF22 /* Build configuration list for PBXNativeTarget "TheUniverseTests" */ = {
+		77DC2D6324EAC61E004275A4 /* Build configuration list for PBXNativeTarget "TheUniverseTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				77397C1E24BCD47C005EEF22 /* Debug */,
-				77397C1F24BCD47C005EEF22 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		77397C2024BCD47C005EEF22 /* Build configuration list for PBXNativeTarget "TheUniverseUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				77397C2124BCD47C005EEF22 /* Debug */,
-				77397C2224BCD47C005EEF22 /* Release */,
+				77DC2D6424EAC61E004275A4 /* Debug */,
+				77DC2D6524EAC61E004275A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

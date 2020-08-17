@@ -2,14 +2,14 @@
 //  CelestialBodyModelTests.swift
 //  TheUniverseTests
 //
-//  Created by Ronaldo Gomes on 16/08/20.
+//  Created by Ronaldo Gomes on 17/08/20.
 //  Copyright © 2020 Ronaldo Gomes. All rights reserved.
 //
 
 import XCTest
 @testable import TheUniverse
 
-class CelestialBodyModelTests: XCTestCase{
+class CelestialBodyModelTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -33,10 +33,11 @@ class CelestialBodyModelTests: XCTestCase{
 
         //When
         let satellitesNamesAndImages = (satellitesNames, imageNames)
-        let listOfNamesAndImages = celestialBody.getListOfNamesAndImagesOfCelestialBody(from: "satellites")
+        let listOfNamesAndImages = celestialBody.getListOfNamesAndImagesOfCelestialBody(from: .satellites)
 
         //Then
-        XCTAssertEqual(satellitesNamesAndImages, listOfNamesAndImages!)
+        XCTAssertEqual(satellitesNames, listOfNamesAndImages?.0)
+        XCTAssertEqual(imageNames, listOfNamesAndImages?.1)
 
     }
 
@@ -51,4 +52,5 @@ class CelestialBodyModelTests: XCTestCase{
         //Then
         XCTAssertNotNil(celestialBodyStruct)
     }
+
 }
