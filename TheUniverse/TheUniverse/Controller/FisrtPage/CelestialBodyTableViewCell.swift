@@ -11,11 +11,19 @@ import Foundation
 
 class CelestialBodyTableViewCell: UITableViewCell {
 
+    var backgroundImage: UIImageView = {
+        let image = UIImageView()
+        image.contentMode = .scaleAspectFill
+        image.clipsToBounds = false
+        image.backgroundColor = .defaultBlack
+        return image
+    }()
+
     var celestialBodyNameLabel: UILabel = {
         let label = UILabel()
         label.textColor = .defaultGrey
         label.font = UIFont.SFProRoundedTitle
-        label.backgroundColor = .defaultBlack
+        label.backgroundColor = nil
         return label
     }()
 
@@ -23,9 +31,11 @@ class CelestialBodyTableViewCell: UITableViewCell {
         let image = UIImageView()
         image.contentMode = .scaleAspectFit
         image.clipsToBounds = false
-        image.backgroundColor = .defaultBlack
+        image.backgroundColor = nil
         return image
     }()
+
+    var cosmosImage = UIImage(named: "cosmos.jpg")
 
     var celestialBodyName: String? {
         didSet {
@@ -41,13 +51,30 @@ class CelestialBodyTableViewCell: UITableViewCell {
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.backgroundColor = .defaultBlack
+        backgroundImage.image = cosmosImage
+        setupcbackgroundImage()
         setupcCelestialBodyImageView()
         setupcCelestialBodyNameLabel()
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    func setupcbackgroundImage() {
+        self.addSubview(backgroundImage)
+        backgroundImage.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            self.backgroundImage.bottomAnchor.constraint(equalTo:
+                self.safeAreaLayoutGuide.bottomAnchor, constant: 0),
+            self.backgroundImage.topAnchor.constraint(equalTo:
+                self.safeAreaLayoutGuide.topAnchor, constant: 0),
+            self.backgroundImage.leadingAnchor.constraint(equalTo:
+                self.safeAreaLayoutGuide.leadingAnchor, constant: 0),
+            self.backgroundImage.trailingAnchor.constraint(equalTo:
+                self.safeAreaLayoutGuide.trailingAnchor, constant: 0)
+        ])
     }
 
     func setupcCelestialBodyImageView() {
