@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nPC-cl-kX4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mCj-X4-9cM">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -7,64 +7,53 @@
     </dependencies>
     <scenes>
         <!--Tab Bar View Controller-->
-        <scene sceneID="nYr-VV-lOL">
+        <scene sceneID="X0w-WD-oSd">
             <objects>
-                <tabBarController id="nPC-cl-kX4" customClass="TabBarViewController" customModule="TheUniverse" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ROm-No-efA">
+                <tabBarController id="mCj-X4-9cM" customClass="TabBarViewController" customModule="TheUniverse" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xvd-5y-cVG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Lba-Jp-qhW" kind="show" identifier="planets" id="Lr2-Er-1J1"/>
-                        <segue destination="Lba-Jp-qhW" kind="relationship" relationship="viewControllers" id="zqO-gm-CwE"/>
-                        <segue destination="tzG-Qi-UhP" kind="show" identifier="satellites" id="bWq-tK-nlU"/>
-                        <segue destination="tzG-Qi-UhP" kind="relationship" relationship="viewControllers" id="fpB-g0-SW6"/>
-                        <segue destination="3QO-OW-3sV" kind="show" identifier="stars" id="6YI-f7-7oc"/>
-                        <segue destination="3QO-OW-3sV" kind="relationship" relationship="viewControllers" id="T6c-2O-2dU"/>
+                        <segue destination="N4f-iL-MH9" kind="relationship" relationship="viewControllers" id="Kqw-sT-Fvz"/>
+                        <segue destination="acC-JJ-hcA" kind="relationship" relationship="viewControllers" id="iif-M7-Bn8"/>
+                        <segue destination="E6o-7I-eIH" kind="relationship" relationship="viewControllers" id="3ZM-Fy-AWV"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cTW-Rt-hVe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JRn-qr-LG9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1288" y="-530"/>
+            <point key="canvasLocation" x="-1233" y="-338"/>
         </scene>
         <!--Planets-->
-        <scene sceneID="pUa-Lc-vCB">
+        <scene sceneID="0Dg-SL-5TX">
             <objects>
-                <viewControllerPlaceholder storyboardName="Planets" id="Lba-Jp-qhW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="cqS-bk-6lj"/>
-                    <navigationItem key="navigationItem" id="Fer-Ge-2xY"/>
+                <viewControllerPlaceholder storyboardName="Planets" id="N4f-iL-MH9" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="ZWf-Nq-w7g"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CQA-dV-aYR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qFN-t7-oGr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-541" y="-781"/>
+            <point key="canvasLocation" x="-448" y="-571"/>
         </scene>
         <!--Satellites-->
-        <scene sceneID="rMw-tn-Zfr">
+        <scene sceneID="4s3-f1-Cc4">
             <objects>
-                <viewControllerPlaceholder storyboardName="Satellites" id="tzG-Qi-UhP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Hv3-WQ-zuW"/>
-                    <navigationItem key="navigationItem" id="aLI-aM-mqD"/>
+                <viewControllerPlaceholder storyboardName="Satellites" id="acC-JJ-hcA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="XYl-5N-uYS"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hoa-ia-mxR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7yI-P1-3QU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-541" y="-531"/>
+            <point key="canvasLocation" x="-440" y="-338"/>
         </scene>
         <!--Stars-->
-        <scene sceneID="SX6-8W-4xa">
+        <scene sceneID="dMJ-3C-rZ4">
             <objects>
-                <viewControllerPlaceholder storyboardName="Stars" id="3QO-OW-3sV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="kjB-A1-8mo"/>
-                    <navigationItem key="navigationItem" id="NL8-J4-PUp"/>
+                <viewControllerPlaceholder storyboardName="Stars" id="E6o-7I-eIH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Yqh-FN-fSU"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oeg-xT-19e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qcw-Jl-xSW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-546" y="-302"/>
+            <point key="canvasLocation" x="-438" y="-115"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="6YI-f7-7oc"/>
-        <segue reference="bWq-tK-nlU"/>
-        <segue reference="Lr2-Er-1J1"/>
-    </inferredMetricsTieBreakers>
 </document>

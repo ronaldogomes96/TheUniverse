@@ -10,17 +10,8 @@ import UIKit
 
 class CelestialBodyTableViewController: UITableViewController {
 
-    var celestialBodyNames: [String]? {
-        didSet {
-            self.tableView.reloadData()
-        }
-    }
-
-    var celestialBodyImageNames: [String]? {
-        didSet {
-            self.tableView.reloadData()
-        }
-    }
+    var celestialBodyNames: [String]?
+    var celestialBodyImageNames: [String]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +24,7 @@ class CelestialBodyTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return celestialBodyNames?.count ?? 0
+        return celestialBodyNames!.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
