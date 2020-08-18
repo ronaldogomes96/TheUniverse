@@ -20,7 +20,7 @@ class CelestialBodyModelTests: XCTestCase {
                             "Urano", "Neturno", "Plutão"]
         let imageNames = ["Mercurio.jpg", "Venus.jpg", "Terra.jpg",
                           "Marte.jpg", "Saturno.jpg", "Jupiter.jpg",
-                          "Urano.jpg", "Neturno.jpg", "Plutão.jpg"]
+                          "Urano.jpg", "Neturno.jpg", "Plutao.jpg"]
 
         //When
         let listOfNamesAndImages = celestialBody.getListOfNamesAndImagesOfCelestialBody(from: .planets)
@@ -37,7 +37,7 @@ class CelestialBodyModelTests: XCTestCase {
         let satellitesNames = ["Lua", "Fobos", "Titã", "Reia",
                                "Encelado", "Ganimedes", "Calisto",
                                "Io", "Titania", "Tritao", "Caronte"]
-        let imageNames = ["Lua.jpg", "Fobos.jpg", "Titã.jpg",
+        let imageNames = ["Lua.jpg", "Fobos.jpg", "Tita.jpg",
                           "Reia.jpg", "Encelado.jpg", "Ganimedes.jpg",
                           "Calisto.jpg", "Io.jpg", "Titania.jpg",
                           "Tritao.jpg", "Caronte.jpg"]

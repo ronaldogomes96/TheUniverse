@@ -11,7 +11,7 @@ import Foundation
 
 class CelestialBodyTableViewCell: UITableViewCell {
 
-    var backgroundImage: UIImageView = {
+    let backgroundImage: UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleAspectFill
         image.clipsToBounds = false
@@ -19,23 +19,29 @@ class CelestialBodyTableViewCell: UITableViewCell {
         return image
     }()
 
-    var celestialBodyNameLabel: UILabel = {
+    let celestialBodyNameLabel: UILabel = {
         let label = UILabel()
         label.textColor = .defaultGrey
         label.font = UIFont.SFProRoundedTitle
-        label.backgroundColor = nil
+        label.font = UIFont.systemFont(ofSize: 21, weight: .semibold)
+        label.backgroundColor = .clear
         return label
     }()
 
-    var celestialBodyImageView: UIImageView = {
+    let celestialBodyImageView: UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleAspectFit
         image.clipsToBounds = false
-        image.backgroundColor = nil
+        image.backgroundColor = .clear
         return image
     }()
 
-    var cosmosImage = UIImage(named: "cosmos.jpg")
+    override func prepareForReuse() {
+        celestialBodyNameLabel.text = ""
+        celestialBodyImageView.image = nil
+    }
+
+    let cosmosImage = UIImage(named: "cosmos.jpg")
 
     var celestialBodyName: String? {
         didSet {
@@ -52,6 +58,7 @@ class CelestialBodyTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         backgroundImage.image = cosmosImage
+        self.clipsToBounds = true
         setupcbackgroundImage()
         setupcCelestialBodyImageView()
         setupcCelestialBodyNameLabel()
@@ -67,13 +74,13 @@ class CelestialBodyTableViewCell: UITableViewCell {
 
         NSLayoutConstraint.activate([
             self.backgroundImage.bottomAnchor.constraint(equalTo:
-                self.safeAreaLayoutGuide.bottomAnchor, constant: 0),
+                self.bottomAnchor, constant: 0),
             self.backgroundImage.topAnchor.constraint(equalTo:
-                self.safeAreaLayoutGuide.topAnchor, constant: 0),
+                self.topAnchor, constant: 0),
             self.backgroundImage.leadingAnchor.constraint(equalTo:
-                self.safeAreaLayoutGuide.leadingAnchor, constant: 0),
+                self.leadingAnchor, constant: 0),
             self.backgroundImage.trailingAnchor.constraint(equalTo:
-                self.safeAreaLayoutGuide.trailingAnchor, constant: 0)
+                self.trailingAnchor, constant: 0)
         ])
     }
 
@@ -83,13 +90,13 @@ class CelestialBodyTableViewCell: UITableViewCell {
 
         NSLayoutConstraint.activate([
             self.celestialBodyImageView.bottomAnchor.constraint(equalTo:
-                self.safeAreaLayoutGuide.bottomAnchor, constant: 0),
+                self.bottomAnchor, constant: 0),
             self.celestialBodyImageView.topAnchor.constraint(equalTo:
-                self.safeAreaLayoutGuide.topAnchor, constant: 0),
+                self.topAnchor, constant: 0),
             self.celestialBodyImageView.leadingAnchor.constraint(equalTo:
-                self.safeAreaLayoutGuide.leadingAnchor, constant: 253),
-            self.celestialBodyImageView.trailingAnchor.constraint(equalTo:
-                self.safeAreaLayoutGuide.trailingAnchor, constant: -20)
+                self.leadingAnchor, constant: 20),
+            celestialBodyImageView.widthAnchor.constraint(equalTo:
+                self.heightAnchor)
         ])
     }
 
@@ -99,13 +106,13 @@ class CelestialBodyTableViewCell: UITableViewCell {
 
         NSLayoutConstraint.activate([
             self.celestialBodyNameLabel.bottomAnchor.constraint(equalTo:
-                self.safeAreaLayoutGuide.bottomAnchor, constant: 0),
+                self.bottomAnchor, constant: 0),
             self.celestialBodyNameLabel.topAnchor.constraint(equalTo:
-                self.safeAreaLayoutGuide.topAnchor, constant: 0),
+                self.topAnchor, constant: 0),
             self.celestialBodyNameLabel.leadingAnchor.constraint(equalTo:
-                self.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+                self.celestialBodyImageView.trailingAnchor, constant: 30),
             self.celestialBodyNameLabel.trailingAnchor.constraint(
-                equalTo: self.celestialBodyImageView.leadingAnchor, constant: -20)
+                equalTo: self.trailingAnchor, constant: -20)
         ])
     }
 }
