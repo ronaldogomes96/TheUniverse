@@ -9,7 +9,7 @@
         <!--Planetas-->
         <scene sceneID="vuG-XY-aOL">
             <objects>
-                <tableViewController id="IaL-tT-EO3" sceneMemberID="viewController">
+                <tableViewController id="IaL-tT-EO3" customClass="CelestialBodyTableViewController" customModule="TheUniverse" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zMa-zd-pBP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,7 +25,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cl7-Qs-bC8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="263" y="-164"/>
+            <point key="canvasLocation" x="262.31884057971018" y="-164.67391304347828"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eJH-xq-gha">
