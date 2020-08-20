@@ -14,16 +14,16 @@ class CelestialBodyModelTests: XCTestCase {
     func test_getListOfNamesAndImagesOfCelestialBody_celestialBodyData_returnsPlanetsNamesAndImages() {
 
         //Givem
-        let celestialBody = CelestialBodyModel()
-        let planetsNames = ["Mercurio", "Venus", "Terra",
-                            "Marte", "Saturno", "Jupiter",
+        let sut = CelestialBodyModel()
+        let planetsNames = ["Mercúrio", "Vênus", "Terra",
+                            "Marte", "Júpiter", "Saturno",
                             "Urano", "Neturno", "Plutão"]
         let imageNames = ["Mercurio.jpg", "Venus.jpg", "Terra.jpg",
-                          "Marte.jpg", "Saturno.jpg", "Jupiter.jpg",
+                          "Marte.jpg", "Jupiter.jpg", "Saturno.jpg",
                           "Urano.jpg", "Neturno.jpg", "Plutao.jpg"]
 
         //When
-        let listOfNamesAndImages = celestialBody.getListOfNamesAndImagesOfCelestialBody(from: .planets)
+        let listOfNamesAndImages = sut.getListOfNamesAndImagesOfCelestialBody(from: .planets)
 
         //Then
         XCTAssertEqual(planetsNames, listOfNamesAndImages?.0)
@@ -33,17 +33,17 @@ class CelestialBodyModelTests: XCTestCase {
     func test_getListOfNamesAndImagesOfCelestialBody_celestialBodyData_returnsSatellitesNamesAndImages() {
 
         //Givem
-        let celestialBody = CelestialBodyModel()
-        let satellitesNames = ["Lua", "Fobos", "Titã", "Reia",
-                               "Encelado", "Ganimedes", "Calisto",
-                               "Io", "Titania", "Tritao", "Caronte"]
-        let imageNames = ["Lua.jpg", "Fobos.jpg", "Tita.jpg",
-                          "Reia.jpg", "Encelado.jpg", "Ganimedes.jpg",
-                          "Calisto.jpg", "Io.jpg", "Titania.jpg",
+        let sut = CelestialBodyModel()
+        let satellitesNames = ["Lua", "Fobos", "Ganimedes", "Calisto",
+                               "Io", "Titã", "Reia",
+                               "Encélado", "Titânia", "Tritão", "Caronte"]
+        let imageNames = ["Lua.jpg", "Fobos.jpg", "Ganimedes.jpg",
+                                 "Calisto.jpg", "Io.jpg", "Tita.jpg",
+                          "Reia.jpg", "Encelado.jpg", "Titania.jpg",
                           "Tritao.jpg", "Caronte.jpg"]
 
         //When
-        let listOfNamesAndImages = celestialBody.getListOfNamesAndImagesOfCelestialBody(from: .satellites)
+        let listOfNamesAndImages = sut.getListOfNamesAndImagesOfCelestialBody(from: .satellites)
 
         //Then
         XCTAssertEqual(satellitesNames, listOfNamesAndImages?.0)
@@ -53,12 +53,12 @@ class CelestialBodyModelTests: XCTestCase {
     func test_getListOfNamesAndImagesOfCelestialBody_celestialBodyData_returnsStarsNamesAndImages() {
 
         //Givem
-        let celestialBody = CelestialBodyModel()
+        let sut = CelestialBodyModel()
         let starsNames = ["Sol"]
         let imageNames = ["Sol.jpg"]
 
         //When
-        let listOfNamesAndImages = celestialBody.getListOfNamesAndImagesOfCelestialBody(from: .stars)
+        let listOfNamesAndImages = sut.getListOfNamesAndImagesOfCelestialBody(from: .stars)
 
         //Then
         XCTAssertEqual(starsNames, listOfNamesAndImages?.0)
@@ -68,10 +68,10 @@ class CelestialBodyModelTests: XCTestCase {
     func test_getCelestialBodyFromJson_celestialBodyStruct_structNotNil() {
 
         //Given
-        let celestialBody = CelestialBodyModel()
+        let sut = CelestialBodyModel()
 
         //When
-        let celestialBodyStruct = celestialBody.getCelestialBodyFromJson()
+        let celestialBodyStruct = sut.getCelestialBodyFromJson()
 
         //Then
         XCTAssertNotNil(celestialBodyStruct)
