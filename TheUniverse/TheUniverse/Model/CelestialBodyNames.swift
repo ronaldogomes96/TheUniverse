@@ -10,11 +10,11 @@ import Foundation
 
 enum CelestialBodyNames: String {
 
-    case mercury = "Mercurio"
-    case venus = "Venus"
+    case mercury = "Mercúrio"
+    case venus = "Vênus"
     case earth = "Terra"
     case mars = "Marte"
-    case jupiter = "Jupiter"
+    case jupiter = "Júpiter"
     case saturn = "Saturno"
     case uranus = "Urano"
     case neptune = "Neturno"

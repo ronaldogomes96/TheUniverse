@@ -12,6 +12,27 @@
 		770A634224E6CC2D0072A235 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770A634124E6CC2D0072A235 /* Fonts.swift */; };
 		770A634424E6DC2F0072A235 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770A634324E6DC2F0072A235 /* TabBarViewController.swift */; };
 		770A634824E6DF1B0072A235 /* CelestialBodyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770A634724E6DF1B0072A235 /* CelestialBodyTableViewController.swift */; };
+		770E993C24EE9C3300C59F30 /* mercury.json in Resources */ = {isa = PBXBuildFile; fileRef = 770E993B24EE9C3300C59F30 /* mercury.json */; };
+		770E993E24EE9C4C00C59F30 /* venus.json in Resources */ = {isa = PBXBuildFile; fileRef = 770E993D24EE9C4C00C59F30 /* venus.json */; };
+		770E994024EE9C5D00C59F30 /* earth.json in Resources */ = {isa = PBXBuildFile; fileRef = 770E993F24EE9C5D00C59F30 /* earth.json */; };
+		770E994224EE9C7400C59F30 /* mars.json in Resources */ = {isa = PBXBuildFile; fileRef = 770E994124EE9C7400C59F30 /* mars.json */; };
+		770E994424EE9C8100C59F30 /* jupiter.json in Resources */ = {isa = PBXBuildFile; fileRef = 770E994324EE9C8100C59F30 /* jupiter.json */; };
+		770E994624EE9CB100C59F30 /* saturn.json in Resources */ = {isa = PBXBuildFile; fileRef = 770E994524EE9CB100C59F30 /* saturn.json */; };
+		770E994824EE9CBC00C59F30 /* uranus.json in Resources */ = {isa = PBXBuildFile; fileRef = 770E994724EE9CBC00C59F30 /* uranus.json */; };
+		770E994A24EE9CC600C59F30 /* neptune.json in Resources */ = {isa = PBXBuildFile; fileRef = 770E994924EE9CC600C59F30 /* neptune.json */; };
+		770E994C24EE9CD100C59F30 /* pluto.json in Resources */ = {isa = PBXBuildFile; fileRef = 770E994B24EE9CD100C59F30 /* pluto.json */; };
+		770E994E24EE9CDC00C59F30 /* moon.json in Resources */ = {isa = PBXBuildFile; fileRef = 770E994D24EE9CDC00C59F30 /* moon.json */; };
+		770E995024EE9CE600C59F30 /* phobos.json in Resources */ = {isa = PBXBuildFile; fileRef = 770E994F24EE9CE600C59F30 /* phobos.json */; };
+		770E995224EE9CF100C59F30 /* titan.json in Resources */ = {isa = PBXBuildFile; fileRef = 770E995124EE9CF100C59F30 /* titan.json */; };
+		770E995424EE9CFB00C59F30 /* rhea.json in Resources */ = {isa = PBXBuildFile; fileRef = 770E995324EE9CFB00C59F30 /* rhea.json */; };
+		770E995624EE9D0500C59F30 /* enceladus.json in Resources */ = {isa = PBXBuildFile; fileRef = 770E995524EE9D0500C59F30 /* enceladus.json */; };
+		770E995824EE9D0E00C59F30 /* ganymede.json in Resources */ = {isa = PBXBuildFile; fileRef = 770E995724EE9D0E00C59F30 /* ganymede.json */; };
+		770E995A24EE9D1800C59F30 /* callisto.json in Resources */ = {isa = PBXBuildFile; fileRef = 770E995924EE9D1800C59F30 /* callisto.json */; };
+		770E995C24EE9D2100C59F30 /* io.json in Resources */ = {isa = PBXBuildFile; fileRef = 770E995B24EE9D2100C59F30 /* io.json */; };
+		770E995E24EE9D2A00C59F30 /* titania.json in Resources */ = {isa = PBXBuildFile; fileRef = 770E995D24EE9D2A00C59F30 /* titania.json */; };
+		770E996024EE9D3600C59F30 /* triton.json in Resources */ = {isa = PBXBuildFile; fileRef = 770E995F24EE9D3600C59F30 /* triton.json */; };
+		770E996224EE9D3E00C59F30 /* charon.json in Resources */ = {isa = PBXBuildFile; fileRef = 770E996124EE9D3E00C59F30 /* charon.json */; };
+		770E996424EE9D4800C59F30 /* sun.json in Resources */ = {isa = PBXBuildFile; fileRef = 770E996324EE9D4800C59F30 /* sun.json */; };
 		77397BF424BCD47A005EEF22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77397BF324BCD47A005EEF22 /* AppDelegate.swift */; };
 		77397BF624BCD47A005EEF22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77397BF524BCD47A005EEF22 /* SceneDelegate.swift */; };
 		77397BFD24BCD47B005EEF22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77397BFC24BCD47B005EEF22 /* Assets.xcassets */; };
@@ -46,6 +67,27 @@
 		770A634124E6CC2D0072A235 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		770A634324E6DC2F0072A235 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = TheUniverse/Controller/FisrtPage/TabBarViewController.swift; sourceTree = SOURCE_ROOT; };
 		770A634724E6DF1B0072A235 /* CelestialBodyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialBodyTableViewController.swift; sourceTree = "<group>"; };
+		770E993B24EE9C3300C59F30 /* mercury.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mercury.json; sourceTree = "<group>"; };
+		770E993D24EE9C4C00C59F30 /* venus.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = venus.json; sourceTree = "<group>"; };
+		770E993F24EE9C5D00C59F30 /* earth.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = earth.json; sourceTree = "<group>"; };
+		770E994124EE9C7400C59F30 /* mars.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mars.json; sourceTree = "<group>"; };
+		770E994324EE9C8100C59F30 /* jupiter.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = jupiter.json; sourceTree = "<group>"; };
+		770E994524EE9CB100C59F30 /* saturn.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = saturn.json; sourceTree = "<group>"; };
+		770E994724EE9CBC00C59F30 /* uranus.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = uranus.json; sourceTree = "<group>"; };
+		770E994924EE9CC600C59F30 /* neptune.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = neptune.json; sourceTree = "<group>"; };
+		770E994B24EE9CD100C59F30 /* pluto.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = pluto.json; sourceTree = "<group>"; };
+		770E994D24EE9CDC00C59F30 /* moon.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = moon.json; sourceTree = "<group>"; };
+		770E994F24EE9CE600C59F30 /* phobos.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = phobos.json; sourceTree = "<group>"; };
+		770E995124EE9CF100C59F30 /* titan.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = titan.json; sourceTree = "<group>"; };
+		770E995324EE9CFB00C59F30 /* rhea.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = rhea.json; sourceTree = "<group>"; };
+		770E995524EE9D0500C59F30 /* enceladus.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = enceladus.json; sourceTree = "<group>"; };
+		770E995724EE9D0E00C59F30 /* ganymede.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ganymede.json; sourceTree = "<group>"; };
+		770E995924EE9D1800C59F30 /* callisto.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = callisto.json; sourceTree = "<group>"; };
+		770E995B24EE9D2100C59F30 /* io.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = io.json; sourceTree = "<group>"; };
+		770E995D24EE9D2A00C59F30 /* titania.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = titania.json; sourceTree = "<group>"; };
+		770E995F24EE9D3600C59F30 /* triton.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = triton.json; sourceTree = "<group>"; };
+		770E996124EE9D3E00C59F30 /* charon.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = charon.json; sourceTree = "<group>"; };
+		770E996324EE9D4800C59F30 /* sun.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sun.json; sourceTree = "<group>"; };
 		77397BF024BCD47A005EEF22 /* TheUniverse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheUniverse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77397BF324BCD47A005EEF22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77397BF524BCD47A005EEF22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -184,6 +226,27 @@
 			isa = PBXGroup;
 			children = (
 				7739DC3C24E8F1ED00C51E70 /* celestialBody.json */,
+				770E993B24EE9C3300C59F30 /* mercury.json */,
+				770E993D24EE9C4C00C59F30 /* venus.json */,
+				770E993F24EE9C5D00C59F30 /* earth.json */,
+				770E994124EE9C7400C59F30 /* mars.json */,
+				770E994324EE9C8100C59F30 /* jupiter.json */,
+				770E994524EE9CB100C59F30 /* saturn.json */,
+				770E994724EE9CBC00C59F30 /* uranus.json */,
+				770E994924EE9CC600C59F30 /* neptune.json */,
+				770E994B24EE9CD100C59F30 /* pluto.json */,
+				770E994D24EE9CDC00C59F30 /* moon.json */,
+				770E994F24EE9CE600C59F30 /* phobos.json */,
+				770E995724EE9D0E00C59F30 /* ganymede.json */,
+				770E995924EE9D1800C59F30 /* callisto.json */,
+				770E995B24EE9D2100C59F30 /* io.json */,
+				770E995124EE9CF100C59F30 /* titan.json */,
+				770E995324EE9CFB00C59F30 /* rhea.json */,
+				770E995524EE9D0500C59F30 /* enceladus.json */,
+				770E995D24EE9D2A00C59F30 /* titania.json */,
+				770E995F24EE9D3600C59F30 /* triton.json */,
+				770E996124EE9D3E00C59F30 /* charon.json */,
+				770E996324EE9D4800C59F30 /* sun.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -280,14 +343,35 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				770E994224EE9C7400C59F30 /* mars.json in Resources */,
+				770E993C24EE9C3300C59F30 /* mercury.json in Resources */,
+				770E996224EE9D3E00C59F30 /* charon.json in Resources */,
+				770E995624EE9D0500C59F30 /* enceladus.json in Resources */,
+				770E994E24EE9CDC00C59F30 /* moon.json in Resources */,
 				773BFA4024E58DDA0099B855 /* Stars.storyboard in Resources */,
+				770E996424EE9D4800C59F30 /* sun.json in Resources */,
+				770E996024EE9D3600C59F30 /* triton.json in Resources */,
+				770E994A24EE9CC600C59F30 /* neptune.json in Resources */,
+				770E995024EE9CE600C59F30 /* phobos.json in Resources */,
 				773BFA3C24E58DA60099B855 /* Planets.storyboard in Resources */,
+				770E995824EE9D0E00C59F30 /* ganymede.json in Resources */,
+				770E994824EE9CBC00C59F30 /* uranus.json in Resources */,
+				770E993E24EE9C4C00C59F30 /* venus.json in Resources */,
 				77397C0024BCD47B005EEF22 /* LaunchScreen.storyboard in Resources */,
+				770E995C24EE9D2100C59F30 /* io.json in Resources */,
 				770A633C24E6BD730072A235 /* .swiftlint.yml in Resources */,
 				77F9760724EC3F830051E8BC /* TabBar.storyboard in Resources */,
+				770E994C24EE9CD100C59F30 /* pluto.json in Resources */,
 				773BFA3E24E58DC90099B855 /* Satellites.storyboard in Resources */,
+				770E995A24EE9D1800C59F30 /* callisto.json in Resources */,
+				770E995E24EE9D2A00C59F30 /* titania.json in Resources */,
 				7739DC3D24E8F1ED00C51E70 /* celestialBody.json in Resources */,
+				770E994624EE9CB100C59F30 /* saturn.json in Resources */,
 				77397BFD24BCD47B005EEF22 /* Assets.xcassets in Resources */,
+				770E994424EE9C8100C59F30 /* jupiter.json in Resources */,
+				770E995424EE9CFB00C59F30 /* rhea.json in Resources */,
+				770E995224EE9CF100C59F30 /* titan.json in Resources */,
+				770E994024EE9C5D00C59F30 /* earth.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
