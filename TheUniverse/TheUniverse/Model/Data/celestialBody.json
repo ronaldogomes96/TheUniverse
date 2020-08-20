@@ -5,7 +5,7 @@
     } ,
 "satellites": {
     "name": ["Lua", "Fobos", "Ganimedes", "Calisto", "Io", "Titã", "Reia", "Encélado", "Titânia", "Tritão", "Caronte"],
-    "image": ["Lua.jpg", "Fobos.jpg", "Tita.jpg", "Reia.jpg", "Encelado.jpg", "Ganimedes.jpg", "Calisto.jpg", "Io.jpg", "Titania.jpg", "Tritao.jpg", "Caronte.jpg"]
+    "image": ["Lua.jpg", "Fobos.jpg", "Ganimedes.jpg", "Calisto.jpg", "Io.jpg", "Tita.jpg", "Reia.jpg", "Encelado.jpg", "Titania.jpg", "Tritao.jpg", "Caronte.jpg"]
     } ,
 "stars": {
     "name": ["Sol"] ,
