@@ -22,6 +22,8 @@ class CelestialBodyTableViewController: UITableViewController {
         }
     }
 
+    let celestialBodyDescriptionModel = CelestialBodyDescriptionModel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .black
@@ -49,6 +51,16 @@ class CelestialBodyTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        let celestialBodyDescription = CelestialBodyDescriptionViewController()
+        celestialBodyDescription.celestialBodyName = celestialBodyNames![indexPath.row]
+        celestialBodyDescription.celestialBodyDescription =
+            celestialBodyDescriptionModel.getCelestialBodyDescription(celestialBody:
+            celestialBodyNames![indexPath.row])
+        navigationController?.pushViewController(celestialBodyDescription, animated: true)
     }
 
     func setupNavigationController() {

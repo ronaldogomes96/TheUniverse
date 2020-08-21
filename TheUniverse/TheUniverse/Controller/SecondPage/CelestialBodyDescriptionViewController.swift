@@ -18,7 +18,7 @@ class CelestialBodyDescriptionViewController: UIViewController {
 
     var scrollContentView: UIView = {
         let view = UIView()
-        view.backgroundColor = .defaultBlack
+        view.backgroundColor = .black
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -38,8 +38,9 @@ class CelestialBodyDescriptionViewController: UIViewController {
         label.textColor = .defaultGrey
         label.font = UIFont.SFProRoundedDescription
         label.font = UIFont.systemFont(ofSize: 19, weight: .semibold)
-        label.textAlignment = .center
+        label.textAlignment = .natural
         label.backgroundColor = .clear
+        label.numberOfLines = 0
         return label
     }()
 
@@ -62,6 +63,7 @@ class CelestialBodyDescriptionViewController: UIViewController {
             CelestialBodyDescriptionCollectionViewCell.self,
             forCellWithReuseIdentifier: "customCell" )
 
+        setupNavigationController()
         setupScrollView()
         setupImageCollection()
         setupCelestialBodyDescription()
@@ -119,5 +121,14 @@ class CelestialBodyDescriptionViewController: UIViewController {
             self.descriptionLabel.trailingAnchor.constraint(equalTo: scrollContentView.trailingAnchor, constant: -20),
             self.descriptionLabel.bottomAnchor.constraint(equalTo: scrollContentView.bottomAnchor, constant: 20)
         ])
+    }
+
+    func setupNavigationController() {
+        navigationController?.navigationBar.titleTextAttributes =
+            [NSAttributedString.Key.foregroundColor: UIColor.defaultGrey]
+        navigationController?.navigationBar.barTintColor = .defaultBlack
+        navigationController?.navigationBar.isTranslucent = false
+        self.navigationItem.title = celestialBodyName
+        navigationController!.navigationBar.tintColor = .defaultGreen
     }
 }

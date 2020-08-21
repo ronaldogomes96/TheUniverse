@@ -27,7 +27,7 @@ class CelestialBodyDescriptionCollectionViewCell: UICollectionViewCell {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = .defaultBlack
+        self.backgroundColor = .black
         setupConstraintsCelestialBodyImageView()
     }
 
