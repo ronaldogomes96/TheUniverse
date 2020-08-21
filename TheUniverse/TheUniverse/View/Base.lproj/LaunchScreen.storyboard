@@ -15,12 +15,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LaunchScreenImage" translatesAutoresizingMaskIntoConstraints="NO" id="EuD-s6-Gfu">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreenImage" translatesAutoresizingMaskIntoConstraints="NO" id="EuD-s6-Gfu">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="EuD-s6-Gfu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Li4-QM-iEC"/>
+                            <constraint firstItem="EuD-s6-Gfu" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="UAy-XW-WVQ"/>
+                            <constraint firstItem="EuD-s6-Gfu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dK9-ye-D7O"/>
+                            <constraint firstItem="EuD-s6-Gfu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gjf-ar-D9K"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>

@@ -4,7 +4,7 @@
 //
 //  Created by Ronaldo Gomes on 19/08/20.
 //  Copyright © 2020 Ronaldo Gomes. All rights reserved.
-//
+// swiftlint:disable identifier_name
 
 import Foundation
 
