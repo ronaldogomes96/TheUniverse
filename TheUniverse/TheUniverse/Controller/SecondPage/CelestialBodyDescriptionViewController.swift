@@ -52,9 +52,11 @@ class CelestialBodyDescriptionViewController: UIViewController {
 
     var celestialBodyName: String?
     let apiModel = ApiModel()
+    var listOfImages: [UIImage] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        listOfImages = []
 
         imagesCollectionView.delegate = self
         imagesCollectionView.dataSource = self
@@ -119,7 +121,7 @@ class CelestialBodyDescriptionViewController: UIViewController {
             self.descriptionLabel.topAnchor.constraint(equalTo: imagesCollectionView.bottomAnchor, constant: 20),
             self.descriptionLabel.leadingAnchor.constraint(equalTo: scrollContentView.leadingAnchor, constant: 10),
             self.descriptionLabel.trailingAnchor.constraint(equalTo: scrollContentView.trailingAnchor, constant: -20),
-            self.descriptionLabel.bottomAnchor.constraint(equalTo: scrollContentView.bottomAnchor, constant: 20)
+            self.descriptionLabel.bottomAnchor.constraint(equalTo: scrollContentView.bottomAnchor, constant: -40)
         ])
     }
 

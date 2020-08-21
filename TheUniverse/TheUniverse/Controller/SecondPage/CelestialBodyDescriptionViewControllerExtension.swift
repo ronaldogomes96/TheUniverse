@@ -13,7 +13,7 @@ extension CelestialBodyDescriptionViewController: UICollectionViewDelegate,
     UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return 25
     }
 
     func collectionView(_ collectionView: UICollectionView,
@@ -26,13 +26,23 @@ extension CelestialBodyDescriptionViewController: UICollectionViewDelegate,
         apiModel.nasaApiCall(celestialBodyNames: celestialBodyName!, indexImage: indexPath.row) { image in
             DispatchQueue.main.async {
                 cell!.celestialBodyImage = image
+                self.listOfImages.append(image)
             }
         }
 
         return cell!
     }
 
-    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    public func collectionView(_ collectionView: UICollectionView,
+                               layout collectionViewLayout: UICollectionViewLayout,
+                               sizeForItemAt indexPath: IndexPath) -> CGSize {
         return collectionView.frame.size
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let celestialBodyImageController = CelestialBodyImageViewController()
+        celestialBodyImageController.celestialBodyName = celestialBodyName
+        celestialBodyImageController.celestialBodyImage = listOfImages[indexPath.row]
+        navigationController?.pushViewController(celestialBodyImageController, animated: true)
     }
 }
