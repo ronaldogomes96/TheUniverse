@@ -11,12 +11,12 @@ import UIKit
 
 class ApiModel {
 
-    var listOfImages: [UIImage] = []
+    var listOfImages: UIImage?
     var responseStruct: Response?
 
-    func nasaApiCall( celestialBodyNames: String, completion: @escaping ([UIImage]) -> Void) {
+    func nasaApiCall( celestialBodyNames: String, indexImage: Int, completion: @escaping (UIImage) -> Void) {
 
-        listOfImages = []
+        listOfImages = nil
         let celestialBodyEnglishName = CelestialBodyNames(rawValue: celestialBodyNames)!.englishNameOfCelestialBody
 
         let requestURL = requestUrl(url:
@@ -33,18 +33,18 @@ class ApiModel {
                 self.responseStruct = try JSONDecoder().decode(Response.self, from: data)
                 let group = DispatchGroup()
 
-                for index in 0..<10 {
+                //for index in 0..<10 {
                     group.enter()
 
                     self.fetchImage(urlString:
-                    (self.responseStruct!.collection.items[index].links.first?.href)!) { image in
-                        self.listOfImages.append(image)
+                    (self.responseStruct!.collection.items[indexImage].links.first?.href)!) { image in
+                        self.listOfImages = image
                         group.leave()
                     }
-                }
+                //}
 
                 group.notify(queue: .global()) {
-                    completion(self.listOfImages)
+                    completion(self.listOfImages!)
                 }
 
             } catch {
