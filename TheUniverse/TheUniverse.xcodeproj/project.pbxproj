@@ -53,12 +53,23 @@
 		7783609C24EFF1AC00191F50 /* CelestialBodyDescriptionViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7783609B24EFF1AC00191F50 /* CelestialBodyDescriptionViewControllerExtension.swift */; };
 		7783609E24EFF24100191F50 /* CelestialBodyDescriptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7783609D24EFF24100191F50 /* CelestialBodyDescriptionCollectionViewCell.swift */; };
 		778360A124F013E200191F50 /* CelestialBodyImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778360A024F013E200191F50 /* CelestialBodyImageViewController.swift */; };
+		77B103B924F21B7800AFEB55 /* CelestialBodyNamesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B103B824F21B7800AFEB55 /* CelestialBodyNamesTests.swift */; };
+		77B103C324F2227900AFEB55 /* FisrtPageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B103C224F2227900AFEB55 /* FisrtPageUITests.swift */; };
+		77B103CB24F2270700AFEB55 /* SecondPageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B103CA24F2270700AFEB55 /* SecondPageUITests.swift */; };
+		77B103CD24F2286A00AFEB55 /* ThirdPageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B103CC24F2286A00AFEB55 /* ThirdPageUITests.swift */; };
 		77DC2D6724EAC6A4004275A4 /* CelestialBodyModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DC2D6624EAC6A4004275A4 /* CelestialBodyModelTests.swift */; };
 		77DC2D6924EAFECF004275A4 /* CelestialBodyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DC2D6824EAFECF004275A4 /* CelestialBodyTableViewCell.swift */; };
 		77F9760724EC3F830051E8BC /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77F9760624EC3F830051E8BC /* TabBar.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		77B103C524F2227900AFEB55 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 77397BE824BCD47A005EEF22 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 77397BEF24BCD47A005EEF22;
+			remoteInfo = TheUniverse;
+		};
 		77DC2D6124EAC61E004275A4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 77397BE824BCD47A005EEF22 /* Project object */;
@@ -117,6 +128,12 @@
 		7783609B24EFF1AC00191F50 /* CelestialBodyDescriptionViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialBodyDescriptionViewControllerExtension.swift; sourceTree = "<group>"; };
 		7783609D24EFF24100191F50 /* CelestialBodyDescriptionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialBodyDescriptionCollectionViewCell.swift; sourceTree = "<group>"; };
 		778360A024F013E200191F50 /* CelestialBodyImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialBodyImageViewController.swift; sourceTree = "<group>"; };
+		77B103B824F21B7800AFEB55 /* CelestialBodyNamesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialBodyNamesTests.swift; sourceTree = "<group>"; };
+		77B103C024F2227900AFEB55 /* TheUniverseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheUniverseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		77B103C224F2227900AFEB55 /* FisrtPageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FisrtPageUITests.swift; sourceTree = "<group>"; };
+		77B103C424F2227900AFEB55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77B103CA24F2270700AFEB55 /* SecondPageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageUITests.swift; sourceTree = "<group>"; };
+		77B103CC24F2286A00AFEB55 /* ThirdPageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPageUITests.swift; sourceTree = "<group>"; };
 		77DC2D5C24EAC61E004275A4 /* TheUniverseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheUniverseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77DC2D6024EAC61E004275A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77DC2D6624EAC6A4004275A4 /* CelestialBodyModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialBodyModelTests.swift; sourceTree = "<group>"; };
@@ -126,6 +143,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		77397BED24BCD47A005EEF22 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77B103BD24F2227900AFEB55 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -187,6 +211,7 @@
 			children = (
 				77397BF224BCD47A005EEF22 /* TheUniverse */,
 				77DC2D5D24EAC61E004275A4 /* TheUniverseTests */,
+				77B103C124F2227900AFEB55 /* TheUniverseUITests */,
 				77397BF124BCD47A005EEF22 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -196,6 +221,7 @@
 			children = (
 				77397BF024BCD47A005EEF22 /* TheUniverse.app */,
 				77DC2D5C24EAC61E004275A4 /* TheUniverseTests.xctest */,
+				77B103C024F2227900AFEB55 /* TheUniverseUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -287,12 +313,24 @@
 			path = ThirdPage;
 			sourceTree = "<group>";
 		};
+		77B103C124F2227900AFEB55 /* TheUniverseUITests */ = {
+			isa = PBXGroup;
+			children = (
+				77B103C424F2227900AFEB55 /* Info.plist */,
+				77B103C224F2227900AFEB55 /* FisrtPageUITests.swift */,
+				77B103CA24F2270700AFEB55 /* SecondPageUITests.swift */,
+				77B103CC24F2286A00AFEB55 /* ThirdPageUITests.swift */,
+			);
+			path = TheUniverseUITests;
+			sourceTree = "<group>";
+		};
 		77DC2D5D24EAC61E004275A4 /* TheUniverseTests */ = {
 			isa = PBXGroup;
 			children = (
 				77DC2D6024EAC61E004275A4 /* Info.plist */,
 				77DC2D6624EAC6A4004275A4 /* CelestialBodyModelTests.swift */,
 				770E996924EEA9F400C59F30 /* CelestialBodyDescriptionModelTests.swift */,
+				77B103B824F21B7800AFEB55 /* CelestialBodyNamesTests.swift */,
 			);
 			path = TheUniverseTests;
 			sourceTree = "<group>";
@@ -317,6 +355,24 @@
 			productName = TheUniverse;
 			productReference = 77397BF024BCD47A005EEF22 /* TheUniverse.app */;
 			productType = "com.apple.product-type.application";
+		};
+		77B103BF24F2227900AFEB55 /* TheUniverseUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77B103C724F2227900AFEB55 /* Build configuration list for PBXNativeTarget "TheUniverseUITests" */;
+			buildPhases = (
+				77B103BC24F2227900AFEB55 /* Sources */,
+				77B103BD24F2227900AFEB55 /* Frameworks */,
+				77B103BE24F2227900AFEB55 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				77B103C624F2227900AFEB55 /* PBXTargetDependency */,
+			);
+			name = TheUniverseUITests;
+			productName = TheUniverseUITests;
+			productReference = 77B103C024F2227900AFEB55 /* TheUniverseUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		77DC2D5B24EAC61E004275A4 /* TheUniverseTests */ = {
 			isa = PBXNativeTarget;
@@ -349,6 +405,10 @@
 					77397BEF24BCD47A005EEF22 = {
 						CreatedOnToolsVersion = 11.5;
 					};
+					77B103BF24F2227900AFEB55 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 77397BEF24BCD47A005EEF22;
+					};
 					77DC2D5B24EAC61E004275A4 = {
 						CreatedOnToolsVersion = 11.6;
 						LastSwiftMigration = 1160;
@@ -371,6 +431,7 @@
 			targets = (
 				77397BEF24BCD47A005EEF22 /* TheUniverse */,
 				77DC2D5B24EAC61E004275A4 /* TheUniverseTests */,
+				77B103BF24F2227900AFEB55 /* TheUniverseUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -409,6 +470,13 @@
 				770E995424EE9CFB00C59F30 /* rhea.json in Resources */,
 				770E995224EE9CF100C59F30 /* titan.json in Resources */,
 				770E994024EE9C5D00C59F30 /* earth.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77B103BE24F2227900AFEB55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,11 +535,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		77B103BC24F2227900AFEB55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77B103CB24F2270700AFEB55 /* SecondPageUITests.swift in Sources */,
+				77B103CD24F2286A00AFEB55 /* ThirdPageUITests.swift in Sources */,
+				77B103C324F2227900AFEB55 /* FisrtPageUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		77DC2D5824EAC61E004275A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				77DC2D6724EAC6A4004275A4 /* CelestialBodyModelTests.swift in Sources */,
+				77B103B924F21B7800AFEB55 /* CelestialBodyNamesTests.swift in Sources */,
 				770E996A24EEA9F400C59F30 /* CelestialBodyDescriptionModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,6 +558,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		77B103C624F2227900AFEB55 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 77397BEF24BCD47A005EEF22 /* TheUniverse */;
+			targetProxy = 77B103C524F2227900AFEB55 /* PBXContainerItemProxy */;
+		};
 		77DC2D6224EAC61E004275A4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 77397BEF24BCD47A005EEF22 /* TheUniverse */;
@@ -648,6 +732,46 @@
 			};
 			name = Release;
 		};
+		77B103C824F2227900AFEB55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 69Y77S7YQP;
+				INFOPLIST_FILE = TheUniverseUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ronaldogomes.TheUniverseUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TheUniverse;
+			};
+			name = Debug;
+		};
+		77B103C924F2227900AFEB55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 69Y77S7YQP;
+				INFOPLIST_FILE = TheUniverseUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ronaldogomes.TheUniverseUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TheUniverse;
+			};
+			name = Release;
+		};
 		77DC2D6424EAC61E004275A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -710,6 +834,15 @@
 			buildConfigurations = (
 				77397C1B24BCD47C005EEF22 /* Debug */,
 				77397C1C24BCD47C005EEF22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77B103C724F2227900AFEB55 /* Build configuration list for PBXNativeTarget "TheUniverseUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77B103C824F2227900AFEB55 /* Debug */,
+				77B103C924F2227900AFEB55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
