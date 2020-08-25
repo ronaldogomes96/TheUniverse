@@ -1,1 +1,1 @@
-# TheUniverse
+Astronomy iOS app
