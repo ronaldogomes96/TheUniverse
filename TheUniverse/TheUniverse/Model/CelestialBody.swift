@@ -9,23 +9,23 @@
 import Foundation
 import UIKit
 
-struct CelestialBody: Decodable {
+struct CelestialBody: Codable {
     let planets: Planets
     let satellites: Satellites
     let stars: Stars
 }
 
-struct Planets: Decodable {
+struct Planets: Codable {
     let name: [String]
     let image: [String]
 }
 
-struct Satellites: Decodable {
+struct Satellites: Codable {
     let name: [String]
     let image: [String]
 }
 
-struct Stars: Decodable {
+struct Stars: Codable {
     let name: [String]
     let image: [String]
 }

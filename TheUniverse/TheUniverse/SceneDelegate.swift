@@ -33,6 +33,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneWillResignActive(_ scene: UIScene) {
         // Called when the scene will move from an active state to an inactive state.
         // This may occur due to temporary interruptions (ex. an incoming phone call).
+        //swiftlint:disable line_length
+        let scene = scene.delegate as? SceneDelegate
+        guard let tabBar = scene?.window?.rootViewController as? UITabBarController,
+            let nav = tabBar.selectedViewController as? UINavigationController,
+            let controller = nav.topViewController as? CelestialBodyDescriptionViewController else {
+            return
+        }
+        let name = controller.celestialBodyName
+        print("Funcionou")
+        UserDefaults.standard.set(name, forKey: "Celestial Body Name")
+        
     }
 
     func sceneWillEnterForeground(_ scene: UIScene) {

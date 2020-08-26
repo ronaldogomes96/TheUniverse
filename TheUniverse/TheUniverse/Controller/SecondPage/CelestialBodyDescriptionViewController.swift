@@ -28,6 +28,7 @@ class CelestialBodyDescriptionViewController: UIViewController {
         flow.scrollDirection = .horizontal
         flow.minimumInteritemSpacing = 0
         flow.minimumLineSpacing = 0
+        //flow.itemSize =
         let collec = UICollectionView(frame: .zero, collectionViewLayout: flow)
         collec.isPagingEnabled = true
         return collec
@@ -50,6 +51,7 @@ class CelestialBodyDescriptionViewController: UIViewController {
         }
     }
 
+    //var lastCelestialBodyName: String?
     var celestialBodyName: String?
     let apiModel = ApiModel()
     var listOfImages: [UIImage] = []

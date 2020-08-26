@@ -30,6 +30,20 @@ class CelestialBodyTableViewController: UITableViewController {
         self.tabBarController?.tabBar.tintColor = .defaultGreen
         setupNavigationController()
         tableView.register(CelestialBodyTableViewCell.self, forCellReuseIdentifier: "celestialBodyCell")
+        
+        
+        if let celestialName = UserDefaults.standard.string(forKey: "Celestial Body Name") {
+            let celestialBodyDescriptionVC = CelestialBodyDescriptionViewController()
+            celestialBodyDescriptionVC.celestialBodyName = celestialName
+            celestialBodyDescriptionVC.celestialBodyDescription = celestialBodyDescriptionModel.getCelestialBodyDescription(celestialBody: celestialName)
+            UserDefaults.standard.removeObject(forKey: "Celestial Body Name")
+            navigationController?.pushViewController(celestialBodyDescriptionVC, animated: true)
+        }
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
     }
 
     // MARK: - Table view data source
