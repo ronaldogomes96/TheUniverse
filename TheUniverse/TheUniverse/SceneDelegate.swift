@@ -4,7 +4,7 @@
 //
 //  Created by Ronaldo Gomes on 13/07/20.
 //  Copyright © 2020 Ronaldo Gomes. All rights reserved.
-//
+// swiftlint:disable line_length
 
 import UIKit
 
@@ -15,8 +15,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene,
                willConnectTo session: UISceneSession,
                options connectionOptions: UIScene.ConnectionOptions) {
+
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         guard let _ = (scene as? UIWindowScene) else { return }
+
+        let isFirstSreen = (UserDefaults.standard.value(forKey: "FirstLaunch") as? Bool) ?? false
+        if !isFirstSreen {
+            UserDefaults.standard.set(true, forKey: "FirstLaunch")
+            self.window?.rootViewController?.addChild(OnBoardingViewController())
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -33,17 +40,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneWillResignActive(_ scene: UIScene) {
         // Called when the scene will move from an active state to an inactive state.
         // This may occur due to temporary interruptions (ex. an incoming phone call).
-        //swiftlint:disable line_length
-        let scene = scene.delegate as? SceneDelegate
-        guard let tabBar = scene?.window?.rootViewController as? UITabBarController,
-            let nav = tabBar.selectedViewController as? UINavigationController,
-            let controller = nav.topViewController as? CelestialBodyDescriptionViewController else {
-            return
-        }
-        let name = controller.celestialBodyName
-        print("Funcionou")
-        UserDefaults.standard.set(name, forKey: "Celestial Body Name")
-        
     }
 
     func sceneWillEnterForeground(_ scene: UIScene) {

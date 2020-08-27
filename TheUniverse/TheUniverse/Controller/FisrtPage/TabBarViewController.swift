@@ -20,7 +20,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         updatePage()
 
     }
-    
+
     func updatePage() {
         for (index, viewController) in viewControllers!.enumerated() {
             guard let navigation = viewController as? UINavigationController,
