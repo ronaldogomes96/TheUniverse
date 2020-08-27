@@ -1,0 +1,14 @@
+{
+"planets": {
+    "name": ["Mercúrio", "Vênus", "Terra", "Marte", "Júpiter","Saturno", "Urano", "Neturno", "Plutão"] ,
+    "image": ["Mercurio.jpg", "Venus.jpg", "Terra.jpg", "Marte.jpg", "Jupiter.jpg","Saturno.jpg", "Urano.jpg", "Neturno.jpg", "Plutao.jpg"]
+    } ,
+"satellites": {
+    "name": ["Lua", "Fobos", "Ganimedes", "Calisto", "Io", "Titã", "Reia", "Encélado", "Titânia", "Tritão", "Caronte"],
+    "image": ["Lua.jpg", "Fobos.jpg", "Ganimedes.jpg", "Calisto.jpg", "Io.jpg", "Tita.jpg", "Reia.jpg", "Encelado.jpg", "Titania.jpg", "Tritao.jpg", "Caronte.jpg"]
+    } ,
+"stars": {
+    "name": ["Sol"] ,
+    "image": ["Sol.jpg"]
+    }
+}
