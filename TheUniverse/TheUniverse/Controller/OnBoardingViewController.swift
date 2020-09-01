@@ -14,7 +14,13 @@ class OnBoardingViewController: UIViewController {
     lazy var onBoardingView: OnBoardingView = {
         let view = OnBoardingView()
         view.dismissAction = {
-            self.dismiss(animated: true, completion: nil)
+            let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
+            let controller = storyboard.instantiateInitialViewController()
+            guard let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate else {
+                return
+            }
+            
+            sceneDelegate.window?.rootViewController = controller
         }
         return view
     }()
