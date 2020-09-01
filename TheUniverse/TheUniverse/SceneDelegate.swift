@@ -4,7 +4,6 @@
 //
 //  Created by Ronaldo Gomes on 13/07/20.
 //  Copyright © 2020 Ronaldo Gomes. All rights reserved.
-//
 
 import UIKit
 
@@ -15,8 +14,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene,
                willConnectTo session: UISceneSession,
                options connectionOptions: UIScene.ConnectionOptions) {
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        guard let _ = (scene as? UIWindowScene) else { return }
+
+        window = UIWindow(frame: UIScreen.main.bounds)
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        window?.windowScene = windowScene
+
+        let isFirstSreen = (UserDefaults.standard.bool(forKey: "FirstLaunch"))
+
+        if !isFirstSreen {
+
+            UserDefaults.standard.set(true, forKey: "FirstLaunch")
+            self.window?.rootViewController = OnBoardingViewController()
+
+        } else {
+
+            let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
+            let controller = storyboard.instantiateInitialViewController()
+            self.window?.rootViewController = controller
+
+        }
+
+        self.window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

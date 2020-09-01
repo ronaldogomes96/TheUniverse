@@ -18,6 +18,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
 
         self.tabBar.barTintColor = .defaultBlack
         updatePage()
+
     }
 
     func updatePage() {
