@@ -17,9 +17,9 @@ class OnBoardingViewController: UIViewController {
             let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
             let controller = storyboard.instantiateInitialViewController()
             guard let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate else {
-                return
+                fatalError()
             }
-            
+
             sceneDelegate.window?.rootViewController = controller
         }
         return view

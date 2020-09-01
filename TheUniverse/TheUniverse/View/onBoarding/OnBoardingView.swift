@@ -10,21 +10,22 @@ import Foundation
 import UIKit
 
 class OnBoardingView: UIView {
-    
+
     lazy var bodyLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.SFProRoundedTitle
+        label.font = UIFont.systemFont(ofSize: 23, weight: .semibold)
         label.textColor = .defaultGrey
         label.numberOfLines = 0
         label.text = """
 
         The Universe é o aplicativo ideal para quem quer se aventurar nas curiosidades do universo.
 
-        1. Clique nos corpos celestes para ver suas informacoes e curiosidades
+        1. Clique nos corpos celestes para ver suas informações e curiosidades.
 
-        2. Nas imagens, passe para o lado para ver mais imagens do corpo celeste escolhido
+        2. Nas imagens, passe para o lado para ver mais imagens do corpo celeste escolhido.
 
-        3. Caso queira, clique na imagem para vê-la em fullscreen
+        3. Caso queira, clique na imagem para vê-la em fullscreen.
 
         """
 
@@ -34,9 +35,9 @@ class OnBoardingView: UIView {
     lazy var startButton: UIButton = {
         let button = UIButton()
         button.setTitle("IR PARA O UNIVERSO", for: .normal)
-        button.titleLabel?.font = UIFont.SFProRoundedTitle
-        button.tintColor = .defaultGrey
         button.backgroundColor = .defaultGreen
+        button.titleLabel!.font = UIFont.SFProRoundedTitle
+        button.titleLabel!.textColor = .defaultBlack
         button.addTarget(self, action: #selector(dismiss), for: .touchUpInside)
         return button
     }()
@@ -61,9 +62,10 @@ class OnBoardingView: UIView {
         self.addSubview(bodyLabel)
         bodyLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            bodyLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            bodyLabel.topAnchor.constraint(equalTo: self.bottomAnchor, constant: 20),
-            bodyLabel.widthAnchor.constraint(equalTo: self.widthAnchor)
+            bodyLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0),
+            bodyLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
+            bodyLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            bodyLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20)
         ])
 
         self.addSubview(startButton)
