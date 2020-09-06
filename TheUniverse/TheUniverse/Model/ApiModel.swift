@@ -18,6 +18,7 @@ class ApiModel {
 
         listOfImages = nil
         let celestialBodyEnglishName = CelestialBodyNames(rawValue: celestialBodyNames)!.englishNameOfCelestialBody
+        let repository = Repository(filename: celestialBodyEnglishName)
 
         let requestURL = requestUrl(url:
             "https://images-api.nasa.gov/search?q=\(celestialBodyEnglishName)&media_type=image")
@@ -31,17 +32,16 @@ class ApiModel {
             do {
 
                 self.responseStruct = try JSONDecoder().decode(Response.self, from: data)
+                let imageUrl = self.responseStruct!.collection.items[indexImage].links.first?.href
+                _ = repository.save(imageUrl!)
+                
                 let group = DispatchGroup()
+                group.enter()
 
-                //for index in 0..<10 {
-                    group.enter()
-
-                    self.fetchImage(urlString:
-                    (self.responseStruct!.collection.items[indexImage].links.first?.href)!) { image in
-                        self.listOfImages = image
-                        group.leave()
-                    }
-                //}
+                self.fetchImage(urlString: imageUrl!) { image in
+                    self.listOfImages = image
+                    group.leave()
+                }
 
                 group.notify(queue: .global()) {
                     completion(self.listOfImages!)

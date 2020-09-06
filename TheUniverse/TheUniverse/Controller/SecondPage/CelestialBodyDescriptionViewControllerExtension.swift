@@ -23,10 +23,22 @@ extension CelestialBodyDescriptionViewController: UICollectionViewDelegate,
                                                       for: indexPath) as?
                                                       CelestialBodyDescriptionCollectionViewCell
 
-        apiModel.nasaApiCall(celestialBodyNames: celestialBodyName!, indexImage: indexPath.row) { image in
-            DispatchQueue.main.async {
-                cell!.celestialBodyImage = image
-                self.listOfImages.append(image)
+        let repository = Repository(filename: celestialBodyName!)
+        let urlImages = repository.load()
+
+        if (urlImages == nil) {
+            apiModel.nasaApiCall(celestialBodyNames: celestialBodyName!, indexImage: indexPath.row) { image in
+                DispatchQueue.main.async {
+                    cell!.celestialBodyImage = image
+                    self.listOfImages.append(image)
+                }
+            }
+        } else {
+            apiModel.fetchImage(urlString: urlImages!.urlOfCelestialBodyImages[indexPath.row]) { image in
+                DispatchQueue.main.async {
+                    cell!.celestialBodyImage = image
+                    self.listOfImages.append(image)
+                }
             }
         }
 
