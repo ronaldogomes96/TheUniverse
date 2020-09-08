@@ -71,8 +71,6 @@ class CelestialBodyDescriptionViewController: UIViewController {
         setupScrollView()
         setupImageCollection()
         setupCelestialBodyDescription()
-
-        // Do any additional setup after loading the view.
     }
 
     func setupScrollView() {

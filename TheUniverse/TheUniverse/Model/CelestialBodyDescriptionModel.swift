@@ -36,6 +36,7 @@ class CelestialBodyDescriptionModel {
         do {
             celestialBodyDescription = try JSONDecoder().decode(CelestialBodyDescription.self, from: data)
         } catch {
+            print(error)
             return nil
         }
 

@@ -34,7 +34,7 @@ class Repository {
             try jsonData.write(to: urlPath)
             return true
         } catch {
-            print("It was not possible to save the celestial bodies.")
+            print(error)
             return false
         }
     }
@@ -46,7 +46,7 @@ class Repository {
             celestialBodiesImageUrl = try JSONDecoder().decode(CelestialBodyImages.self, from: jsonData)
             return celestialBodiesImageUrl
         } catch {
-            print("It was not possible to load the celestial bodies.")
+            print(error)
             return celestialBodiesImageUrl
         }
     }

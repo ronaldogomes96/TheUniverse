@@ -24,18 +24,25 @@ extension CelestialBodyDescriptionViewController: UICollectionViewDelegate,
                                                       CelestialBodyDescriptionCollectionViewCell
 
         let repository = Repository(filename: celestialBodyName!)
-        let urlImages = repository.load()
+        let urlImage = repository.load()
+        //let start = CFAbsoluteTimeGetCurrent()
 
-        if (urlImages == nil) {
-            apiModel.nasaApiCall(celestialBodyNames: celestialBodyName!, indexImage: indexPath.row) { image in
+        if let urlImages = urlImage, urlImages.urlOfCelestialBodyImages.count > indexPath.row {
+           apiModel.fetchImage(urlString: urlImages.urlOfCelestialBodyImages[indexPath.row]) { image in
                 DispatchQueue.main.async {
+
+                    //let diff = CFAbsoluteTimeGetCurrent() - start
+                    //print("1: Took \(diff) seconds")
                     cell!.celestialBodyImage = image
                     self.listOfImages.append(image)
                 }
             }
         } else {
-            apiModel.fetchImage(urlString: urlImages!.urlOfCelestialBodyImages[indexPath.row]) { image in
+            apiModel.nasaApiCall(celestialBodyNames: celestialBodyName!, indexImage: indexPath.row) { image in
                 DispatchQueue.main.async {
+
+                    //let diff = CFAbsoluteTimeGetCurrent() - start
+                    //print("2: Took \(diff) seconds")
                     cell!.celestialBodyImage = image
                     self.listOfImages.append(image)
                 }
