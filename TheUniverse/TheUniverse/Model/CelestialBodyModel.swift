@@ -48,6 +48,7 @@ class CelestialBodyModel {
         do {
             celestialBody = try JSONDecoder().decode(CelestialBody.self, from: data)
         } catch {
+            print(error)
             return nil
         }
         return celestialBody
