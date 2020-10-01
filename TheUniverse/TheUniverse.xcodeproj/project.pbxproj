@@ -142,6 +142,7 @@
 		77B103C424F2227900AFEB55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77B103CA24F2270700AFEB55 /* SecondPageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageUITests.swift; sourceTree = "<group>"; };
 		77B103CC24F2286A00AFEB55 /* ThirdPageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPageUITests.swift; sourceTree = "<group>"; };
+		77C8A1CF251A965E0079D58C /* TheUniverse.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TheUniverse.entitlements; sourceTree = "<group>"; };
 		77DC2D5C24EAC61E004275A4 /* TheUniverseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheUniverseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77DC2D6024EAC61E004275A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77DC2D6624EAC6A4004275A4 /* CelestialBodyModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialBodyModelTests.swift; sourceTree = "<group>"; };
@@ -237,6 +238,7 @@
 		77397BF224BCD47A005EEF22 /* TheUniverse */ = {
 			isa = PBXGroup;
 			children = (
+				77C8A1CF251A965E0079D58C /* TheUniverse.entitlements */,
 				77397C2324BCD6B2005EEF22 /* View */,
 				77397C2424BCD6BB005EEF22 /* Controller */,
 				77397C2524BCD6C3005EEF22 /* Model */,
@@ -724,6 +726,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TheUniverse/TheUniverse.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69Y77S7YQP;
 				INFOPLIST_FILE = TheUniverse/Info.plist;
@@ -742,6 +745,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TheUniverse/TheUniverse.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69Y77S7YQP;
 				INFOPLIST_FILE = TheUniverse/Info.plist;
