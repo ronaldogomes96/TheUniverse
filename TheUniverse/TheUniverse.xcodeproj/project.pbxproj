@@ -51,6 +51,9 @@
 		774EC1F0250449A200152774 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774EC1EF250449A200152774 /* Repository.swift */; };
 		7751B6F224F7DA1200833E58 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7751B6F124F7DA1200833E58 /* OnBoardingView.swift */; };
 		7751B6F424F7E5DC00833E58 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7751B6F324F7E5DC00833E58 /* OnBoardingViewController.swift */; };
+		7771E9A22526734D005D1882 /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7771E9A12526734D005D1882 /* Planet.swift */; };
+		7771E9AA25267475005D1882 /* Moon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7771E9A925267475005D1882 /* Moon.swift */; };
+		7771E9AF252674E3005D1882 /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7771E9AE252674E3005D1882 /* Star.swift */; };
 		777A350624ED660900B4874E /* ApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777A350524ED660900B4874E /* ApiModel.swift */; };
 		777A350824ED664700B4874E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777A350724ED664700B4874E /* Response.swift */; };
 		777A350A24ED6A8500B4874E /* CelestialBodyNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777A350924ED6A8500B4874E /* CelestialBodyNames.swift */; };
@@ -130,6 +133,9 @@
 		774EC1EF250449A200152774 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		7751B6F124F7DA1200833E58 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		7751B6F324F7E5DC00833E58 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		7771E9A12526734D005D1882 /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
+		7771E9A925267475005D1882 /* Moon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moon.swift; sourceTree = "<group>"; };
+		7771E9AE252674E3005D1882 /* Star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
 		777A350524ED660900B4874E /* ApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiModel.swift; sourceTree = "<group>"; };
 		777A350724ED664700B4874E /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		777A350924ED6A8500B4874E /* CelestialBodyNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialBodyNames.swift; sourceTree = "<group>"; };
@@ -286,6 +292,9 @@
 				770E996724EEA5DC00C59F30 /* CelestialBodyDescriptionModel.swift */,
 				774EC1ED250447B300152774 /* CelestialBodyImages.swift */,
 				774EC1EF250449A200152774 /* Repository.swift */,
+				7771E9A12526734D005D1882 /* Planet.swift */,
+				7771E9A925267475005D1882 /* Moon.swift */,
+				7771E9AE252674E3005D1882 /* Star.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -542,6 +551,7 @@
 				770E996D24EEBDEA00C59F30 /* CelestialBodyDescriptionViewController.swift in Sources */,
 				7783609C24EFF1AC00191F50 /* CelestialBodyDescriptionViewControllerExtension.swift in Sources */,
 				774EC1F0250449A200152774 /* Repository.swift in Sources */,
+				7771E9A22526734D005D1882 /* Planet.swift in Sources */,
 				770A634024E6CA600072A235 /* Colors.swift in Sources */,
 				7739DC3F24E8F7F900C51E70 /* CelestialBody.swift in Sources */,
 				777A350624ED660900B4874E /* ApiModel.swift in Sources */,
@@ -557,6 +567,8 @@
 				774EC1EE250447B300152774 /* CelestialBodyImages.swift in Sources */,
 				7783609E24EFF24100191F50 /* CelestialBodyDescriptionCollectionViewCell.swift in Sources */,
 				77DC2D6924EAFECF004275A4 /* CelestialBodyTableViewCell.swift in Sources */,
+				7771E9AA25267475005D1882 /* Moon.swift in Sources */,
+				7771E9AF252674E3005D1882 /* Star.swift in Sources */,
 				7751B6F424F7E5DC00833E58 /* OnBoardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
