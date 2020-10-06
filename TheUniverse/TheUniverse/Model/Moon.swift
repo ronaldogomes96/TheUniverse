@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Moon: Decodable {
+struct Satellite: Decodable {
 
     let introduction: String
     let sizeAndDistance: String

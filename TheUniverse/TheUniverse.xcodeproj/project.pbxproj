@@ -285,13 +285,13 @@
 				7739DC3824E8F07800C51E70 /* Data */,
 				7739DC3E24E8F7F900C51E70 /* CelestialBody.swift */,
 				7739DC4024E8FCF300C51E70 /* CelestialBodyModel.swift */,
+				777A350924ED6A8500B4874E /* CelestialBodyNames.swift */,
 				777A350524ED660900B4874E /* ApiModel.swift */,
 				777A350724ED664700B4874E /* Response.swift */,
-				777A350924ED6A8500B4874E /* CelestialBodyNames.swift */,
-				770E996524EEA59A00C59F30 /* CelestialBodyDescription.swift */,
-				770E996724EEA5DC00C59F30 /* CelestialBodyDescriptionModel.swift */,
 				774EC1ED250447B300152774 /* CelestialBodyImages.swift */,
 				774EC1EF250449A200152774 /* Repository.swift */,
+				770E996724EEA5DC00C59F30 /* CelestialBodyDescriptionModel.swift */,
+				770E996524EEA59A00C59F30 /* CelestialBodyDescription.swift */,
 				7771E9A12526734D005D1882 /* Planet.swift */,
 				7771E9A925267475005D1882 /* Moon.swift */,
 				7771E9AE252674E3005D1882 /* Star.swift */,
@@ -303,6 +303,16 @@
 			isa = PBXGroup;
 			children = (
 				7739DC3C24E8F1ED00C51E70 /* celestialBody.json */,
+				774E6375252B908000BD220D /* Planets */,
+				77D6A825252BE97600A7FB06 /* Satellites */,
+				77D6A829252BF20D00A7FB06 /* Star */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		774E6375252B908000BD220D /* Planets */ = {
+			isa = PBXGroup;
+			children = (
 				770E993B24EE9C3300C59F30 /* mercury.json */,
 				770E993D24EE9C4C00C59F30 /* venus.json */,
 				770E993F24EE9C5D00C59F30 /* earth.json */,
@@ -312,20 +322,8 @@
 				770E994724EE9CBC00C59F30 /* uranus.json */,
 				770E994924EE9CC600C59F30 /* neptune.json */,
 				770E994B24EE9CD100C59F30 /* pluto.json */,
-				770E994D24EE9CDC00C59F30 /* moon.json */,
-				770E994F24EE9CE600C59F30 /* phobos.json */,
-				770E995724EE9D0E00C59F30 /* ganymede.json */,
-				770E995924EE9D1800C59F30 /* callisto.json */,
-				770E995B24EE9D2100C59F30 /* io.json */,
-				770E995124EE9CF100C59F30 /* titan.json */,
-				770E995324EE9CFB00C59F30 /* rhea.json */,
-				770E995524EE9D0500C59F30 /* enceladus.json */,
-				770E995D24EE9D2A00C59F30 /* titania.json */,
-				770E995F24EE9D3600C59F30 /* triton.json */,
-				770E996124EE9D3E00C59F30 /* charon.json */,
-				770E996324EE9D4800C59F30 /* sun.json */,
 			);
-			path = Data;
+			path = Planets;
 			sourceTree = "<group>";
 		};
 		7751B6F024F7D9F200833E58 /* onBoarding */ = {
@@ -353,6 +351,32 @@
 				77B103CC24F2286A00AFEB55 /* ThirdPageUITests.swift */,
 			);
 			path = TheUniverseUITests;
+			sourceTree = "<group>";
+		};
+		77D6A825252BE97600A7FB06 /* Satellites */ = {
+			isa = PBXGroup;
+			children = (
+				770E994D24EE9CDC00C59F30 /* moon.json */,
+				770E994F24EE9CE600C59F30 /* phobos.json */,
+				770E995724EE9D0E00C59F30 /* ganymede.json */,
+				770E995924EE9D1800C59F30 /* callisto.json */,
+				770E995B24EE9D2100C59F30 /* io.json */,
+				770E995124EE9CF100C59F30 /* titan.json */,
+				770E995324EE9CFB00C59F30 /* rhea.json */,
+				770E995524EE9D0500C59F30 /* enceladus.json */,
+				770E995D24EE9D2A00C59F30 /* titania.json */,
+				770E995F24EE9D3600C59F30 /* triton.json */,
+				770E996124EE9D3E00C59F30 /* charon.json */,
+			);
+			path = Satellites;
+			sourceTree = "<group>";
+		};
+		77D6A829252BF20D00A7FB06 /* Star */ = {
+			isa = PBXGroup;
+			children = (
+				770E996324EE9D4800C59F30 /* sun.json */,
+			);
+			path = Star;
 			sourceTree = "<group>";
 		};
 		77DC2D5D24EAC61E004275A4 /* TheUniverseTests */ = {
