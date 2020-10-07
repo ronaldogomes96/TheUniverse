@@ -8,17 +8,17 @@
 
 import Foundation
 
-struct Planet: Decodable {
+struct Planet: CelestialBodyDescription {
 
-    let introduction: String
-    let sizeAndDistance: String
-    let orbitAndRotation: String
-    let structure: String
-    let formation: String
-    let surface: String
-    let atmosphereAndMagnetosphere: String
-    let rings: String
-    let moons: String
-    let potentialForLife: String
+    var introduction: String
+    var sizeAndDistance: String
+    var orbitAndRotation: String
+    var structure: String
+    var formation: String
+    var surface: String
+    var atmosphereAndMagnetosphere: String
+    var rings: String
+    var moons: String
+    var potentialForLife: String
 
 }

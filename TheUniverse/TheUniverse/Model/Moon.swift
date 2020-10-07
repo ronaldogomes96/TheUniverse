@@ -8,14 +8,14 @@
 
 import Foundation
 
-struct Satellite: Decodable {
+struct Satellite: CelestialBodyDescription {
 
-    let introduction: String
-    let sizeAndDistance: String
-    let orbitAndRotation: String
-    let structure: String
-    let surface: String
-    let atmosphereAndMagnetosphere: String
-    let potentialForLife: String
+    var introduction: String
+    var sizeAndDistance: String
+    var orbitAndRotation: String
+    var structure: String
+    var surface: String
+    var atmosphereAndMagnetosphere: String
+    var potentialForLife: String
 
 }
