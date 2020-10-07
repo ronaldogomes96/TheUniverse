@@ -8,6 +8,13 @@
 
 import Foundation
 
-struct CelestialBodyDescription: Decodable {
-    let description: String
+protocol CelestialBodyDescription: Codable {
+    var introduction: String { get set }
+    var sizeAndDistance: String { get set }
+    var orbitAndRotation: String { get set }
+    var structure: String { get set }
+    var surface: String { get set }
+    var atmosphereAndMagnetosphere: String { get set }
+    var potentialForLife: String { get set }
+    //Fazer um protocolo, que sera decodable, e ira ser de planet, moon e star, e fazer o celestial body description ser generico
 }
