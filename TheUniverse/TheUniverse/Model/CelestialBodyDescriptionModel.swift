@@ -9,17 +9,17 @@
 import Foundation
 import UIKit
 
-class CelestialBodyDescriptionModel<T: CelestialBodyDescription> {
+class CelestialBodyDescriptionModel {
 
-    func getCelestialBodyDescription(celestialBody: String) -> T? {
+    func getCelestialBodyDescription(celestialBody: String) -> CelestialBodyDescription? {
 
         let celestialBodyName = CelestialBodyNames(rawValue: celestialBody)?.englishNameOfCelestialBody
         let celestialBodyDescriptionFromJson = getCelestialBodyDescriptionFromJson(jsonName: celestialBodyName!)
-
-        return celestialBodyDescriptionFromJson!
+        
+        return celestialBodyDescriptionFromJson ?? nil
     }
 
-    func getCelestialBodyDescriptionFromJson(jsonName: String) -> T? {
+    func getCelestialBodyDescriptionFromJson(jsonName: String) -> CelestialBodyDescription? {
 
         let filePath = Bundle.main.url(forResource: jsonName, withExtension: "json")
         guard let fileUrlPath = filePath else {
@@ -33,12 +33,12 @@ class CelestialBodyDescriptionModel<T: CelestialBodyDescription> {
 
         let celestialBodyDescription: CelestialBodyDescription
         do {
-            celestialBodyDescription = try JSONDecoder().decode(T.self, from: data)
+            celestialBodyDescription = try JSONDecoder().decode(CelestialBodyDescription.self, from: data)
         } catch {
             print(error)
             return nil
         }
 
-        return (celestialBodyDescription as! T)
+        return celestialBodyDescription
     }
 }
