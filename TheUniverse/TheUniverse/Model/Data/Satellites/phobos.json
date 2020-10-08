@@ -1,10 +1,33 @@
 {
-    "introduction": "Fobos, escavada e quase destruída por uma cratera de impacto gigante e derrotada por milhares de impactos de meteoritos, está em rota de colisão com Marte. Fobos é, em todo o Sistema Solar, o satélite que orbita mais próximo do planeta-mãe: menos de seis mil quilômetros acima da superfície marciana e orbita Marte três vezes ao dia.[4] Encontra-se, por isso, abaixo da órbita síncrona para Marte. Por esse motivo, a sua órbita vai descendo a um ritmo de 1,8 m por século. Assim, dentro de 30 a 50 milhões de anos pode ocorrer uma de duas coisas: ou Fobos se despenha sobre Marte ou, o que é mais provável, antes que isso aconteça as forças gravitacionais destruirão o satélite criando um anel à volta de Marte. \n",
-    "sizeAndDistance": "Fobos é a maior das duas luas de Marte e tem 17 x 14 x 11 milhas (27 por 22 por 18 quilômetros) de diâmetro. Ele orbita Marte três vezes por dia e está tão perto da superfície do planeta que nem sempre pode ser visto em alguns locais de Marte.\nFobos está se aproximando de Marte a uma taxa de 1,8 metros a cada cem anos; a essa taxa, ou colidirá com Marte em 50 milhões de anos ou se dividirá em um anel. \n",
-    "orbitAndRotation": "Por conta de sua proximidade com marte, ela orbita mais rápido do que a rotação marciana, o que a fazer \"nascer\" e se pôr três vezes por dia.\nFobos demora cerca de 7,65 horas a completar uma volta sobre si próprio, que corresponde ao mesmo tempo que leva a completar uma volta ao redor de Marte. Como consequência disso, Fobos tem sempre a mesma face voltado para Marte.\n",
-    "structure": "Sua característica mais proeminente é a cratera Stickney de 9,7 quilômetros, seu impacto causando padrões de listras na superfície da lua. Stickney foi visto pela Mars Global Surveyor cheio de poeira fina, com evidências de pedras deslizando em sua superfície inclinada.\n",
-    "surface": "Fobos e Deimos parecem ser compostos de rocha do tipo C, semelhante a asteróides condritos carbonáceos enegrecidos. As observações da Mars Global Surveyor indicam que a superfície deste pequeno corpo foi transformada em pó por eras de impactos de meteoróides, alguns dos quais iniciaram deslizamentos de terra que deixaram rastros escuros marcando as encostas íngremes de crateras gigantes.\nAs medições dos lados diurno e noturno de Fobos mostram variações de temperatura tão extremas que o lado ensolarado da lua rivaliza com um agradável dia de inverno em Chicago, enquanto a apenas alguns quilômetros de distância, no lado escuro da lua, o clima é mais severo que uma noite na Antártica. As altas temperaturas para Fobos foram medidas a 25 graus Fahrenheit (-4 graus Celsius) e as mínimas a -170 graus Fahrenheit (-112 graus Celsius). Essa intensa perda de calor é provavelmente resultado da poeira fina na superfície de Phobos, que é incapaz de reter o calor.\n",
-    "atmosphereAndMagnetosphere": "Phobos não tem atmosfera. Pode ser um asteróide capturado, mas alguns cientistas mostram evidências que contradizem essa teoria.\n",
-    "potentialForLife": "O ambiente de Fobos não é propício para a vida como a conhecemos.\n"
+    "info": [
+        {
+            "title": "Introdução",
+            "description":  "Fobos, escavada e quase destruída por uma cratera de impacto gigante e derrotada por milhares de impactos de meteoritos, está em rota de colisão com Marte. Fobos é, em todo o Sistema Solar, o satélite que orbita mais próximo do planeta-mãe: menos de seis mil quilômetros acima da superfície marciana e orbita Marte três vezes ao dia.[4] Encontra-se, por isso, abaixo da órbita síncrona para Marte. Por esse motivo, a sua órbita vai descendo a um ritmo de 1,8 m por século. Assim, dentro de 30 a 50 milhões de anos pode ocorrer uma de duas coisas: ou Fobos se despenha sobre Marte ou, o que é mais provável, antes que isso aconteça as forças gravitacionais destruirão o satélite criando um anel à volta de Marte. \n"
+        },
+        {
+            "title": "Tamanho e distância",
+            "description": "Fobos é a maior das duas luas de Marte e tem 17 x 14 x 11 milhas (27 por 22 por 18 quilômetros) de diâmetro. Ele orbita Marte três vezes por dia e está tão perto da superfície do planeta que nem sempre pode ser visto em alguns locais de Marte.\nFobos está se aproximando de Marte a uma taxa de 1,8 metros a cada cem anos; a essa taxa, ou colidirá com Marte em 50 milhões de anos ou se dividirá em um anel. \n"
+        },
+        {
+            "title": "Orbita e rotação",
+            "description": "Por conta de sua proximidade com marte, ela orbita mais rápido do que a rotação marciana, o que a fazer \"nascer\" e se pôr três vezes por dia.\nFobos demora cerca de 7,65 horas a completar uma volta sobre si próprio, que corresponde ao mesmo tempo que leva a completar uma volta ao redor de Marte. Como consequência disso, Fobos tem sempre a mesma face voltado para Marte.\n"
+        },
+        {
+            "title": "Estrutura",
+            "description": "Sua característica mais proeminente é a cratera Stickney de 9,7 quilômetros, seu impacto causando padrões de listras na superfície da lua. Stickney foi visto pela Mars Global Surveyor cheio de poeira fina, com evidências de pedras deslizando em sua superfície inclinada.\n"
+        },
+        {
+            "title": "Superfície",
+            "description": "Fobos e Deimos parecem ser compostos de rocha do tipo C, semelhante a asteróides condritos carbonáceos enegrecidos. As observações da Mars Global Surveyor indicam que a superfície deste pequeno corpo foi transformada em pó por eras de impactos de meteoróides, alguns dos quais iniciaram deslizamentos de terra que deixaram rastros escuros marcando as encostas íngremes de crateras gigantes.\nAs medições dos lados diurno e noturno de Fobos mostram variações de temperatura tão extremas que o lado ensolarado da lua rivaliza com um agradável dia de inverno em Chicago, enquanto a apenas alguns quilômetros de distância, no lado escuro da lua, o clima é mais severo que uma noite na Antártica. As altas temperaturas para Fobos foram medidas a 25 graus Fahrenheit (-4 graus Celsius) e as mínimas a -170 graus Fahrenheit (-112 graus Celsius). Essa intensa perda de calor é provavelmente resultado da poeira fina na superfície de Phobos, que é incapaz de reter o calor.\n"
+        },
+        {
+            "title": "Atmosfera e magnosfera",
+            "description":"Phobos não tem atmosfera. Pode ser um asteróide capturado, mas alguns cientistas mostram evidências que contradizem essa teoria.\n"
+        },
+        {
+            "title": "Potencial para vida",
+            "description":  "O ambiente de Fobos não é propício para a vida como a conhecemos.\n"
+        }
+    ]
 }
 
