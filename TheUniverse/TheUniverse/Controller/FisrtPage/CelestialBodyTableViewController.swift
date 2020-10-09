@@ -56,7 +56,7 @@ class CelestialBodyTableViewController: UITableViewController {
 
         let celestialBodyDescription = CelestialBodyDescriptionViewController()
         celestialBodyDescription.celestialBodyName = celestialBodyNames![indexPath.row]
-        celestialBodyDescription.celestialBodyDescription =
+        celestialBodyDescription.celestialBodyInfos =
             celestialBodyDescriptionModel.getCelestialBodyDescription(celestialBody:
             celestialBodyNames![indexPath.row])
         navigationController?.pushViewController(celestialBodyDescription, animated: true)

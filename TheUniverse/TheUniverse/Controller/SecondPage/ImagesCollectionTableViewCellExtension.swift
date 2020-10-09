@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension CelestialBodyDescriptionViewController: UICollectionViewDelegate,
+extension ImagesCollectionTableViewCell: UICollectionViewDelegate,
     UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -19,20 +19,16 @@ extension CelestialBodyDescriptionViewController: UICollectionViewDelegate,
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customCell",
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imagesCell",
                                                       for: indexPath) as?
-                                                      CelestialBodyDescriptionCollectionViewCell
+                                                      ImagesCollectionCell
 
         let repository = Repository(filename: celestialBodyName!)
         let urlImage = repository.load()
-        //let start = CFAbsoluteTimeGetCurrent()
 
         if let urlImages = urlImage, urlImages.urlOfCelestialBodyImages.count > indexPath.row {
            apiModel.fetchImage(urlString: urlImages.urlOfCelestialBodyImages[indexPath.row]) { image in
                 DispatchQueue.main.async {
-
-                    //let diff = CFAbsoluteTimeGetCurrent() - start
-                    //print("1: Took \(diff) seconds")
                     cell!.celestialBodyImage = image
                     self.listOfImages.append(image)
                 }
@@ -40,9 +36,6 @@ extension CelestialBodyDescriptionViewController: UICollectionViewDelegate,
         } else {
             apiModel.nasaApiCall(celestialBodyNames: celestialBodyName!, indexImage: indexPath.row) { image in
                 DispatchQueue.main.async {
-
-                    //let diff = CFAbsoluteTimeGetCurrent() - start
-                    //print("2: Took \(diff) seconds")
                     cell!.celestialBodyImage = image
                     self.listOfImages.append(image)
                 }
@@ -62,6 +55,6 @@ extension CelestialBodyDescriptionViewController: UICollectionViewDelegate,
         let celestialBodyImageController = CelestialBodyImageViewController()
         celestialBodyImageController.celestialBodyName = celestialBodyName
         celestialBodyImageController.celestialBodyImage = listOfImages[indexPath.row]
-        navigationController?.pushViewController(celestialBodyImageController, animated: true)
+        //navigationController?.pushViewController(celestialBodyImageController, animated: true)
     }
 }

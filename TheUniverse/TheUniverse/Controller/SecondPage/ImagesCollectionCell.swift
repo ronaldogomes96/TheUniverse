@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class CelestialBodyDescriptionCollectionViewCell: UICollectionViewCell {
+class ImagesCollectionCell: UICollectionViewCell {
 
     var celestialBodyImageView: UIImageView = {
         let image  = UIImageView()
@@ -47,4 +47,5 @@ class CelestialBodyDescriptionCollectionViewCell: UICollectionViewCell {
             self.celestialBodyImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0)
         ])
     }
+    
 }

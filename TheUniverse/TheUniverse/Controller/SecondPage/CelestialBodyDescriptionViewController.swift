@@ -10,118 +10,39 @@ import UIKit
 
 class CelestialBodyDescriptionViewController: UIViewController {
 
-    var scrollView: UIScrollView = {
-        let scroll = UIScrollView()
-        scroll.translatesAutoresizingMaskIntoConstraints = false
-        return scroll
+    var celestialBodyDescriptionTableView: UITableView = {
+        let table = UITableView()
+        table.backgroundColor = .white
+        //table.rowHeight = 100
+        //table.estimatedRowHeight = 50
+        return table
     }()
 
-    var scrollContentView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .black
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-
-    var imagesCollectionView: UICollectionView = {
-        let flow = UICollectionViewFlowLayout()
-        flow.scrollDirection = .horizontal
-        flow.minimumInteritemSpacing = 0
-        flow.minimumLineSpacing = 0
-        //flow.itemSize =
-        let collec = UICollectionView(frame: .zero, collectionViewLayout: flow)
-        collec.isPagingEnabled = true
-        return collec
-    }()
-
-    var descriptionLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = .defaultGrey
-        label.font = UIFont.SFProRoundedDescription
-        label.font = UIFont.systemFont(ofSize: 19, weight: .semibold)
-        label.textAlignment = .natural
-        label.backgroundColor = .clear
-        label.numberOfLines = 0
-        return label
-    }()
-
-    var celestialBodyDescription: String? {
-        didSet {
-            descriptionLabel.text = celestialBodyDescription
-        }
-    }
-
-    //var lastCelestialBodyName: String?
     var celestialBodyName: String?
-    let apiModel = ApiModel()
-    var listOfImages: [UIImage] = []
+    var celestialBodyInfos: CelestialBodyDescription?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        listOfImages = []
+        
+        celestialBodyDescriptionTableView.delegate = self
+        celestialBodyDescriptionTableView.dataSource = self
+        celestialBodyDescriptionTableView.register(CelestialBodyDescriptionTableViewCell.self, forCellReuseIdentifier: "celestialBodyDescriptionCell")
+        celestialBodyDescriptionTableView.register(ImagesCollectionTableViewCell.self, forCellReuseIdentifier: "celestialBodyImageCollectionCell")
 
-        imagesCollectionView.delegate = self
-        imagesCollectionView.dataSource = self
-
-        imagesCollectionView.register(
-            CelestialBodyDescriptionCollectionViewCell.self,
-            forCellWithReuseIdentifier: "customCell" )
-
+        setupCelestialBodyTableView()
         setupNavigationController()
-        setupScrollView()
-        setupImageCollection()
-        setupCelestialBodyDescription()
     }
 
-    func setupScrollView() {
 
-        view.addSubview(scrollView)
-        scrollView.addSubview(scrollContentView)
-
-        let heightAnchorContent = scrollContentView.heightAnchor.constraint(equalTo: scrollView.heightAnchor)
-        heightAnchorContent.priority = .defaultLow
+    func setupCelestialBodyTableView() {
+        view.addSubview(celestialBodyDescriptionTableView)
+        celestialBodyDescriptionTableView.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            scrollView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0),
-            scrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
-            scrollView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0),
-            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
-
-            scrollContentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
-            scrollContentView.leftAnchor.constraint(equalTo: scrollView.leftAnchor),
-            scrollContentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
-            scrollContentView.rightAnchor.constraint(equalTo: scrollView.rightAnchor),
-            scrollContentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor)
-        ])
-    }
-
-    func setupImageCollection() {
-
-        scrollContentView.addSubview(imagesCollectionView)
-        imagesCollectionView.translatesAutoresizingMaskIntoConstraints = false
-
-        NSLayoutConstraint.activate([
-            self.imagesCollectionView.bottomAnchor.constraint(equalTo:
-                scrollContentView.safeAreaLayoutGuide.topAnchor, constant: 280),
-            self.imagesCollectionView.topAnchor.constraint(equalTo:
-                scrollContentView.safeAreaLayoutGuide.topAnchor,constant: 0),
-            self.imagesCollectionView.leadingAnchor.constraint(equalTo:
-                scrollContentView.safeAreaLayoutGuide.leadingAnchor, constant: 0),
-            self.imagesCollectionView.trailingAnchor.constraint(equalTo:
-                scrollContentView.safeAreaLayoutGuide.trailingAnchor, constant: 0)
-        ])
-    }
-
-    func setupCelestialBodyDescription() {
-
-        scrollContentView.addSubview(descriptionLabel)
-        descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
-
-        NSLayoutConstraint.activate([
-            self.descriptionLabel.topAnchor.constraint(equalTo: imagesCollectionView.bottomAnchor, constant: 20),
-            self.descriptionLabel.leadingAnchor.constraint(equalTo: scrollContentView.leadingAnchor, constant: 10),
-            self.descriptionLabel.trailingAnchor.constraint(equalTo: scrollContentView.trailingAnchor, constant: -20),
-            self.descriptionLabel.bottomAnchor.constraint(equalTo: scrollContentView.bottomAnchor, constant: -40)
+            self.celestialBodyDescriptionTableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
+            self.celestialBodyDescriptionTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+            self.celestialBodyDescriptionTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
+            self.celestialBodyDescriptionTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
         ])
     }
 
