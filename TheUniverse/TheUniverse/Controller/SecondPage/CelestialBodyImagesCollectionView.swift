@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension ImagesCollectionTableViewCell: UICollectionViewDelegate,
+extension CelestialBodyImagesTableViewCell: UICollectionViewDelegate,
     UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -20,13 +20,13 @@ extension ImagesCollectionTableViewCell: UICollectionViewDelegate,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imagesCell",
-                                                      for: indexPath) as?
-                                                      ImagesCollectionCell
+                                                      for: indexPath) as? CelestialBodyImagesCollectionViewCell
 
         let repository = Repository(filename: celestialBodyName!)
         let urlImage = repository.load()
 
         if let urlImages = urlImage, urlImages.urlOfCelestialBodyImages.count > indexPath.row {
+
            apiModel.fetchImage(urlString: urlImages.urlOfCelestialBodyImages[indexPath.row]) { image in
                 DispatchQueue.main.async {
                     cell!.celestialBodyImage = image

@@ -8,41 +8,46 @@
 
 import UIKit
 
-class ImagesCollectionTableViewCell: UITableViewCell {
-    
-    var imagesCollectionView: UICollectionView = {
+class CelestialBodyImagesTableViewCell: UITableViewCell {
+
+    let imagesCollectionView: UICollectionView = {
         let flow = UICollectionViewFlowLayout()
         flow.scrollDirection = .horizontal
         flow.minimumInteritemSpacing = 0
         flow.minimumLineSpacing = 0
-        //flow.itemSize =
         let collec = UICollectionView(frame: .zero, collectionViewLayout: flow)
         collec.isPagingEnabled = true
         return collec
     }()
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        imagesCollectionView.delegate = self
-        imagesCollectionView.dataSource = self
-        imagesCollectionView.register(
-            ImagesCollectionCell.self,
-            forCellWithReuseIdentifier: "imagesCell" )
-        setupImageCollection() 
-    }
-    
     let apiModel = ApiModel()
     var celestialBodyName: String?
     var listOfImages: [UIImage] = []
+
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        imagesCollectionView.delegate = self
+        imagesCollectionView.dataSource = self
+        self.contentView.isUserInteractionEnabled = false
+        imagesCollectionView.register(
+            CelestialBodyImagesCollectionViewCell.self,
+            forCellWithReuseIdentifier: "imagesCell" )
+        setupImageCollection()
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
     
     func setupImageCollection() {
-        
         self.addSubview(imagesCollectionView)
         imagesCollectionView.translatesAutoresizingMaskIntoConstraints = false
+        let heightConstat = self.imagesCollectionView.heightAnchor.constraint(equalToConstant: 200)
+        heightConstat.priority = .defaultLow
         
         NSLayoutConstraint.activate([
             self.imagesCollectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor,
@@ -52,8 +57,8 @@ class ImagesCollectionTableViewCell: UITableViewCell {
             self.imagesCollectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor,
                                                                constant: 0),
             self.imagesCollectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor,
-                                                                constant: 0)
+                                                                constant: 0),
+            heightConstat
         ])
     }
-
 }

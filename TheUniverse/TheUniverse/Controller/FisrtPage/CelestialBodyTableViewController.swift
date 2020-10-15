@@ -54,12 +54,12 @@ class CelestialBodyTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-        let celestialBodyDescription = CelestialBodyDescriptionViewController()
-        celestialBodyDescription.celestialBodyName = celestialBodyNames![indexPath.row]
-        celestialBodyDescription.celestialBodyInfos =
+        let celestialBodyData = CelestialBodyDataViewController()
+        celestialBodyData.celestialBodyName = celestialBodyNames![indexPath.row]
+        celestialBodyData.celestialBodyInfos =
             celestialBodyDescriptionModel.getCelestialBodyDescription(celestialBody:
             celestialBodyNames![indexPath.row])
-        navigationController?.pushViewController(celestialBodyDescription, animated: true)
+        navigationController?.pushViewController(celestialBodyData, animated: true)
     }
 
     func setupNavigationController() {

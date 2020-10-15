@@ -8,11 +8,11 @@
 
 import UIKit
 
-class CelestialBodyDescriptionViewController: UIViewController {
+class CelestialBodyDataViewController: UIViewController {
 
     var celestialBodyDescriptionTableView: UITableView = {
         let table = UITableView()
-        table.backgroundColor = .white
+        table.backgroundColor = .black
         //table.rowHeight = 100
         //table.estimatedRowHeight = 50
         return table
@@ -23,16 +23,17 @@ class CelestialBodyDescriptionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         celestialBodyDescriptionTableView.delegate = self
         celestialBodyDescriptionTableView.dataSource = self
-        celestialBodyDescriptionTableView.register(CelestialBodyDescriptionTableViewCell.self, forCellReuseIdentifier: "celestialBodyDescriptionCell")
-        celestialBodyDescriptionTableView.register(ImagesCollectionTableViewCell.self, forCellReuseIdentifier: "celestialBodyImageCollectionCell")
+        celestialBodyDescriptionTableView.register(
+            CelestialBodyDescriptionTableViewCell.self, forCellReuseIdentifier: "celestialBodyDescriptionCell")
+        celestialBodyDescriptionTableView.register(
+            CelestialBodyImagesTableViewCell.self, forCellReuseIdentifier: "celestialBodyImageCollectionCell")
 
         setupCelestialBodyTableView()
         setupNavigationController()
     }
-
 
     func setupCelestialBodyTableView() {
         view.addSubview(celestialBodyDescriptionTableView)
