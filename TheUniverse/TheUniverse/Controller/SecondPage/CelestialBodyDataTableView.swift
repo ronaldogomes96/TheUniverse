@@ -41,11 +41,11 @@ extension CelestialBodyDataViewController: UITableViewDelegate, UITableViewDataS
                 fatalError()
             }
 
-            cell.indexPathForCell = indexPath.row
             cell.celestialBodyName = celestialBodyName
+            cell.indexPathForCell = indexPath.row
+            cell.setupImage()
             cell.celestialBodyTittleLabel.text = celestialBodyInfos?.info[indexPath.row].title
             cell.celestialBodyDescriptionLabel.text = celestialBodyInfos?.info[indexPath.row].description
-            cell.setupImage()
             return cell
         }
     }

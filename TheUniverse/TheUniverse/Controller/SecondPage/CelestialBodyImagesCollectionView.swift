@@ -26,7 +26,6 @@ extension CelestialBodyImagesTableViewCell: UICollectionViewDelegate,
         let urlImage = repository.load()
 
         if let urlImages = urlImage, urlImages.urlOfCelestialBodyImages.count > indexPath.row {
-
            apiModel.fetchImage(urlString: urlImages.urlOfCelestialBodyImages[indexPath.row]) { image in
                 DispatchQueue.main.async {
                     cell!.celestialBodyImage = image
@@ -55,6 +54,6 @@ extension CelestialBodyImagesTableViewCell: UICollectionViewDelegate,
         let celestialBodyImageController = CelestialBodyImageViewController()
         celestialBodyImageController.celestialBodyName = celestialBodyName
         celestialBodyImageController.celestialBodyImage = listOfImages[indexPath.row]
-        //navigationController?.pushViewController(celestialBodyImageController, animated: true)
+        //pushViewController(celestialBodyImageController, animated: true)
     }
 }

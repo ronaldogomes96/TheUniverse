@@ -14,8 +14,7 @@ class CelestialBodyDescriptionTableViewCell: UITableViewCell {
         let label = UILabel()
         label.textColor = .defaultGrey
         label.font = UIFont.SFProRoundedTitle
-        label.font = UIFont.systemFont(ofSize: 21, weight: .semibold)
-        label.backgroundColor = .clear
+        label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
         return label
     }()
 
@@ -25,7 +24,6 @@ class CelestialBodyDescriptionTableViewCell: UITableViewCell {
         label.font = UIFont.SFProRoundedDescription
         label.font = UIFont.systemFont(ofSize: 19, weight: .semibold)
         label.textAlignment = .natural
-        label.backgroundColor = .clear
         label.numberOfLines = 0
         return label
     }()
@@ -33,8 +31,9 @@ class CelestialBodyDescriptionTableViewCell: UITableViewCell {
     let celestialBodyImage: UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleAspectFill
-        image.clipsToBounds = false
+        image.clipsToBounds = true
         image.backgroundColor = .defaultBlack
+        image.heightAnchor.constraint(equalToConstant: 180).isActive = true
         return image
     }()
 
@@ -52,10 +51,11 @@ class CelestialBodyDescriptionTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         listOfImages = []
-        setupCelestialBodyTittleConstraints()
-        setupCelestialBodyDescriptionConstraints()
-        setupCelestialBodyImageConstraints()
+        self.backgroundColor = .black
         self.clipsToBounds = true
+        self.setupCelestialBodyTittleConstraints()
+        self.setupCelestialBodyDescriptionConstraints()
+        self.setupCelestialBodyImageConstraints()
     }
 
     required init?(coder: NSCoder) {
@@ -63,13 +63,11 @@ class CelestialBodyDescriptionTableViewCell: UITableViewCell {
     }
 
     func setupCelestialBodyTittleConstraints() {
-
         self.addSubview(celestialBodyTittleLabel)
         celestialBodyTittleLabel.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
             self.celestialBodyTittleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
-            //self.celestialBodyTittleLabel.bottomAnchor.constraint(equalTo: self.topAnchor, constant: ),
             self.celestialBodyTittleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             self.celestialBodyTittleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20)
         ])

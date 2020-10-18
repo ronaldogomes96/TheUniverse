@@ -275,9 +275,9 @@
 			isa = PBXGroup;
 			children = (
 				7751B6F324F7E5DC00833E58 /* OnBoardingViewController.swift */,
-				7783609F24F0132700191F50 /* ThirdPage */,
 				770A634624E6DCF40072A235 /* FisrtPage */,
 				770E996B24EEBD6E00C59F30 /* SecondPage */,
+				7783609F24F0132700191F50 /* ThirdPage */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

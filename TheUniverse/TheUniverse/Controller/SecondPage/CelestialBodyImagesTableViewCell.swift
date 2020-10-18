@@ -39,16 +39,12 @@ class CelestialBodyImagesTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
     func setupImageCollection() {
         self.addSubview(imagesCollectionView)
         imagesCollectionView.translatesAutoresizingMaskIntoConstraints = false
-        let heightConstat = self.imagesCollectionView.heightAnchor.constraint(equalToConstant: 200)
+        let heightConstat = self.imagesCollectionView.heightAnchor.constraint(equalToConstant: 260)
         heightConstat.priority = .defaultLow
-        
+
         NSLayoutConstraint.activate([
             self.imagesCollectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor,
                                                                 constant: 0),

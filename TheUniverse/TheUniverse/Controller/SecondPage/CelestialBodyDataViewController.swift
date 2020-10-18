@@ -12,9 +12,6 @@ class CelestialBodyDataViewController: UIViewController {
 
     var celestialBodyDescriptionTableView: UITableView = {
         let table = UITableView()
-        table.backgroundColor = .black
-        //table.rowHeight = 100
-        //table.estimatedRowHeight = 50
         return table
     }()
 
@@ -24,6 +21,7 @@ class CelestialBodyDataViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.view.backgroundColor = .black
         celestialBodyDescriptionTableView.delegate = self
         celestialBodyDescriptionTableView.dataSource = self
         celestialBodyDescriptionTableView.register(
@@ -33,6 +31,16 @@ class CelestialBodyDataViewController: UIViewController {
 
         setupCelestialBodyTableView()
         setupNavigationController()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        celestialBodyDescriptionTableView.rowHeight = UITableView.automaticDimension
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.celestialBodyDescriptionTableView.reloadData()
     }
 
     func setupCelestialBodyTableView() {
