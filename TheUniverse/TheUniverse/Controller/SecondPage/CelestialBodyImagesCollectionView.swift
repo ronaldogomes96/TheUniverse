@@ -54,6 +54,6 @@ extension CelestialBodyImagesTableViewCell: UICollectionViewDelegate,
         let celestialBodyImageController = CelestialBodyImageViewController()
         celestialBodyImageController.celestialBodyName = celestialBodyName
         celestialBodyImageController.celestialBodyImage = listOfImages[indexPath.row]
-        //pushViewController(celestialBodyImageController, animated: true)
+        viewController?.navigationController?.pushViewController(celestialBodyImageController, animated: true)
     }
 }

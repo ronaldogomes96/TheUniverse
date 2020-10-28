@@ -32,6 +32,7 @@ extension CelestialBodyDataViewController: UITableViewDelegate, UITableViewDataS
             }
 
             cell.celestialBodyName = celestialBodyName
+            cell.viewController = self
             return cell
 
         } else {

@@ -23,6 +23,7 @@ class CelestialBodyImagesTableViewCell: UITableViewCell {
     let apiModel = ApiModel()
     var celestialBodyName: String?
     var listOfImages: [UIImage] = []
+    var viewController: UIViewController?
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
