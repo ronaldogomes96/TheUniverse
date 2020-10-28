@@ -30,7 +30,18 @@ class CelestialBodyImageViewController: UIViewController {
         super.viewDidLoad()
         setupcCelestialBodyImageView()
         setupNavigationController()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Salvar foto", style: .plain, target: self, action: #selector(downloadTapped))
         // Do any additional setup after loading the view.
+    }
+    
+    @objc
+    func downloadTapped() {
+        guard let image = celestialBodyImageView.image else {
+            print("Erro em salvar a imagem")
+            return
+        }
+        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+        navigationController?.popToRootViewController(animated: true)
     }
 
     func setupcCelestialBodyImageView() {
