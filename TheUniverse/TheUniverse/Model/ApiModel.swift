@@ -13,6 +13,7 @@ class ApiModel {
 
     var listOfImages: UIImage?
     var responseStruct: Response?
+    private let imageCache = NSCache<NSString, UIImage>()
 
     func nasaApiCall( celestialBodyNames: String, indexImage: Int, completion: @escaping (UIImage) -> Void) {
 
@@ -57,21 +58,29 @@ class ApiModel {
     func fetchImage(urlString: String, completion: @escaping (UIImage) -> Void) {
 
         let requestURL = requestUrl(url: urlString)
-
-        let task = URLSession.shared.downloadTask(with: requestURL) { (urlResponse, _, error) in
-            guard let url = urlResponse, error == nil else {
-                fatalError("Erron in \(String(describing: error))")
-            }
-
-            do {
-                let data = try Data(contentsOf: url)
-                let imagePlanet = UIImage(data: data)
-                completion(imagePlanet!)
-            } catch {
-                fatalError("Erron in \(String(describing: error))")
-            }
+        
+        if let cachedImage = imageCache.object(forKey: requestURL.absoluteString as NSString) {
+            let image = cachedImage
+            completion(image)
         }
-        task.resume()
+
+        else {
+            let task = URLSession.shared.downloadTask(with: requestURL) { (urlResponse, _, error) in
+                guard let url = urlResponse, error == nil else {
+                    fatalError("Erron in \(String(describing: error))")
+                }
+                
+                do {
+                    let data = try Data(contentsOf: url)
+                    let imagePlanet = UIImage(data: data)
+                    self.imageCache.setObject(imagePlanet!, forKey: requestURL.absoluteString as NSString)
+                    completion(imagePlanet!)
+                } catch {
+                    fatalError("Erron in \(String(describing: error))")
+                }
+            }
+            task.resume()
+        }
     }
 
     func requestUrl (url: String) -> URL {

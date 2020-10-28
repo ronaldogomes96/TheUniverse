@@ -12,8 +12,8 @@ class CelestialBodyImageViewController: UIViewController {
 
     let celestialBodyImageView: UIImageView = {
         let image = UIImageView()
-        image.contentMode = .scaleAspectFill
-        image.clipsToBounds = true
+        image.contentMode = .scaleAspectFit
+        image.clipsToBounds = false
         image.backgroundColor = .black
         return image
     }()
