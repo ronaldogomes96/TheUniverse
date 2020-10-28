@@ -9,13 +9,12 @@
 import UIKit
 import Foundation
 
-class CelestialBodyDescriptionCollectionViewCell: UICollectionViewCell {
+class CelestialBodyImagesCollectionViewCell: UICollectionViewCell {
 
     var celestialBodyImageView: UIImageView = {
         let image  = UIImageView()
         image.contentMode = .scaleAspectFit
         image.clipsToBounds = false
-        image.backgroundColor = .clear
         return image
     }()
 
@@ -27,7 +26,6 @@ class CelestialBodyDescriptionCollectionViewCell: UICollectionViewCell {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = .black
         setupConstraintsCelestialBodyImageView()
     }
 
@@ -37,7 +35,6 @@ class CelestialBodyDescriptionCollectionViewCell: UICollectionViewCell {
 
     func setupConstraintsCelestialBodyImageView() {
         self.addSubview(celestialBodyImageView)
-
         celestialBodyImageView.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([

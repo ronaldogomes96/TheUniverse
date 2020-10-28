@@ -32,6 +32,10 @@ class CelestialBodyTableViewController: UITableViewController {
         tableView.register(CelestialBodyTableViewCell.self, forCellReuseIdentifier: "celestialBodyCell")
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.tableView.reloadData()
+    }
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -54,12 +58,12 @@ class CelestialBodyTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-        let celestialBodyDescription = CelestialBodyDescriptionViewController()
-        celestialBodyDescription.celestialBodyName = celestialBodyNames![indexPath.row]
-        celestialBodyDescription.celestialBodyDescription =
+        let celestialBodyData = CelestialBodyDataViewController()
+        celestialBodyData.celestialBodyName = celestialBodyNames![indexPath.row]
+        celestialBodyData.celestialBodyInfos =
             celestialBodyDescriptionModel.getCelestialBodyDescription(celestialBody:
             celestialBodyNames![indexPath.row])
-        navigationController?.pushViewController(celestialBodyDescription, animated: true)
+        navigationController?.pushViewController(celestialBodyData, animated: true)
     }
 
     func setupNavigationController() {
