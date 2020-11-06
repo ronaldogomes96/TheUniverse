@@ -11,13 +11,12 @@ import UIKit
 
 class CelestialBodyDescriptionModel {
 
-    func getCelestialBodyDescription(celestialBody: String) -> String {
+    func getCelestialBodyDescription(celestialBody: String) -> CelestialBodyDescription? {
 
         let celestialBodyName = CelestialBodyNames(rawValue: celestialBody)?.englishNameOfCelestialBody
         let celestialBodyDescriptionFromJson = getCelestialBodyDescriptionFromJson(jsonName: celestialBodyName!)
-        let description = celestialBodyDescriptionFromJson?.description
-
-        return description ?? ""
+        
+        return celestialBodyDescriptionFromJson ?? nil
     }
 
     func getCelestialBodyDescriptionFromJson(jsonName: String) -> CelestialBodyDescription? {

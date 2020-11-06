@@ -14,7 +14,7 @@ class CelestialBodyImageViewController: UIViewController {
         let image = UIImageView()
         image.contentMode = .scaleAspectFit
         image.clipsToBounds = false
-        image.backgroundColor = .clear
+        image.backgroundColor = .black
         return image
     }()
 
@@ -26,11 +26,32 @@ class CelestialBodyImageViewController: UIViewController {
 
     var celestialBodyName: String?
 
+    init() {
+        super.init(nibName: nil, bundle: nil)
+        celestialBodyImageView.image = nil
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupcCelestialBodyImageView()
         setupNavigationController()
-        // Do any additional setup after loading the view.
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Salvar foto",
+                                                            style: .plain, target: self,
+                                                            action: #selector(downloadTapped))
+    }
+
+    @objc
+    func downloadTapped() {
+        guard let image = celestialBodyImageView.image else {
+            print("Erro em salvar a imagem")
+            return
+        }
+        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+        navigationController?.popToRootViewController(animated: true)
     }
 
     func setupcCelestialBodyImageView() {
