@@ -33,6 +33,11 @@ class CelestialBodyImagesCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        celestialBodyImageView.image = nil
+    }
+
     func setupConstraintsCelestialBodyImageView() {
         self.addSubview(celestialBodyImageView)
         celestialBodyImageView.translatesAutoresizingMaskIntoConstraints = false

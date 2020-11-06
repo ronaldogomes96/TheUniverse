@@ -58,18 +58,16 @@ class ApiModel {
     func fetchImage(urlString: String, completion: @escaping (UIImage) -> Void) {
 
         let requestURL = requestUrl(url: urlString)
-        
+
         if let cachedImage = imageCache.object(forKey: requestURL.absoluteString as NSString) {
             let image = cachedImage
             completion(image)
-        }
-
-        else {
+        } else {
             let task = URLSession.shared.downloadTask(with: requestURL) { (urlResponse, _, error) in
                 guard let url = urlResponse, error == nil else {
                     fatalError("Erron in \(String(describing: error))")
                 }
-                
+
                 do {
                     let data = try Data(contentsOf: url)
                     let imagePlanet = UIImage(data: data)

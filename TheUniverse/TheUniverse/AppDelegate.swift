@@ -32,20 +32,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the user discards a scene session.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
-    //Acionado quando o app esta prestes a ir para o espaco
-    /*func applicationWillTerminate(_ application: UIApplication) {
-
-        //swiftlint:disable line_length
-        let scene = application.connectedScenes.first?.delegate as? SceneDelegate
-        guard let tabBar = scene?.window?.rootViewController as? UITabBarController,
-            let nav = tabBar.selectedViewController as? UINavigationController, let controller = nav.topViewController as? CelestialBodyDescriptionViewController else{
-            return
-        }
-        print("Funcionou")
-        let name = controller.celestialBodyName
-        UserDefaults.standard.set(name,
-                                  forKey: "Celestial Body Name")
-        //_ = UserDefaults.synchronize(UserDefaults.standard)
-    }*/
 }

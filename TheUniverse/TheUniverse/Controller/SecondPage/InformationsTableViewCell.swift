@@ -53,6 +53,7 @@ class CelestialBodyDescriptionTableViewCell: UITableViewCell {
         listOfImages = []
         self.backgroundColor = .black
         self.clipsToBounds = true
+        self.isSelected = false
         self.setupCelestialBodyTittleConstraints()
         self.setupCelestialBodyDescriptionConstraints()
         self.setupCelestialBodyImageConstraints()

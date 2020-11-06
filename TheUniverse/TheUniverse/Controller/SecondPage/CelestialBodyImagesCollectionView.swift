@@ -29,18 +29,15 @@ extension CelestialBodyImagesTableViewCell: UICollectionViewDelegate,
            apiModel.fetchImage(urlString: urlImages.urlOfCelestialBodyImages[indexPath.row]) { image in
                 DispatchQueue.main.async {
                     cell!.celestialBodyImage = image
-                    self.listOfImages.append(image)
                 }
             }
         } else {
             apiModel.nasaApiCall(celestialBodyNames: celestialBodyName!, indexImage: indexPath.row) { image in
                 DispatchQueue.main.async {
                     cell!.celestialBodyImage = image
-                    self.listOfImages.append(image)
                 }
             }
         }
-
         return cell!
     }
 
@@ -53,7 +50,9 @@ extension CelestialBodyImagesTableViewCell: UICollectionViewDelegate,
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let celestialBodyImageController = CelestialBodyImageViewController()
         celestialBodyImageController.celestialBodyName = celestialBodyName
-        celestialBodyImageController.celestialBodyImage = listOfImages[indexPath.row]
+        guard let cell = collectionView.cellForItem(at: indexPath)
+                as? CelestialBodyImagesCollectionViewCell else { return }
+        celestialBodyImageController.celestialBodyImage = cell.celestialBodyImage
         viewController?.navigationController?.pushViewController(celestialBodyImageController, animated: true)
     }
 }
