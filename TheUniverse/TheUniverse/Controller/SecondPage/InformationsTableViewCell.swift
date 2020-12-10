@@ -107,14 +107,14 @@ class CelestialBodyDescriptionTableViewCell: UITableViewCell {
             apiModel.fetchImage(urlString: urlImages.urlOfCelestialBodyImages[indexPathForCell!]) { image in
                 DispatchQueue.main.async {
                     self.celestialBodyImage.image = image
-                    self.listOfImages.append(image)
+                    self.listOfImages.append(image!)
                 }
             }
         } else {
             apiModel.nasaApiCall(celestialBodyNames: celestialBodyName!, indexImage: indexPathForCell!) { image in
                 DispatchQueue.main.async {
                     self.celestialBodyImage.image = image
-                    self.listOfImages.append(image)
+                    self.listOfImages.append(image!)
                 }
             }
         }
