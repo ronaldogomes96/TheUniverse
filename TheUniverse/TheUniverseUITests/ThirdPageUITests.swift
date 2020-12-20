@@ -21,8 +21,9 @@ class ThirdPageUITests: XCTestCase {
     }
 
     func testImageOfThirdPage() {
-        let app = XCUIApplication()
-        app.tables/*@START_MENU_TOKEN@*/.staticTexts["Vênus"]/*[[".cells.staticTexts[\"Vênus\"]",".staticTexts[\"Vênus\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        app.scrollViews.otherElements.collectionViews.cells.children(matching: .other).element.tap()
+        _ = XCUIApplication()
+        let tablesQuery = XCUIApplication().tables
+        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Vênus"]/*[[".cells.staticTexts[\"Vênus\"]",".staticTexts[\"Vênus\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        tablesQuery/*@START_MENU_TOKEN@*/.collectionViews/*[[".cells.collectionViews",".collectionViews"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.children(matching: .cell).element.tap()
     }
 }
