@@ -7,11 +7,14 @@
 //
 
 import XCTest
+import Foundation
 @testable import TheUniverse
 
 class ApiModelTests: XCTestCase {
     let session = URLSessionMock()
 
+    // MARK: - NasaApiCall
+    
     func test_nasaApiCall_urlForEarthImages_toBeValid() {
         //Given
         let sut = ApiModel(session: session)
@@ -85,4 +88,90 @@ class ApiModelTests: XCTestCase {
         wait(for: [expect], timeout: 5)
     }
 
+    // MARK: - FetchImage
+
+    func test_fetchImage_urlForEarthImages_toBeValid() {
+        //Given
+        let sut = ApiModel(session: session)
+        let url = URL(string: "https://images-api.nasa.gov/search?q=earth&media_type=image")
+
+        let expect = expectation(description: "nasaApi")
+
+        //When
+        sut.fetchImage(urlString: url!.absoluteString) { _ in
+            //Then
+            XCTAssertEqual(url, self.session.lastUrl)
+            expect.fulfill()
+        }
+
+        wait(for: [expect], timeout: 5)
+    }
+
+    func test_fecthImage_urlForEarthImages_resumedCalled() {
+        //Given
+        let sut = ApiModel(session: session)
+        let url = URL(string: "https://images-api.nasa.gov/search?q=earth&media_type=image")
+
+        let expect = expectation(description: "nasaApi")
+
+        //When
+        sut.fetchImage(urlString: url!.absoluteString) { _ in
+            XCTAssertTrue(self.session.dowlondTask?.calledResume ?? false)
+            expect.fulfill()
+        }
+
+        wait(for: [expect], timeout: 5)
+    }
+
+    func test_fetchImage_urlForEarthImages_returnData() {
+        //Given
+        let sut = ApiModel(session: session)
+        let url = URL(string: "https://images-api.nasa.gov/search?q=earth&media_type=image")
+        let path = createLocalUrl(forImageNamed: "Terra")
+        session.testURLData = path
+        let expect = expectation(description: "nasaApi")
+
+        //When
+        sut.fetchImage(urlString: url!.absoluteString) { image in
+            XCTAssertNotNil(image)
+            expect.fulfill()
+        }
+
+        wait(for: [expect], timeout: 5)
+    }
+
+    func test_fetchImage_urlForEarthImages_returnError() {
+        //Given
+        let sut = ApiModel(session: session)
+        let expect = expectation(description: "nasaApi")
+        let url = URL(string: "https://images-api.nasa.gov/search?q=earth&media_type=image")
+
+        //When
+        sut.fetchImage(urlString: url!.absoluteString) { image in
+            XCTAssertNil(image)
+            expect.fulfill()
+        }
+
+        wait(for: [expect], timeout: 5)
+    }
+
+    // MARK: - Help Functions
+
+    func createLocalUrl(forImageNamed name: String) -> URL? {
+        let fileManager = FileManager.default
+        let cacheDirectory = fileManager.urls(for: .cachesDirectory, in: .userDomainMask)[0]
+        let url = cacheDirectory.appendingPathComponent("\(name).png")
+
+        guard fileManager.fileExists(atPath: url.path) else {
+            guard
+                let image = UIImage(named: name),
+                let data = image.jpegData(compressionQuality: 1.0)
+            else { return nil }
+
+            fileManager.createFile(atPath: url.path, contents: data, attributes: nil)
+            return url
+        }
+
+        return url
+    }
 }

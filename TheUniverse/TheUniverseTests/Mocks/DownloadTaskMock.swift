@@ -10,18 +10,18 @@ import Foundation
 import UIKit
 @testable import TheUniverse
 
-//class DownloadTaskMock: URLSessionDownloadTask {
-//    var mockData: TestMockData?
-//    var calledResume = false
-//    var completion: (URL?, URLResponse?, Error?) -> Void
-//    
-//    init(mockData: TestMockData? = nil, completion: @escaping (URL?, URLResponse?, Error?) -> Void) {
-//        self.completion = completion
-//        self.mockData = mockData
-//    }
-//    
-//    override func resume() {
-//        calledResume = true
-//        completion(mockData?.testData, mockData?.testResponse, mockData?.testError)
-//    }
-//}
+class DownloadTaskMock: URLSessionDownloadTask {
+    var mockData: TestDownloadTaskDataMock?
+    var calledResume = false
+    var completion: (URL?, URLResponse?, Error?) -> Void
+    
+    init(mockData: TestDownloadTaskDataMock? = nil, completion: @escaping (URL?, URLResponse?, Error?) -> Void) {
+        self.completion = completion
+        self.mockData = mockData
+    }
+    
+    override func resume() {
+        calledResume = true
+        completion(mockData?.testData, mockData?.testResponse, mockData?.testError)
+    }
+}

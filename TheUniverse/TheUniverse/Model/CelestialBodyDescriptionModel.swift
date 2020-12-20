@@ -15,7 +15,7 @@ class CelestialBodyDescriptionModel {
 
         let celestialBodyName = CelestialBodyNames(rawValue: celestialBody)?.englishNameOfCelestialBody
         let celestialBodyDescriptionFromJson = getCelestialBodyDescriptionFromJson(jsonName: celestialBodyName!)
-        
+
         return celestialBodyDescriptionFromJson ?? nil
     }
 

@@ -13,8 +13,9 @@ import UIKit
 class URLSessionMock: URLSession {
     var lastUrl: URL?
     var dataTask: DataTaskMock?
-    //var dowlondTask: DownloadTaskMock?
+    var dowlondTask: DownloadTaskMock?
     var testDataTaskData: Data?
+    var testURLData: URL?
     var testError: Error?
     var testResponse: HTTPURLResponse?
 
@@ -26,11 +27,11 @@ class URLSessionMock: URLSession {
         return dataTask!
     }
 
-//    override func downloadTask(with url: URL, completionHandler: @escaping (URL?, URLResponse?, Error?) -> Void) -> URLSessionDownloadTask {
-//        lastUrl = url
-//        let testMock = TestMockData(data: testURLData, error: testError, response: testResponse)
-//        dowlondTask = DownloadTaskMock(mockData: testMock, completion: completionHandler)
-//        return dowlondTask!
-//    }
+    override func downloadTask(with url: URL, completionHandler: @escaping (URL?, URLResponse?, Error?) -> Void) -> URLSessionDownloadTask {
+        lastUrl = url
+        let testMock = TestDownloadTaskDataMock(data: testURLData, error: testError, response: testResponse)
+        dowlondTask = DownloadTaskMock(mockData: testMock, completion: completionHandler)
+        return dowlondTask!
+    }
 
 }

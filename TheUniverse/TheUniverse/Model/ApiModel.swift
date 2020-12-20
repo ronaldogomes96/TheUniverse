@@ -71,6 +71,7 @@ class ApiModel {
         if let cachedImage = imageCache.object(forKey: requestURL.absoluteString as NSString) {
             let image = cachedImage
             completion(image)
+            return
         } else {
             let task = session.downloadTask(with: requestURL) { (urlResponse, _, error) in
                 guard let url = urlResponse, error == nil else {
