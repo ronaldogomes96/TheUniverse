@@ -13,10 +13,17 @@ class ApiModel {
 
     var listOfImages: UIImage?
     var responseStruct: Response?
+    let session: URLSession
     private let imageCache = NSCache<NSString, UIImage>()
 
-    func nasaApiCall( celestialBodyNames: String, indexImage: Int, session: URLSession = URLSession.shared, completion: @escaping (UIImage?) -> Void) {
+    init(session: URLSession = URLSession.shared) {
+        self.session = session
+    }
 
+    func nasaApiCall( celestialBodyNames: String,
+                      indexImage: Int,
+                      fecthImage: @escaping (String, @escaping (UIImage?) -> Void) -> () = fetchImage(ApiModel()),
+                      completion: @escaping (UIImage?) -> Void) {
         listOfImages = nil
         let celestialBodyEnglishName = CelestialBodyNames(rawValue: celestialBodyNames)!.englishNameOfCelestialBody
         let repository = Repository(filename: celestialBodyNames)
@@ -40,7 +47,7 @@ class ApiModel {
                 let group = DispatchGroup()
                 group.enter()
 
-                self.fetchImage(urlString: imageUrl!) { image in
+                fecthImage(imageUrl!) { image in
                     self.listOfImages = image
                     group.leave()
                 }
@@ -56,7 +63,8 @@ class ApiModel {
         task.resume()
     }
 
-    func fetchImage(urlString: String, session: URLSession = URLSession.shared, completion: @escaping (UIImage?) -> Void) {
+    func fetchImage(urlString: String,
+                    completion: @escaping (UIImage?) -> Void) {
 
         let requestURL = requestUrl(url: urlString)
 

@@ -7,17 +7,20 @@
 //
 
 import Foundation
+import UIKit
 @testable import TheUniverse
 
 class DataTaskMock: URLSessionDataTask {
+    var mockData: TestDataTaskDataMock?
     var calledResume = false
     var completion: (Data?, URLResponse?, Error?) -> Void
 
-    init(completion: @escaping (Data?, URLResponse?, Error?) -> Void) {
+    init(mockData: TestDataTaskDataMock? = nil, completion: @escaping (Data?, URLResponse?, Error?) -> Void) {
         self.completion = completion
+        self.mockData = mockData
     }
     override func resume() {
         calledResume = true
-        completion(nil,nil,nil)
+        self.completion(mockData?.testData, mockData?.testResponse, mockData?.testError)
     }
 }

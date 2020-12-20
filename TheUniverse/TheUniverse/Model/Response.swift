@@ -9,18 +9,18 @@
 import Foundation
 import UIKit
 
-struct Response: Decodable {
+struct Response: Codable {
     let collection: Collection
 }
 
-struct Collection: Decodable {
+struct Collection: Codable {
     let items: [Items]
 }
 
-struct Items: Decodable {
+struct Items: Codable {
     var links: [Links]
 }
 
-struct Links: Decodable {
+struct Links: Codable {
     var href: String
 }
