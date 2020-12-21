@@ -22,7 +22,7 @@ class CelestialBodyTableViewController: UITableViewController {
         }
     }
 
-    let celestialBodyDescriptionModel = CelestialBodyDescriptionModel()
+    let celestialBodyModel = CelestialBodyModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,7 +61,7 @@ class CelestialBodyTableViewController: UITableViewController {
         let celestialBodyData = CelestialBodyDataViewController()
         celestialBodyData.celestialBodyName = celestialBodyNames![indexPath.row]
         celestialBodyData.celestialBodyInfos =
-            celestialBodyDescriptionModel.getCelestialBodyDescription(celestialBody:
+            celestialBodyModel.getCelestialBodyDescription(celestialBody:
             celestialBodyNames![indexPath.row])
         navigationController?.pushViewController(celestialBodyData, animated: true)
     }
