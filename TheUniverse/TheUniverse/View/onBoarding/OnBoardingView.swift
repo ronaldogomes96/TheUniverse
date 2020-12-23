@@ -18,7 +18,6 @@ class OnBoardingView: UIView {
         label.textColor = .defaultGrey
         label.numberOfLines = 0
         label.text = """
-
         The Universe é o aplicativo ideal para quem quer se aventurar nas curiosidades do universo.
 
         1. Clique nos corpos celestes para ver suas informações e curiosidades.
@@ -37,7 +36,8 @@ class OnBoardingView: UIView {
         button.setTitle("IR PARA O UNIVERSO", for: .normal)
         button.backgroundColor = .defaultGreen
         button.titleLabel!.font = UIFont.SFProRoundedTitle
-        button.titleLabel!.textColor = .defaultBlack
+        button.titleLabel!.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
+        button.setTitleColor(.defaultBlack, for: .normal)
         button.addTarget(self, action: #selector(dismiss), for: .touchUpInside)
         return button
     }()
@@ -70,10 +70,11 @@ class OnBoardingView: UIView {
 
         self.addSubview(startButton)
         startButton.translatesAutoresizingMaskIntoConstraints = false
+        startButton.layer.cornerRadius = 15
         NSLayoutConstraint.activate([
-            startButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            startButton.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -90),
-            startButton.widthAnchor.constraint(equalTo: bodyLabel.widthAnchor, multiplier: 1),
+            startButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -50),
+            startButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            startButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
             startButton.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
