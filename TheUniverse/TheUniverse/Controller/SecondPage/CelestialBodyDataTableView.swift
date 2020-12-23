@@ -42,6 +42,7 @@ extension CelestialBodyDataViewController: UITableViewDelegate, UITableViewDataS
                 fatalError()
             }
 
+            cell.isUserInteractionEnabled = false
             cell.celestialBodyName = celestialBodyName
             cell.indexPathForCell = indexPath.row
             cell.setupImage()
