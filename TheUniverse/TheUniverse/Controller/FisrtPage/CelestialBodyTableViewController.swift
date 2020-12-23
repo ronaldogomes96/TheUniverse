@@ -30,6 +30,7 @@ class CelestialBodyTableViewController: UITableViewController {
         self.tabBarController?.tabBar.tintColor = .defaultGreen
         setupNavigationController()
         tableView.register(CelestialBodyTableViewCell.self, forCellReuseIdentifier: "celestialBodyCell")
+        tableView.separatorStyle = .none
     }
 
     override func viewWillDisappear(_ animated: Bool) {
