@@ -35,8 +35,6 @@
 		770E996224EE9D3E00C59F30 /* charon.json in Resources */ = {isa = PBXBuildFile; fileRef = 770E996124EE9D3E00C59F30 /* charon.json */; };
 		770E996424EE9D4800C59F30 /* sun.json in Resources */ = {isa = PBXBuildFile; fileRef = 770E996324EE9D4800C59F30 /* sun.json */; };
 		770E996624EEA59A00C59F30 /* CelestialBodyDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770E996524EEA59A00C59F30 /* CelestialBodyDescription.swift */; };
-		770E996824EEA5DC00C59F30 /* CelestialBodyDescriptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770E996724EEA5DC00C59F30 /* CelestialBodyDescriptionModel.swift */; };
-		770E996A24EEA9F400C59F30 /* CelestialBodyDescriptionModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770E996924EEA9F400C59F30 /* CelestialBodyDescriptionModelTests.swift */; };
 		770E996D24EEBDEA00C59F30 /* CelestialBodyDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770E996C24EEBDEA00C59F30 /* CelestialBodyDataViewController.swift */; };
 		7723D9F5258FD9A200CDDF4A /* TestDownloadTaskDataMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7723D9F4258FD9A200CDDF4A /* TestDownloadTaskDataMock.swift */; };
 		77397BF424BCD47A005EEF22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77397BF324BCD47A005EEF22 /* AppDelegate.swift */; };
@@ -122,8 +120,6 @@
 		770E996124EE9D3E00C59F30 /* charon.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = charon.json; sourceTree = "<group>"; };
 		770E996324EE9D4800C59F30 /* sun.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sun.json; sourceTree = "<group>"; };
 		770E996524EEA59A00C59F30 /* CelestialBodyDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialBodyDescription.swift; sourceTree = "<group>"; };
-		770E996724EEA5DC00C59F30 /* CelestialBodyDescriptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialBodyDescriptionModel.swift; sourceTree = "<group>"; };
-		770E996924EEA9F400C59F30 /* CelestialBodyDescriptionModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialBodyDescriptionModelTests.swift; sourceTree = "<group>"; };
 		770E996C24EEBDEA00C59F30 /* CelestialBodyDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialBodyDataViewController.swift; sourceTree = "<group>"; };
 		7723D9F4258FD9A200CDDF4A /* TestDownloadTaskDataMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDownloadTaskDataMock.swift; sourceTree = "<group>"; };
 		77397BF024BCD47A005EEF22 /* TheUniverse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheUniverse.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -300,15 +296,14 @@
 			isa = PBXGroup;
 			children = (
 				7739DC3824E8F07800C51E70 /* Data */,
-				7739DC3E24E8F7F900C51E70 /* CelestialBody.swift */,
 				7739DC4024E8FCF300C51E70 /* CelestialBodyModel.swift */,
 				777A350924ED6A8500B4874E /* CelestialBodyNames.swift */,
+				774EC1EF250449A200152774 /* Repository.swift */,
 				777A350524ED660900B4874E /* ApiModel.swift */,
+				7739DC3E24E8F7F900C51E70 /* CelestialBody.swift */,
+				770E996524EEA59A00C59F30 /* CelestialBodyDescription.swift */,
 				777A350724ED664700B4874E /* Response.swift */,
 				774EC1ED250447B300152774 /* CelestialBodyImages.swift */,
-				774EC1EF250449A200152774 /* Repository.swift */,
-				770E996724EEA5DC00C59F30 /* CelestialBodyDescriptionModel.swift */,
-				770E996524EEA59A00C59F30 /* CelestialBodyDescription.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -411,7 +406,6 @@
 			children = (
 				773BD2C0257ED15D003D78BF /* Mocks */,
 				77DC2D6624EAC6A4004275A4 /* CelestialBodyModelTests.swift */,
-				770E996924EEA9F400C59F30 /* CelestialBodyDescriptionModelTests.swift */,
 				77B103B824F21B7800AFEB55 /* CelestialBodyNamesTests.swift */,
 				77D828E8258174E600E97882 /* ApiModelTests.swift */,
 				77DC2D6024EAC61E004275A4 /* Info.plist */,
@@ -612,7 +606,6 @@
 				770A634824E6DF1B0072A235 /* CelestialBodyTableViewController.swift in Sources */,
 				7751B6F224F7DA1200833E58 /* OnBoardingView.swift in Sources */,
 				777A350A24ED6A8500B4874E /* CelestialBodyNames.swift in Sources */,
-				770E996824EEA5DC00C59F30 /* CelestialBodyDescriptionModel.swift in Sources */,
 				777A350824ED664700B4874E /* Response.swift in Sources */,
 				770A634424E6DC2F0072A235 /* TabBarViewController.swift in Sources */,
 				77397BF624BCD47A005EEF22 /* SceneDelegate.swift in Sources */,
@@ -649,7 +642,6 @@
 				77A2BB22258D8550002E4C4B /* ApiModelMock.swift in Sources */,
 				77B103B924F21B7800AFEB55 /* CelestialBodyNamesTests.swift in Sources */,
 				7701024A258C138600B3CEB1 /* DownloadTaskMock.swift in Sources */,
-				770E996A24EEA9F400C59F30 /* CelestialBodyDescriptionModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
