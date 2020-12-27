@@ -106,15 +106,21 @@ class CelestialBodyDescriptionTableViewCell: UITableViewCell {
         if let urlImages = urlImage, urlImages.urlOfCelestialBodyImages.count > indexPathForCell! {
             apiModel.fetchImage(urlString: urlImages.urlOfCelestialBodyImages[indexPathForCell!]) { image in
                 DispatchQueue.main.async {
-                    self.celestialBodyImage.image = image
-                    self.listOfImages.append(image!)
+                    guard let newImage = image else {
+                        return
+                    }
+                    self.celestialBodyImage.image = newImage
+                    self.listOfImages.append(newImage)
                 }
             }
         } else {
             apiModel.nasaApiCall(celestialBodyNames: celestialBodyName!, indexImage: indexPathForCell!) { image in
                 DispatchQueue.main.async {
-                    self.celestialBodyImage.image = image
-                    self.listOfImages.append(image!)
+                    guard let newImage = image else {
+                        return
+                    }
+                    self.celestialBodyImage.image = newImage
+                    self.listOfImages.append(newImage)
                 }
             }
         }
