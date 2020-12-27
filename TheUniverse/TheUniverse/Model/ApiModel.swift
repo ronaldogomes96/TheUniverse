@@ -41,6 +41,11 @@ class ApiModel {
             do {
 
                 self.responseStruct = try JSONDecoder().decode(Response.self, from: data)
+                if (self.responseStruct!.collection.items.count <= indexImage) {
+                    completion(nil)
+                    return
+                }
+
                 let imageUrl = self.responseStruct!.collection.items[indexImage].links.first?.href
                 _ = repository.save(imageUrl!)
 

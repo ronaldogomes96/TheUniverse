@@ -41,7 +41,7 @@ enum CelestialBodyNames: String {
         case .earth:
             return "earth"
         case .mars:
-            return "mars"
+            return "mars-planet"
         case .jupiter:
             return "jupiter"
         case .saturn:

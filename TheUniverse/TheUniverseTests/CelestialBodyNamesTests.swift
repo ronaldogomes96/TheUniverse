@@ -25,7 +25,7 @@ class CelestialBodyNamesTests: XCTestCase {
                                              "Encélado", "Titânia", "Tritão",
                                              "Caronte", "Sol"]
         let celestialBodyEnglish = ["mercury", "venus", "earth",
-                                    "mars", "jupiter", "saturn",
+                                    "mars-planet", "jupiter", "saturn",
                                     "uranus", "neptune", "pluto",
                                     "moon", "phobos", "ganymede",
                                     "callisto", "io", "titan",
