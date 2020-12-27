@@ -26,11 +26,13 @@ class CelestialBodyTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .black
+        self.view.backgroundColor = .clear
+        tableView.backgroundView = UIImageView(image: UIImage(named: "cosmos"))
         self.tabBarController?.tabBar.tintColor = .defaultGreen
-        setupNavigationController()
         tableView.register(CelestialBodyTableViewCell.self, forCellReuseIdentifier: "celestialBodyCell")
         tableView.separatorStyle = .none
+        
+        setupNavigationController()
     }
 
     override func viewWillDisappear(_ animated: Bool) {

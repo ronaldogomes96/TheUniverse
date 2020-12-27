@@ -51,9 +51,9 @@ class CelestialBodyDescriptionTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         listOfImages = []
-        self.backgroundColor = .black
+        self.backgroundColor = .clear
         self.clipsToBounds = true
-        self.isSelected = false
+        self.selectionStyle = .none
         self.setupCelestialBodyTittleConstraints()
         self.setupCelestialBodyDescriptionConstraints()
         self.setupCelestialBodyImageConstraints()

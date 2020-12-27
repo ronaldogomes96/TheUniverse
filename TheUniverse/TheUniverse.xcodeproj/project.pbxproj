@@ -16,7 +16,7 @@
 		770E993C24EE9C3300C59F30 /* mercury.json in Resources */ = {isa = PBXBuildFile; fileRef = 770E993B24EE9C3300C59F30 /* mercury.json */; };
 		770E993E24EE9C4C00C59F30 /* venus.json in Resources */ = {isa = PBXBuildFile; fileRef = 770E993D24EE9C4C00C59F30 /* venus.json */; };
 		770E994024EE9C5D00C59F30 /* earth.json in Resources */ = {isa = PBXBuildFile; fileRef = 770E993F24EE9C5D00C59F30 /* earth.json */; };
-		770E994224EE9C7400C59F30 /* mars.json in Resources */ = {isa = PBXBuildFile; fileRef = 770E994124EE9C7400C59F30 /* mars.json */; };
+		770E994224EE9C7400C59F30 /* mars-planet.json in Resources */ = {isa = PBXBuildFile; fileRef = 770E994124EE9C7400C59F30 /* mars-planet.json */; };
 		770E994424EE9C8100C59F30 /* jupiter.json in Resources */ = {isa = PBXBuildFile; fileRef = 770E994324EE9C8100C59F30 /* jupiter.json */; };
 		770E994624EE9CB100C59F30 /* saturn.json in Resources */ = {isa = PBXBuildFile; fileRef = 770E994524EE9CB100C59F30 /* saturn.json */; };
 		770E994824EE9CBC00C59F30 /* uranus.json in Resources */ = {isa = PBXBuildFile; fileRef = 770E994724EE9CBC00C59F30 /* uranus.json */; };
@@ -101,7 +101,7 @@
 		770E993B24EE9C3300C59F30 /* mercury.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mercury.json; sourceTree = "<group>"; };
 		770E993D24EE9C4C00C59F30 /* venus.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = venus.json; sourceTree = "<group>"; };
 		770E993F24EE9C5D00C59F30 /* earth.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = earth.json; sourceTree = "<group>"; };
-		770E994124EE9C7400C59F30 /* mars.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mars.json; sourceTree = "<group>"; };
+		770E994124EE9C7400C59F30 /* mars-planet.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "mars-planet.json"; sourceTree = "<group>"; };
 		770E994324EE9C8100C59F30 /* jupiter.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = jupiter.json; sourceTree = "<group>"; };
 		770E994524EE9CB100C59F30 /* saturn.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = saturn.json; sourceTree = "<group>"; };
 		770E994724EE9CBC00C59F30 /* uranus.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = uranus.json; sourceTree = "<group>"; };
@@ -338,7 +338,7 @@
 				770E993B24EE9C3300C59F30 /* mercury.json */,
 				770E993D24EE9C4C00C59F30 /* venus.json */,
 				770E993F24EE9C5D00C59F30 /* earth.json */,
-				770E994124EE9C7400C59F30 /* mars.json */,
+				770E994124EE9C7400C59F30 /* mars-planet.json */,
 				770E994324EE9C8100C59F30 /* jupiter.json */,
 				770E994524EE9CB100C59F30 /* saturn.json */,
 				770E994724EE9CBC00C59F30 /* uranus.json */,
@@ -519,7 +519,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				770E994224EE9C7400C59F30 /* mars.json in Resources */,
+				770E994224EE9C7400C59F30 /* mars-planet.json in Resources */,
 				770E993C24EE9C3300C59F30 /* mercury.json in Resources */,
 				770E996224EE9D3E00C59F30 /* charon.json in Resources */,
 				770E995624EE9D0500C59F30 /* enceladus.json in Resources */,

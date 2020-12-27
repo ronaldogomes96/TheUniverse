@@ -12,8 +12,9 @@ class CelestialBodyDataViewController: UIViewController {
 
     var celestialBodyDescriptionTableView: UITableView = {
         let table = UITableView()
-        table.backgroundColor = .black
+        table.backgroundColor = .clear
         table.separatorStyle = .none
+        table.backgroundView = UIImageView(image: UIImage(named: "cosmos"))
         return table
     }()
 
