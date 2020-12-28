@@ -11,14 +11,6 @@ import Foundation
 
 class CelestialBodyTableViewCell: UITableViewCell {
 
-    let backgroundImage: UIImageView = {
-        let image = UIImageView()
-        image.contentMode = .scaleAspectFill
-        image.clipsToBounds = false
-        image.backgroundColor = .defaultBlack
-        return image
-    }()
-
     let celestialBodyNameLabel: UILabel = {
         let label = UILabel()
         label.textColor = .defaultGrey
@@ -41,8 +33,6 @@ class CelestialBodyTableViewCell: UITableViewCell {
         celestialBodyImageView.image = nil
     }
 
-    let cosmosImage = UIImage(named: "cosmos.jpg")
-
     var celestialBodyName: String? {
         didSet {
             celestialBodyNameLabel.text = celestialBodyName
@@ -57,31 +47,15 @@ class CelestialBodyTableViewCell: UITableViewCell {
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        backgroundImage.image = cosmosImage
+        self.backgroundColor = .clear
+        self.selectionStyle = .none
         self.clipsToBounds = true
-        setupcbackgroundImage()
         setupcCelestialBodyImageView()
         setupcCelestialBodyNameLabel()
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-
-    func setupcbackgroundImage() {
-        self.addSubview(backgroundImage)
-        backgroundImage.translatesAutoresizingMaskIntoConstraints = false
-
-        NSLayoutConstraint.activate([
-            self.backgroundImage.bottomAnchor.constraint(equalTo:
-                self.bottomAnchor, constant: 0),
-            self.backgroundImage.topAnchor.constraint(equalTo:
-                self.topAnchor, constant: 0),
-            self.backgroundImage.leadingAnchor.constraint(equalTo:
-                self.leadingAnchor, constant: 0),
-            self.backgroundImage.trailingAnchor.constraint(equalTo:
-                self.trailingAnchor, constant: 0)
-        ])
     }
 
     func setupcCelestialBodyImageView() {

@@ -47,7 +47,6 @@ class CelestialBodyImageViewController: UIViewController {
     @objc
     func downloadTapped() {
         guard let image = celestialBodyImageView.image else {
-            print("Erro em salvar a imagem")
             return
         }
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)

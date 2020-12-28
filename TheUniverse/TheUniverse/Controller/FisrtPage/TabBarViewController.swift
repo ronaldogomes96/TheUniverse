@@ -15,10 +15,10 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
-
+        view.backgroundColor = .clear
+        self.tabBar.isTranslucent = false
         self.tabBar.barTintColor = .defaultBlack
         updatePage()
-
     }
 
     func updatePage() {
@@ -53,5 +53,4 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
             }
         }
     }
-
 }

@@ -30,6 +30,7 @@ class CelestialBodyImagesTableViewCell: UITableViewCell {
         imagesCollectionView.dataSource = self
         self.contentView.isUserInteractionEnabled = false
         self.isSelected = false
+        self.backgroundColor = .clear
         imagesCollectionView.register(
             CelestialBodyImagesCollectionViewCell.self,
             forCellWithReuseIdentifier: "imagesCell" )

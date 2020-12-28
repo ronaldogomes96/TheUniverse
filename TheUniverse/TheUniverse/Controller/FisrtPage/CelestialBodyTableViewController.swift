@@ -22,14 +22,17 @@ class CelestialBodyTableViewController: UITableViewController {
         }
     }
 
-    let celestialBodyDescriptionModel = CelestialBodyDescriptionModel()
+    let celestialBodyModel = CelestialBodyModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .black
+        self.view.backgroundColor = .clear
+        tableView.backgroundView = UIImageView(image: UIImage(named: "cosmos"))
         self.tabBarController?.tabBar.tintColor = .defaultGreen
-        setupNavigationController()
         tableView.register(CelestialBodyTableViewCell.self, forCellReuseIdentifier: "celestialBodyCell")
+        tableView.separatorStyle = .none
+        
+        setupNavigationController()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -61,7 +64,7 @@ class CelestialBodyTableViewController: UITableViewController {
         let celestialBodyData = CelestialBodyDataViewController()
         celestialBodyData.celestialBodyName = celestialBodyNames![indexPath.row]
         celestialBodyData.celestialBodyInfos =
-            celestialBodyDescriptionModel.getCelestialBodyDescription(celestialBody:
+            celestialBodyModel.getCelestialBodyDescription(celestialBody:
             celestialBodyNames![indexPath.row])
         navigationController?.pushViewController(celestialBodyData, animated: true)
     }
