@@ -57,9 +57,9 @@ class CelestialBodyModel {
     func getCelestialBodyDescription(celestialBody: String) -> CelestialBodyDescription? {
 
         let celestialBodyName = CelestialBodyNames(rawValue: celestialBody)?.englishNameOfCelestialBody
-        let celestialBodyDescriptionFromJson = getCelestialBodyDescriptionFromJson(jsonName: celestialBodyName!)
+        let celestialBodyDescriptionFromJson = getCelestialBodyDescriptionFromJson(jsonName: celestialBodyName ?? "none")
 
-        return celestialBodyDescriptionFromJson ?? nil
+        return celestialBodyDescriptionFromJson
     }
 
     func getCelestialBodyDescriptionFromJson(jsonName: String) -> CelestialBodyDescription? {

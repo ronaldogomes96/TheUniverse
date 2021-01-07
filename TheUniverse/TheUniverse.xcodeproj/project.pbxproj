@@ -57,6 +57,7 @@
 		775237912530F954001DC0BB /* CelestialBodyImagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775237902530F954001DC0BB /* CelestialBodyImagesTableViewCell.swift */; };
 		77682AA3252FE4A300572839 /* CelestialBodyDataTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77682AA2252FE4A300572839 /* CelestialBodyDataTableView.swift */; };
 		77682AA8252FE72500572839 /* InformationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77682AA7252FE72500572839 /* InformationsTableViewCell.swift */; };
+		7775FE66259D41B30094AE06 /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7775FE65259D41B30094AE06 /* RepositoryTests.swift */; };
 		777A350624ED660900B4874E /* ApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777A350524ED660900B4874E /* ApiModel.swift */; };
 		777A350824ED664700B4874E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777A350724ED664700B4874E /* Response.swift */; };
 		777A350A24ED6A8500B4874E /* CelestialBodyNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777A350924ED6A8500B4874E /* CelestialBodyNames.swift */; };
@@ -144,6 +145,7 @@
 		775237902530F954001DC0BB /* CelestialBodyImagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialBodyImagesTableViewCell.swift; sourceTree = "<group>"; };
 		77682AA2252FE4A300572839 /* CelestialBodyDataTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialBodyDataTableView.swift; sourceTree = "<group>"; };
 		77682AA7252FE72500572839 /* InformationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationsTableViewCell.swift; sourceTree = "<group>"; };
+		7775FE65259D41B30094AE06 /* RepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTests.swift; sourceTree = "<group>"; };
 		777A350524ED660900B4874E /* ApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiModel.swift; sourceTree = "<group>"; };
 		777A350724ED664700B4874E /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		777A350924ED6A8500B4874E /* CelestialBodyNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialBodyNames.swift; sourceTree = "<group>"; };
@@ -409,6 +411,7 @@
 				77B103B824F21B7800AFEB55 /* CelestialBodyNamesTests.swift */,
 				77D828E8258174E600E97882 /* ApiModelTests.swift */,
 				77DC2D6024EAC61E004275A4 /* Info.plist */,
+				7775FE65259D41B30094AE06 /* RepositoryTests.swift */,
 			);
 			path = TheUniverseTests;
 			sourceTree = "<group>";
@@ -636,6 +639,7 @@
 				773BD2C2257ED172003D78BF /* URLSessionMock.swift in Sources */,
 				773BD2D2257ED18D003D78BF /* DataTaskMock.swift in Sources */,
 				7723D9F5258FD9A200CDDF4A /* TestDownloadTaskDataMock.swift in Sources */,
+				7775FE66259D41B30094AE06 /* RepositoryTests.swift in Sources */,
 				77DC2D6724EAC6A4004275A4 /* CelestialBodyModelTests.swift in Sources */,
 				773BD2D7257ED1AB003D78BF /* TestDataTaskDataMock.swift in Sources */,
 				77D828E9258174E700E97882 /* ApiModelTests.swift in Sources */,

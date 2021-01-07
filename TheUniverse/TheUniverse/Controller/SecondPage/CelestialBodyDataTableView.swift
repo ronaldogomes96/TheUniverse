@@ -47,6 +47,8 @@ extension CelestialBodyDataViewController: UITableViewDelegate, UITableViewDataS
             cell.setupImage()
             cell.celestialBodyTittleLabel.text = celestialBodyInfos?.info[indexPath.row].title
             cell.celestialBodyDescriptionLabel.text = celestialBodyInfos?.info[indexPath.row].description
+            CelestialBodyDescriptionTableViewCell.celestialBodyInformationForSpeech +=
+                celestialBodyInfos?.info[indexPath.row].description ?? ""
             return cell
         }
     }

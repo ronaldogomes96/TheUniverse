@@ -76,7 +76,7 @@ class CelestialBodyModelTests: XCTestCase {
         //Then
         XCTAssertNotNil(celestialBodyStruct)
     }
-    
+
     func test_getCelestialBodyDescription_marsDescriptionData_returnsMarsDescriptionIntroduction() {
 
         //Given
@@ -88,6 +88,18 @@ class CelestialBodyModelTests: XCTestCase {
 
         //Then
         XCTAssertEqual(marsDescriptionFromJson?.info[0].description, marsDescription)
+    }
+    
+    func test_getCelestialBodyDescription_celestialBodyNotExists_structNil() {
+
+        //Given
+        let sut = CelestialBodyModel()
+
+        //When
+        let celestialBodyDescriptionStruct = sut.getCelestialBodyDescription(celestialBody: "none")
+
+        //then
+        XCTAssertNil(celestialBodyDescriptionStruct)
     }
 
     func test_getCelestialBodyDescriptionFromJson_celestialBodyDescriptionStruct_structNotNil() {
