@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class CelestialBodyDataViewController: UIViewController {
 
@@ -34,16 +35,27 @@ class CelestialBodyDataViewController: UIViewController {
 
         setupCelestialBodyTableView()
         setupNavigationController()
+
+        CelestialBodyDescriptionTableViewCell.celestialBodyInformationForSpeech = ""
+
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "speaker.wave.2"),
+                                                            style: .plain,
+                                                            target: self,
+                                                            action: #selector(speechTaped))
+
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         celestialBodyDescriptionTableView.rowHeight = UITableView.automaticDimension
+        CelestialBodyDescriptionTableViewCell.celestialBodyInformationForSpeech = ""
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.celestialBodyDescriptionTableView.reloadData()
+        CelestialBodyDescriptionTableViewCell.celestialBodyInformationForSpeech = ""
+        CelestialBodyDescriptionTableViewCell.speechSynthesizer.stopSpeaking(at: AVSpeechBoundary(rawValue: 0)!)
     }
 
     func setupCelestialBodyTableView() {
@@ -65,5 +77,9 @@ class CelestialBodyDataViewController: UIViewController {
         navigationController?.navigationBar.isTranslucent = false
         self.navigationItem.title = celestialBodyName
         navigationController!.navigationBar.tintColor = .defaultGreen
+    }
+
+    @objc func speechTaped() {
+        CelestialBodyDescriptionTableViewCell.setupSpeechSynthesizer()
     }
 }

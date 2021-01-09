@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class CelestialBodyDescriptionTableViewCell: UITableViewCell {
 
@@ -37,10 +38,12 @@ class CelestialBodyDescriptionTableViewCell: UITableViewCell {
         return image
     }()
 
+    static var celestialBodyInformationForSpeech: String = ""
     var listOfImages: [UIImage] = []
     var indexPathForCell: Int?
     var celestialBodyName: String?
     let apiModel = ApiModel()
+    static let speechSynthesizer = AVSpeechSynthesizer()
 
     override func prepareForReuse() {
         celestialBodyTittleLabel.text = ""
@@ -124,5 +127,15 @@ class CelestialBodyDescriptionTableViewCell: UITableViewCell {
                 }
             }
         }
+    }
+
+    static func setupSpeechSynthesizer() {
+        let speechUtterance: AVSpeechUtterance = AVSpeechUtterance(string:
+                                                                    CelestialBodyDescriptionTableViewCell
+                                                                    .celestialBodyInformationForSpeech)
+
+        speechUtterance.rate = AVSpeechUtteranceMaximumSpeechRate / 2.5
+        speechUtterance.voice = AVSpeechSynthesisVoice(language: "pt-BR")
+        CelestialBodyDescriptionTableViewCell.speechSynthesizer.speak(speechUtterance)
     }
 }
