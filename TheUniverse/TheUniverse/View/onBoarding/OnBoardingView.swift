@@ -18,7 +18,7 @@ class OnBoardingView: UIView {
         label.textColor = .defaultGrey
         label.numberOfLines = 0
         label.text = """
-        The Universe é o aplicativo ideal para quem quer se aventurar nas curiosidades do universo.
+        TheUniverse é o aplicativo ideal para quem quer se aventurar nas curiosidades do universo.
 
         1. Clique nos corpos celestes para ver suas informações e curiosidades.
 
@@ -33,7 +33,7 @@ class OnBoardingView: UIView {
 
     lazy var startButton: UIButton = {
         let button = UIButton()
-        button.setTitle("IR PARA O UNIVERSO", for: .normal)
+        button.setTitle("Ir para TheUniverse", for: .normal)
         button.backgroundColor = .defaultGreen
         button.titleLabel!.font = UIFont.SFProRoundedTitle
         button.titleLabel!.font = UIFont.systemFont(ofSize: 20, weight: .semibold)

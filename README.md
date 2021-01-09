@@ -5,6 +5,8 @@ The Universe is an iOS astronomy app, which has information on size, formation, 
 
 ![Alt text](https://github.com/ronaldogomes96/TheUniverse/blob/master/prototype.png?raw=true "prototype")
 
+## TestFlight
+Test the beta version on testflight: [Link](https://testflight.apple.com/join/IFyqpbg4)
 
 ## API's 
 
