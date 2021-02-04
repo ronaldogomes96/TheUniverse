@@ -11,7 +11,6 @@
 		770A633C24E6BD730072A235 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 770A633B24E6BD730072A235 /* .swiftlint.yml */; };
 		770A634024E6CA600072A235 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770A633F24E6CA600072A235 /* Colors.swift */; };
 		770A634224E6CC2D0072A235 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770A634124E6CC2D0072A235 /* Fonts.swift */; };
-		770A634424E6DC2F0072A235 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770A634324E6DC2F0072A235 /* TabBarViewController.swift */; };
 		770A634824E6DF1B0072A235 /* CelestialBodyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770A634724E6DF1B0072A235 /* CelestialBodyTableViewController.swift */; };
 		770E993C24EE9C3300C59F30 /* mercury.json in Resources */ = {isa = PBXBuildFile; fileRef = 770E993B24EE9C3300C59F30 /* mercury.json */; };
 		770E993E24EE9C4C00C59F30 /* venus.json in Resources */ = {isa = PBXBuildFile; fileRef = 770E993D24EE9C4C00C59F30 /* venus.json */; };
@@ -69,6 +68,8 @@
 		77B103C324F2227900AFEB55 /* FisrtPageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B103C224F2227900AFEB55 /* FisrtPageUITests.swift */; };
 		77B103CB24F2270700AFEB55 /* SecondPageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B103CA24F2270700AFEB55 /* SecondPageUITests.swift */; };
 		77B103CD24F2286A00AFEB55 /* ThirdPageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B103CC24F2286A00AFEB55 /* ThirdPageUITests.swift */; };
+		77B1230725CC25A50011FF32 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B1230625CC25A50011FF32 /* TabBarViewModel.swift */; };
+		77B7A91E25CC24AD00ACBDCD /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B7A91D25CC24AD00ACBDCD /* TabBarController.swift */; };
 		77D828E9258174E700E97882 /* ApiModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D828E8258174E600E97882 /* ApiModelTests.swift */; };
 		77DC2D6724EAC6A4004275A4 /* CelestialBodyModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DC2D6624EAC6A4004275A4 /* CelestialBodyModelTests.swift */; };
 		77DC2D6924EAFECF004275A4 /* CelestialBodyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DC2D6824EAFECF004275A4 /* CelestialBodyTableViewCell.swift */; };
@@ -97,7 +98,6 @@
 		770A633B24E6BD730072A235 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		770A633F24E6CA600072A235 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		770A634124E6CC2D0072A235 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
-		770A634324E6DC2F0072A235 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = TheUniverse/Controller/FisrtPage/TabBarViewController.swift; sourceTree = SOURCE_ROOT; };
 		770A634724E6DF1B0072A235 /* CelestialBodyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialBodyTableViewController.swift; sourceTree = "<group>"; };
 		770E993B24EE9C3300C59F30 /* mercury.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mercury.json; sourceTree = "<group>"; };
 		770E993D24EE9C4C00C59F30 /* venus.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = venus.json; sourceTree = "<group>"; };
@@ -159,6 +159,8 @@
 		77B103C424F2227900AFEB55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77B103CA24F2270700AFEB55 /* SecondPageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageUITests.swift; sourceTree = "<group>"; };
 		77B103CC24F2286A00AFEB55 /* ThirdPageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPageUITests.swift; sourceTree = "<group>"; };
+		77B1230625CC25A50011FF32 /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
+		77B7A91D25CC24AD00ACBDCD /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		77C8A1CF251A965E0079D58C /* TheUniverse.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TheUniverse.entitlements; sourceTree = "<group>"; };
 		77D828E8258174E600E97882 /* ApiModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiModelTests.swift; sourceTree = "<group>"; };
 		77DC2D5C24EAC61E004275A4 /* TheUniverseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheUniverseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,7 +195,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		770A633D24E6C4DF0072A235 /* FirstPage */ = {
+		770A633D24E6C4DF0072A235 /* ListOfCelestialBody */ = {
 			isa = PBXGroup;
 			children = (
 				77F9760624EC3F830051E8BC /* TabBar.storyboard */,
@@ -201,7 +203,7 @@
 				773BFA3D24E58DC90099B855 /* Satellites.storyboard */,
 				773BFA3F24E58DDA0099B855 /* Stars.storyboard */,
 			);
-			path = FirstPage;
+			path = ListOfCelestialBody;
 			sourceTree = "<group>";
 		};
 		770A633E24E6CA390072A235 /* Utils */ = {
@@ -213,14 +215,22 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		770A634624E6DCF40072A235 /* FisrtPage */ = {
+		770A634624E6DCF40072A235 /* ListOfCelestialBody */ = {
 			isa = PBXGroup;
 			children = (
-				770A634324E6DC2F0072A235 /* TabBarViewController.swift */,
+				77B7A91D25CC24AD00ACBDCD /* TabBarController.swift */,
 				770A634724E6DF1B0072A235 /* CelestialBodyTableViewController.swift */,
 				77DC2D6824EAFECF004275A4 /* CelestialBodyTableViewCell.swift */,
 			);
-			path = FisrtPage;
+			path = ListOfCelestialBody;
+			sourceTree = "<group>";
+		};
+		770CD14E25CC2388002A121E /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				7751B6F324F7E5DC00833E58 /* OnBoardingViewController.swift */,
+			);
+			path = OnBoarding;
 			sourceTree = "<group>";
 		};
 		770E996B24EEBD6E00C59F30 /* SecondPage */ = {
@@ -261,7 +271,9 @@
 			children = (
 				77C8A1CF251A965E0079D58C /* TheUniverse.entitlements */,
 				77397C2324BCD6B2005EEF22 /* View */,
+				770A633E24E6CA390072A235 /* Utils */,
 				77397C2424BCD6BB005EEF22 /* Controller */,
+				77B1230425CC256A0011FF32 /* ViewModel */,
 				77397C2524BCD6C3005EEF22 /* Model */,
 				77397BFC24BCD47B005EEF22 /* Assets.xcassets */,
 				77397BF324BCD47A005EEF22 /* AppDelegate.swift */,
@@ -275,10 +287,11 @@
 		77397C2324BCD6B2005EEF22 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7751B6F024F7D9F200833E58 /* onBoarding */,
-				77397BFE24BCD47B005EEF22 /* LaunchScreen.storyboard */,
-				770A633D24E6C4DF0072A235 /* FirstPage */,
-				770A633E24E6CA390072A235 /* Utils */,
+				77BE522225CC1E2100CC07A8 /* LaunchScreen */,
+				7751B6F024F7D9F200833E58 /* OnBoarding */,
+				770A633D24E6C4DF0072A235 /* ListOfCelestialBody */,
+				77BE522625CC1E5B00CC07A8 /* CelestialBodyDescription */,
+				77BE522725CC1E6700CC07A8 /* CelestialBodyImage */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -286,8 +299,8 @@
 		77397C2424BCD6BB005EEF22 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7751B6F324F7E5DC00833E58 /* OnBoardingViewController.swift */,
-				770A634624E6DCF40072A235 /* FisrtPage */,
+				770CD14E25CC2388002A121E /* OnBoarding */,
+				770A634624E6DCF40072A235 /* ListOfCelestialBody */,
 				770E996B24EEBD6E00C59F30 /* SecondPage */,
 				7783609F24F0132700191F50 /* ThirdPage */,
 			);
@@ -350,12 +363,12 @@
 			path = Planets;
 			sourceTree = "<group>";
 		};
-		7751B6F024F7D9F200833E58 /* onBoarding */ = {
+		7751B6F024F7D9F200833E58 /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
 				7751B6F124F7DA1200833E58 /* OnBoardingView.swift */,
 			);
-			path = onBoarding;
+			path = OnBoarding;
 			sourceTree = "<group>";
 		};
 		7783609F24F0132700191F50 /* ThirdPage */ = {
@@ -375,6 +388,44 @@
 				77B103CC24F2286A00AFEB55 /* ThirdPageUITests.swift */,
 			);
 			path = TheUniverseUITests;
+			sourceTree = "<group>";
+		};
+		77B1230425CC256A0011FF32 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				77B1230525CC25880011FF32 /* ListOfCelestialBody */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		77B1230525CC25880011FF32 /* ListOfCelestialBody */ = {
+			isa = PBXGroup;
+			children = (
+				77B1230625CC25A50011FF32 /* TabBarViewModel.swift */,
+			);
+			path = ListOfCelestialBody;
+			sourceTree = "<group>";
+		};
+		77BE522225CC1E2100CC07A8 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				77397BFE24BCD47B005EEF22 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		77BE522625CC1E5B00CC07A8 /* CelestialBodyDescription */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CelestialBodyDescription;
+			sourceTree = "<group>";
+		};
+		77BE522725CC1E6700CC07A8 /* CelestialBodyImage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CelestialBodyImage;
 			sourceTree = "<group>";
 		};
 		77D6A825252BE97600A7FB06 /* Satellites */ = {
@@ -595,6 +646,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77B1230725CC25A50011FF32 /* TabBarViewModel.swift in Sources */,
 				770E996624EEA59A00C59F30 /* CelestialBodyDescription.swift in Sources */,
 				77682AA8252FE72500572839 /* InformationsTableViewCell.swift in Sources */,
 				7739DC4124E8FCF300C51E70 /* CelestialBodyModel.swift in Sources */,
@@ -604,13 +656,13 @@
 				774EC1F0250449A200152774 /* Repository.swift in Sources */,
 				770A634024E6CA600072A235 /* Colors.swift in Sources */,
 				7739DC3F24E8F7F900C51E70 /* CelestialBody.swift in Sources */,
+				77B7A91E25CC24AD00ACBDCD /* TabBarController.swift in Sources */,
 				777A350624ED660900B4874E /* ApiModel.swift in Sources */,
 				77397BF424BCD47A005EEF22 /* AppDelegate.swift in Sources */,
 				770A634824E6DF1B0072A235 /* CelestialBodyTableViewController.swift in Sources */,
 				7751B6F224F7DA1200833E58 /* OnBoardingView.swift in Sources */,
 				777A350A24ED6A8500B4874E /* CelestialBodyNames.swift in Sources */,
 				777A350824ED664700B4874E /* Response.swift in Sources */,
-				770A634424E6DC2F0072A235 /* TabBarViewController.swift in Sources */,
 				77397BF624BCD47A005EEF22 /* SceneDelegate.swift in Sources */,
 				778360A124F013E200191F50 /* CelestialBodyImageViewController.swift in Sources */,
 				774EC1EE250447B300152774 /* CelestialBodyImages.swift in Sources */,
