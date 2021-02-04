@@ -38,5 +38,6 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         view.backgroundColor = .clear
         self.tabBar.isTranslucent = false
         self.tabBar.barTintColor = .defaultBlack
+        self.tabBar.tintColor = .defaultGreen
     }
 }

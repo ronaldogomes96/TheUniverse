@@ -69,6 +69,7 @@
 		77B103CB24F2270700AFEB55 /* SecondPageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B103CA24F2270700AFEB55 /* SecondPageUITests.swift */; };
 		77B103CD24F2286A00AFEB55 /* ThirdPageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B103CC24F2286A00AFEB55 /* ThirdPageUITests.swift */; };
 		77B1230725CC25A50011FF32 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B1230625CC25A50011FF32 /* TabBarViewModel.swift */; };
+		77B1230C25CC3A610011FF32 /* CelestialBodyViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B1230B25CC3A610011FF32 /* CelestialBodyViewCell.swift */; };
 		77B7A91E25CC24AD00ACBDCD /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B7A91D25CC24AD00ACBDCD /* TabBarController.swift */; };
 		77D828E9258174E700E97882 /* ApiModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D828E8258174E600E97882 /* ApiModelTests.swift */; };
 		77DC2D6724EAC6A4004275A4 /* CelestialBodyModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DC2D6624EAC6A4004275A4 /* CelestialBodyModelTests.swift */; };
@@ -160,6 +161,7 @@
 		77B103CA24F2270700AFEB55 /* SecondPageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageUITests.swift; sourceTree = "<group>"; };
 		77B103CC24F2286A00AFEB55 /* ThirdPageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPageUITests.swift; sourceTree = "<group>"; };
 		77B1230625CC25A50011FF32 /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
+		77B1230B25CC3A610011FF32 /* CelestialBodyViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialBodyViewCell.swift; sourceTree = "<group>"; };
 		77B7A91D25CC24AD00ACBDCD /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		77C8A1CF251A965E0079D58C /* TheUniverse.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TheUniverse.entitlements; sourceTree = "<group>"; };
 		77D828E8258174E600E97882 /* ApiModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiModelTests.swift; sourceTree = "<group>"; };
@@ -198,10 +200,8 @@
 		770A633D24E6C4DF0072A235 /* ListOfCelestialBody */ = {
 			isa = PBXGroup;
 			children = (
-				77F9760624EC3F830051E8BC /* TabBar.storyboard */,
-				773BFA3B24E58DA60099B855 /* Planets.storyboard */,
-				773BFA3D24E58DC90099B855 /* Satellites.storyboard */,
-				773BFA3F24E58DDA0099B855 /* Stars.storyboard */,
+				7739F8E925CC4510008BD03B /* Storyboards */,
+				7739F8EA25CC4523008BD03B /* Cell */,
 			);
 			path = ListOfCelestialBody;
 			sourceTree = "<group>";
@@ -220,7 +220,6 @@
 			children = (
 				77B7A91D25CC24AD00ACBDCD /* TabBarController.swift */,
 				770A634724E6DF1B0072A235 /* CelestialBodyTableViewController.swift */,
-				77DC2D6824EAFECF004275A4 /* CelestialBodyTableViewCell.swift */,
 			);
 			path = ListOfCelestialBody;
 			sourceTree = "<group>";
@@ -332,6 +331,26 @@
 				77D6A829252BF20D00A7FB06 /* Star */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		7739F8E925CC4510008BD03B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				77F9760624EC3F830051E8BC /* TabBar.storyboard */,
+				773BFA3B24E58DA60099B855 /* Planets.storyboard */,
+				773BFA3D24E58DC90099B855 /* Satellites.storyboard */,
+				773BFA3F24E58DDA0099B855 /* Stars.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		7739F8EA25CC4523008BD03B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				77DC2D6824EAFECF004275A4 /* CelestialBodyTableViewCell.swift */,
+				77B1230B25CC3A610011FF32 /* CelestialBodyViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		773BD2C0257ED15D003D78BF /* Mocks */ = {
@@ -657,6 +676,7 @@
 				770A634024E6CA600072A235 /* Colors.swift in Sources */,
 				7739DC3F24E8F7F900C51E70 /* CelestialBody.swift in Sources */,
 				77B7A91E25CC24AD00ACBDCD /* TabBarController.swift in Sources */,
+				77B1230C25CC3A610011FF32 /* CelestialBodyViewCell.swift in Sources */,
 				777A350624ED660900B4874E /* ApiModel.swift in Sources */,
 				77397BF424BCD47A005EEF22 /* AppDelegate.swift in Sources */,
 				770A634824E6DF1B0072A235 /* CelestialBodyTableViewController.swift in Sources */,

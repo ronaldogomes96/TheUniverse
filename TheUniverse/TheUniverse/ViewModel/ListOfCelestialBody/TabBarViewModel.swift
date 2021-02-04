@@ -14,22 +14,17 @@ class TabBarViewModel {
 
     func getInformationsFromCelestialBody(indexOf: Int) -> ([String], [String]) {
 
-        var informationsFromCelestialBody: ([String], [String]) = ([""], [""])
-
         switch indexOf {
         case 0:
-            informationsFromCelestialBody =
-                celestialBody.getListOfNamesAndImagesOfCelestialBody(from: .planets) ?? ([""], [""])
+            return celestialBody.getListOfNamesAndImagesOfCelestialBody(from: .planets) ?? ([""], [""])
         case 1:
-            informationsFromCelestialBody =
-                celestialBody.getListOfNamesAndImagesOfCelestialBody(from: .satellites) ?? ([""], [""])
+            return celestialBody.getListOfNamesAndImagesOfCelestialBody(from: .satellites) ?? ([""], [""])
         case 2:
-            informationsFromCelestialBody =
-                celestialBody.getListOfNamesAndImagesOfCelestialBody(from: .stars) ?? ([""], [""])
+            return celestialBody.getListOfNamesAndImagesOfCelestialBody(from: .stars) ?? ([""], [""])
         default:
             print("Index out of range")
         }
 
-        return informationsFromCelestialBody
+        return ([""], [""])
     }
 }

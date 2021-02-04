@@ -22,37 +22,33 @@ class CelestialBodyTableViewController: UITableViewController {
         }
     }
 
-    let celestialBodyModel = CelestialBodyModel()
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .clear
-        tableView.backgroundView = UIImageView(image: UIImage(named: "cosmos"))
-        self.tabBarController?.tabBar.tintColor = .defaultGreen
-        tableView.register(CelestialBodyTableViewCell.self, forCellReuseIdentifier: "celestialBodyCell")
-        tableView.separatorStyle = .none
-        
-        setupNavigationController()
+
+        setupNavigationControllerLayout()
+        setupTableViewConfigurations()
     }
 
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.tableView.reloadData()
     }
-    // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return celestialBodyNames?.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier:
-            "celestialBodyCell", for: indexPath) as? CelestialBodyTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier:
+                                                        "celestialBodyCell",
+                                                       for: indexPath) as? CelestialBodyTableViewCell else {
+            fatalError()
+        }
 
-        cell!.celestialBodyName = celestialBodyNames![indexPath.row]
-        cell!.celestialBodyImage = UIImage(named: celestialBodyImageNames![indexPath.row])
+        cell.celestialBodyName = celestialBodyNames?[indexPath.row]
+        cell.celestialBodyImage = UIImage(named: celestialBodyImageNames?[indexPath.row] ?? "")
 
-        return cell!
+        return cell
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -62,17 +58,25 @@ class CelestialBodyTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         let celestialBodyData = CelestialBodyDataViewController()
-        celestialBodyData.celestialBodyName = celestialBodyNames![indexPath.row]
-        celestialBodyData.celestialBodyInfos =
-            celestialBodyModel.getCelestialBodyDescription(celestialBody:
-            celestialBodyNames![indexPath.row])
+//        celestialBodyData.celestialBodyName = celestialBodyNames![indexPath.row]
+//        celestialBodyData.celestialBodyInfos =
+//            celestialBodyModel.getCelestialBodyDescription(celestialBody:
+//            celestialBodyNames![indexPath.row])
+        // Passar a viewModel como parametro e dentro do init dela ter o indexPath
         navigationController?.pushViewController(celestialBodyData, animated: true)
     }
 
-    func setupNavigationController() {
+    private func setupNavigationControllerLayout() {
         navigationController?.navigationBar.titleTextAttributes =
             [NSAttributedString.Key.foregroundColor: UIColor.defaultGrey]
         navigationController?.navigationBar.barTintColor = .defaultBlack
         navigationController?.navigationBar.isTranslucent = false
+    }
+
+    private func setupTableViewConfigurations() {
+        self.view.backgroundColor = .clear
+        tableView.backgroundView = UIImageView(image: UIImage(named: "cosmos"))
+        tableView.register(CelestialBodyTableViewCell.self, forCellReuseIdentifier: "celestialBodyCell")
+        tableView.separatorStyle = .none
     }
 }
