@@ -19,43 +19,28 @@ class CelestialBodyDataViewController: UIViewController {
         return table
     }()
 
-    var celestialBodyName: String?
-    var celestialBodyInfos: CelestialBodyDescription?
+    var viewModel: CelestialBodyDataViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = .black
-        celestialBodyDescriptionTableView.delegate = self
-        celestialBodyDescriptionTableView.dataSource = self
-        celestialBodyDescriptionTableView.register(
-            CelestialBodyDescriptionTableViewCell.self, forCellReuseIdentifier: "celestialBodyDescriptionCell")
-        celestialBodyDescriptionTableView.register(
-            CelestialBodyImagesTableViewCell.self, forCellReuseIdentifier: "celestialBodyImageCollectionCell")
-
+        speakConfigurations()
+        tableViewConfigurations()
         setupCelestialBodyTableView()
         setupNavigationController()
-
-        CelestialBodyDescriptionTableViewCell.celestialBodyInformationForSpeech = ""
-
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "speaker.wave.2"),
-                                                            style: .plain,
-                                                            target: self,
-                                                            action: #selector(speechTaped))
-
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         celestialBodyDescriptionTableView.rowHeight = UITableView.automaticDimension
-        CelestialBodyDescriptionTableViewCell.celestialBodyInformationForSpeech = ""
+        CelestialBodyInformationsTableViewCell.celestialBodyInformationForSpeech = ""
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.celestialBodyDescriptionTableView.reloadData()
-        CelestialBodyDescriptionTableViewCell.celestialBodyInformationForSpeech = ""
-        CelestialBodyDescriptionTableViewCell.speechSynthesizer.stopSpeaking(at: AVSpeechBoundary(rawValue: 0)!)
+        CelestialBodyInformationsTableViewCell.celestialBodyInformationForSpeech = ""
+        CelestialBodyInformationsTableViewCell.speechSynthesizer.stopSpeaking(at: AVSpeechBoundary(rawValue: 0)!)
     }
 
     func setupCelestialBodyTableView() {
@@ -75,11 +60,30 @@ class CelestialBodyDataViewController: UIViewController {
             [NSAttributedString.Key.foregroundColor: UIColor.defaultGrey]
         navigationController?.navigationBar.barTintColor = .defaultBlack
         navigationController?.navigationBar.isTranslucent = false
-        self.navigationItem.title = celestialBodyName
+        self.navigationItem.title = viewModel?.getCelestialBodyName()
         navigationController!.navigationBar.tintColor = .defaultGreen
     }
 
+    private func tableViewConfigurations() {
+        self.view.backgroundColor = .black
+        celestialBodyDescriptionTableView.delegate = self
+        celestialBodyDescriptionTableView.dataSource = self
+        celestialBodyDescriptionTableView.register(
+            CelestialBodyInformationsTableViewCell.self, forCellReuseIdentifier: "celestialBodyDescriptionCell")
+        celestialBodyDescriptionTableView.register(
+            CelestialBodyImagesTableViewCell.self, forCellReuseIdentifier: "celestialBodyImageCollectionCell")
+    }
+
+    private func speakConfigurations() {
+        CelestialBodyInformationsTableViewCell.celestialBodyInformationForSpeech = ""
+
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "speaker.wave.2"),
+                                                            style: .plain,
+                                                            target: self,
+                                                            action: #selector(speechTaped))
+    }
+
     @objc func speechTaped() {
-        CelestialBodyDescriptionTableViewCell.setupSpeechSynthesizer()
+        CelestialBodyInformationsTableViewCell.setupSpeechSynthesizer()
     }
 }
