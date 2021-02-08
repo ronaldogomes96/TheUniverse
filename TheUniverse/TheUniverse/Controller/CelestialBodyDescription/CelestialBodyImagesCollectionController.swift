@@ -58,7 +58,12 @@ class CelestialBodyImagesCollectionController: UICollectionViewController, UICol
     }
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //Passar a viewModel
-        //handler(, <#UIImage#>)
+        viewModel.imageForApi(index: indexPath.row) { image in
+            DispatchQueue.main.async {
+                if let image = image {
+                    self.handler(self.viewModel.getCelestialBodyName(), image)
+                }
+            }
+        }
     }
 }

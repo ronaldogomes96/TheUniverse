@@ -53,9 +53,8 @@ extension CelestialBodyDataViewController: UITableViewDelegate, UITableViewDataS
     private func getCelestialBodyImagesCollectionController() -> CelestialBodyImagesCollectionController {
         let handler: ((String, UIImage) -> Void) = { [weak self] celestialBodyName, celestialBodyImage in
             let celestialBodyImageController = CelestialBodyImageViewController()
-            //Receber a viewModel
-//                celestialBodyImageController.celestialBodyName = celestialBodyName
-//                celestialBodyImageController.celestialBodyImage = celestialBodyImage
+            celestialBodyImageController.celestialBodyName = celestialBodyName
+            celestialBodyImageController.celestialBodyImage = celestialBodyImage
             self?.navigationController?.pushViewController(celestialBodyImageController, animated: true)
         }
 

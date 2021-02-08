@@ -296,7 +296,6 @@
 				7751B6F024F7D9F200833E58 /* OnBoarding */,
 				770A633D24E6C4DF0072A235 /* ListOfCelestialBody */,
 				77BE522625CC1E5B00CC07A8 /* CelestialBodyDescription */,
-				77BE522725CC1E6700CC07A8 /* CelestialBodyImage */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -307,7 +306,7 @@
 				770CD14E25CC2388002A121E /* OnBoarding */,
 				770A634624E6DCF40072A235 /* ListOfCelestialBody */,
 				770E996B24EEBD6E00C59F30 /* CelestialBodyDescription */,
-				7783609F24F0132700191F50 /* ThirdPage */,
+				7783609F24F0132700191F50 /* CelestialBodyImage */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -414,12 +413,12 @@
 			path = OnBoarding;
 			sourceTree = "<group>";
 		};
-		7783609F24F0132700191F50 /* ThirdPage */ = {
+		7783609F24F0132700191F50 /* CelestialBodyImage */ = {
 			isa = PBXGroup;
 			children = (
 				778360A024F013E200191F50 /* CelestialBodyImageViewController.swift */,
 			);
-			path = ThirdPage;
+			path = CelestialBodyImage;
 			sourceTree = "<group>";
 		};
 		77B103C124F2227900AFEB55 /* TheUniverseUITests */ = {
@@ -466,13 +465,6 @@
 				77682AA7252FE72500572839 /* CelestialBodyInformationsTableViewCell.swift */,
 			);
 			path = CelestialBodyDescription;
-			sourceTree = "<group>";
-		};
-		77BE522725CC1E6700CC07A8 /* CelestialBodyImage */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CelestialBodyImage;
 			sourceTree = "<group>";
 		};
 		77D6A825252BE97600A7FB06 /* Satellites */ = {
