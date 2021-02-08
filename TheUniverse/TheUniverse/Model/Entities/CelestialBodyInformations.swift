@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct CelestialBodyDescription: Codable {
+struct CelestialBodyInformations: Codable {
     let info: [info]
 }
 

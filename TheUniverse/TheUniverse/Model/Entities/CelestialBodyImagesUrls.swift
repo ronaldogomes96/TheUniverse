@@ -9,6 +9,6 @@
 import Foundation
 import UIKit
 
-struct CelestialBodyImages: Codable {
+struct CelestialBodyImagesUrls: Codable {
     var urlOfCelestialBodyImages: [String]
 }

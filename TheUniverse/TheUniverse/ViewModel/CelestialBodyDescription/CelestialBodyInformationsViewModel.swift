@@ -14,7 +14,7 @@ class CelestialBodyInformationsViewModel: ImageForApiResponse {
     internal var apiModel: ApiModel = ApiModel()
     internal var repository: Repository
     private let model = CelestialBodyModel()
-    let celestialBody: CelestialBodyDescription?
+    let celestialBody: CelestialBodyInformations?
     let indexPathForCell: Int
 
     init(celestialBodyName: String, indexPathForCell: Int) {

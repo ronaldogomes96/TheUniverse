@@ -12,7 +12,7 @@ class CelestialBodyDataViewModel {
     
     private let indexOfCelestialBody: Int
     private let celestialBodyName: String
-    private var celestialBodyDescription: CelestialBodyDescription?
+    private var celestialBodyDescription: CelestialBodyInformations?
     private let model = CelestialBodyModel()
 
     init(indexOf: Int, celestialBodyName: String) {
@@ -21,7 +21,7 @@ class CelestialBodyDataViewModel {
         self.celestialBodyDescription = getCelestialBodyDescription()
     }
     
-    func getCelestialBodyDescription() -> CelestialBodyDescription? {
+    func getCelestialBodyDescription() -> CelestialBodyInformations? {
         return model.getCelestialBodyDescription(celestialBody: celestialBodyName)
     }
     
