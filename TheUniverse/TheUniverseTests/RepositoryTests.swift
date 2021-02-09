@@ -51,7 +51,7 @@ class RepositoryTests: XCTestCase {
 
         //Givem
         let sut = Repository(filename: "test")
-        let _ = sut.save("cosmos")
+        _ = sut.save("cosmos")
 
         //When
         let load = sut.load()

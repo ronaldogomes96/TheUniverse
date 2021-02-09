@@ -27,7 +27,9 @@ class URLSessionMock: URLSession {
         return dataTask!
     }
 
-    override func downloadTask(with url: URL, completionHandler: @escaping (URL?, URLResponse?, Error?) -> Void) -> URLSessionDownloadTask {
+    override func downloadTask(with url: URL,
+                               completionHandler: @escaping
+                                (URL?, URLResponse?, Error?) -> Void) -> URLSessionDownloadTask {
         lastUrl = url
         let testMock = TestDownloadTaskDataMock(data: testURLData, error: testError, response: testResponse)
         dowlondTask = DownloadTaskMock(mockData: testMock, completion: completionHandler)
