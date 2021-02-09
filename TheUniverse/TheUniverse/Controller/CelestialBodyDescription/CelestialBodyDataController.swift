@@ -33,13 +33,13 @@ class CelestialBodyDataViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         celestialBodyDescriptionTableView.rowHeight = UITableView.automaticDimension
-        CelestialBodyInformationsTableViewCell.celestialBodyInformationForSpeech = ""
+        //CelestialBodyInformationsTableViewCell.celestialBodyInformationForSpeech = ""
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.celestialBodyDescriptionTableView.reloadData()
-        CelestialBodyInformationsTableViewCell.celestialBodyInformationForSpeech = ""
+        //CelestialBodyInformationsTableViewCell.celestialBodyInformationForSpeech = ""
         CelestialBodyInformationsTableViewCell.speechSynthesizer.stopSpeaking(at: AVSpeechBoundary(rawValue: 0)!)
     }
 
@@ -84,6 +84,10 @@ class CelestialBodyDataViewController: UIViewController {
     }
 
     @objc func speechTaped() {
+        if CelestialBodyInformationsTableViewCell.speechSynthesizer.isSpeaking {
+            CelestialBodyInformationsTableViewCell.speechSynthesizer.stopSpeaking(at: AVSpeechBoundary(rawValue: 0)!)
+            return
+        }
         CelestialBodyInformationsTableViewCell.setupSpeechSynthesizer()
     }
 }
