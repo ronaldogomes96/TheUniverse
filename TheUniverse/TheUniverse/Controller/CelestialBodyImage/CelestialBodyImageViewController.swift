@@ -37,15 +37,15 @@ class CelestialBodyImageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupcCelestialBodyImageView()
-        setupNavigationController()
+        setupCelestialBodyImageViewConstraints()
+        setupNavigationControllerConfigurations()
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Salvar foto",
                                                             style: .plain, target: self,
                                                             action: #selector(downloadTapped))
     }
 
     @objc
-    func downloadTapped() {
+    private func downloadTapped() {
         guard let image = celestialBodyImageView.image else {
             return
         }
@@ -53,7 +53,7 @@ class CelestialBodyImageViewController: UIViewController {
         navigationController?.popToRootViewController(animated: true)
     }
 
-    func setupcCelestialBodyImageView() {
+    private func setupCelestialBodyImageViewConstraints() {
         view.addSubview(celestialBodyImageView)
         celestialBodyImageView.translatesAutoresizingMaskIntoConstraints = false
 
@@ -65,7 +65,7 @@ class CelestialBodyImageViewController: UIViewController {
         ])
     }
 
-    func setupNavigationController() {
+    private func setupNavigationControllerConfigurations() {
         navigationController?.navigationBar.titleTextAttributes =
             [NSAttributedString.Key.foregroundColor: UIColor.defaultGrey]
         navigationController?.navigationBar.barTintColor = .defaultBlack

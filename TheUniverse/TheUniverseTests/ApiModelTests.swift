@@ -14,7 +14,7 @@ class ApiModelTests: XCTestCase {
     let session = URLSessionMock()
 
     // MARK: - NasaApiCall
-    
+
     func test_nasaApiCall_urlForEarthImages_toBeValid() {
         //Given
         let sut = ApiModel(session: session)
@@ -51,11 +51,12 @@ class ApiModelTests: XCTestCase {
     func test_nasaApiCall_urlForEarthImages_returnData() {
         //Given
         let sut = ApiModel(session: session)
-        let response = Response(collection:
+        let response = ApiResponse(collection:
                                     Collection(items:
                                                 [Items(links:
                                                         [Links(href:
-                                                                "https://images-api.nasa.gov/search?q=earth&media_type=image")])]))
+                                                                "https://images-api.nasa.gov/search?q=earth&media_type=image")
+                                                        ])]))
 
         session.testDataTaskData = try? JSONEncoder().encode(response)
         let expect = expectation(description: "nasaApi")

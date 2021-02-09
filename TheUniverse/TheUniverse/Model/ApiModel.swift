@@ -12,7 +12,7 @@ import UIKit
 class ApiModel {
 
     var listOfImages: UIImage?
-    var responseStruct: Response?
+    var responseStruct: ApiResponse?
     let session: URLSession
     private let imageCache = NSCache<NSString, UIImage>()
 
@@ -22,7 +22,7 @@ class ApiModel {
 
     func nasaApiCall( celestialBodyNames: String,
                       indexImage: Int,
-                      fecthImage: @escaping (String, @escaping (UIImage?) -> Void) -> () = fetchImage(ApiModel()),
+                      fecthImage: @escaping (String, @escaping (UIImage?) -> Void) -> Void = fetchImage(ApiModel()),
                       completion: @escaping (UIImage?) -> Void) {
         listOfImages = nil
         let celestialBodyEnglishName = CelestialBodyNames(rawValue: celestialBodyNames)!.englishNameOfCelestialBody
@@ -40,7 +40,7 @@ class ApiModel {
 
             do {
 
-                self.responseStruct = try JSONDecoder().decode(Response.self, from: data)
+                self.responseStruct = try JSONDecoder().decode(ApiResponse.self, from: data)
                 if (self.responseStruct!.collection.items.count <= indexImage) {
                     completion(nil)
                     return

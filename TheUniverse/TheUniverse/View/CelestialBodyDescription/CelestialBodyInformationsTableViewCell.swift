@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class CelestialBodyDescriptionTableViewCell: UITableViewCell {
+class CelestialBodyInformationsTableViewCell: UITableViewCell {
 
     let celestialBodyTittleLabel: UILabel = {
         let label = UILabel()
@@ -39,24 +39,27 @@ class CelestialBodyDescriptionTableViewCell: UITableViewCell {
     }()
 
     static var celestialBodyInformationForSpeech: String = ""
-    var listOfImages: [UIImage] = []
-    var indexPathForCell: Int?
-    var celestialBodyName: String?
-    let apiModel = ApiModel()
     static let speechSynthesizer = AVSpeechSynthesizer()
 
-    override func prepareForReuse() {
-        celestialBodyTittleLabel.text = ""
-        celestialBodyDescriptionLabel.text = ""
-        celestialBodyImage.image = nil
+    var viewModel: CelestialBodyInformationsViewModel! {
+        didSet {
+            celestialBodyTittleLabel.text = viewModel.getCelestialBodyDescriptionTittle()
+            celestialBodyDescriptionLabel.text = viewModel.getCelestialBodyDescriptionString()
+            CelestialBodyInformationsTableViewCell.celestialBodyInformationForSpeech +=
+                viewModel.getCelestialBodyDescriptionString()
+
+            viewModel.imageForApi(index: viewModel.indexPathForCell) { image in
+                DispatchQueue.main.async {
+                    self.celestialBodyImage.image = image
+                }
+            }
+        }
     }
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        listOfImages = []
-        self.backgroundColor = .clear
-        self.clipsToBounds = true
-        self.selectionStyle = .none
+
+        layoutConfiguration()
         self.setupCelestialBodyTittleConstraints()
         self.setupCelestialBodyDescriptionConstraints()
         self.setupCelestialBodyImageConstraints()
@@ -66,7 +69,13 @@ class CelestialBodyDescriptionTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func setupCelestialBodyTittleConstraints() {
+    override func prepareForReuse() {
+        celestialBodyTittleLabel.text = ""
+        celestialBodyDescriptionLabel.text = ""
+        celestialBodyImage.image = nil
+    }
+
+    private func setupCelestialBodyTittleConstraints() {
         self.addSubview(celestialBodyTittleLabel)
         celestialBodyTittleLabel.translatesAutoresizingMaskIntoConstraints = false
 
@@ -77,7 +86,7 @@ class CelestialBodyDescriptionTableViewCell: UITableViewCell {
         ])
     }
 
-    func setupCelestialBodyDescriptionConstraints() {
+    private func setupCelestialBodyDescriptionConstraints() {
         self.addSubview(celestialBodyDescriptionLabel)
         celestialBodyDescriptionLabel.translatesAutoresizingMaskIntoConstraints = false
 
@@ -89,7 +98,7 @@ class CelestialBodyDescriptionTableViewCell: UITableViewCell {
         ])
     }
 
-    func setupCelestialBodyImageConstraints() {
+    private func setupCelestialBodyImageConstraints() {
         self.addSubview(celestialBodyImage)
         celestialBodyImage.translatesAutoresizingMaskIntoConstraints = false
 
@@ -102,40 +111,18 @@ class CelestialBodyDescriptionTableViewCell: UITableViewCell {
         ])
     }
 
-    func setupImage() {
-        let repository = Repository(filename: celestialBodyName!)
-        let urlImage = repository.load()
-
-        if let urlImages = urlImage, urlImages.urlOfCelestialBodyImages.count > indexPathForCell! {
-            apiModel.fetchImage(urlString: urlImages.urlOfCelestialBodyImages[indexPathForCell!]) { image in
-                DispatchQueue.main.async {
-                    guard let newImage = image else {
-                        return
-                    }
-                    self.celestialBodyImage.image = newImage
-                    self.listOfImages.append(newImage)
-                }
-            }
-        } else {
-            apiModel.nasaApiCall(celestialBodyNames: celestialBodyName!, indexImage: indexPathForCell!) { image in
-                DispatchQueue.main.async {
-                    guard let newImage = image else {
-                        return
-                    }
-                    self.celestialBodyImage.image = newImage
-                    self.listOfImages.append(newImage)
-                }
-            }
-        }
+    private func layoutConfiguration() {
+        self.backgroundColor = .clear
+        self.clipsToBounds = true
+        self.selectionStyle = .none
     }
 
     static func setupSpeechSynthesizer() {
         let speechUtterance: AVSpeechUtterance = AVSpeechUtterance(string:
-                                                                    CelestialBodyDescriptionTableViewCell
+                                                                    self
                                                                     .celestialBodyInformationForSpeech)
-
         speechUtterance.rate = AVSpeechUtteranceMaximumSpeechRate / 2.5
         speechUtterance.voice = AVSpeechSynthesisVoice(language: "pt-BR")
-        CelestialBodyDescriptionTableViewCell.speechSynthesizer.speak(speechUtterance)
+        self.speechSynthesizer.speak(speechUtterance)
     }
 }

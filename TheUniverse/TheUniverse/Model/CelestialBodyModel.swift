@@ -16,7 +16,8 @@ enum ListOfCelestialBodyType: String {
 
 class CelestialBodyModel {
 
-    func getListOfNamesAndImagesOfCelestialBody(from celestialBodyType: ListOfCelestialBodyType) -> ([String], [String])? {
+    func getListOfNamesAndImagesOfCelestialBody(from celestialBodyType:
+                                                    ListOfCelestialBodyType) -> ([String], [String])? {
 
         let celestialBodyData = getCelestialBodyFromJson()
         let celestialBodyName: [String]
@@ -54,15 +55,16 @@ class CelestialBodyModel {
         return celestialBody
     }
 
-    func getCelestialBodyDescription(celestialBody: String) -> CelestialBodyDescription? {
+    func getCelestialBodyDescription(celestialBody: String) -> CelestialBodyInformations? {
 
         let celestialBodyName = CelestialBodyNames(rawValue: celestialBody)?.englishNameOfCelestialBody
-        let celestialBodyDescriptionFromJson = getCelestialBodyDescriptionFromJson(jsonName: celestialBodyName ?? "none")
+        let celestialBodyDescriptionFromJson = getCelestialBodyDescriptionFromJson(
+            jsonName: celestialBodyName ?? "none")
 
         return celestialBodyDescriptionFromJson
     }
 
-    func getCelestialBodyDescriptionFromJson(jsonName: String) -> CelestialBodyDescription? {
+    func getCelestialBodyDescriptionFromJson(jsonName: String) -> CelestialBodyInformations? {
 
         let filePath = Bundle.main.url(forResource: jsonName, withExtension: "json")
         guard let fileUrlPath = filePath else {
@@ -74,9 +76,9 @@ class CelestialBodyModel {
             return nil
         }
 
-        let celestialBodyDescription: CelestialBodyDescription
+        let celestialBodyDescription: CelestialBodyInformations
         do {
-            celestialBodyDescription = try JSONDecoder().decode(CelestialBodyDescription.self, from: data)
+            celestialBodyDescription = try JSONDecoder().decode(CelestialBodyInformations.self, from: data)
         } catch {
             print(error)
             return nil

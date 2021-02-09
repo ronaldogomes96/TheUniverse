@@ -20,28 +20,25 @@ class CelestialBodyImagesTableViewCell: UITableViewCell {
         return collec
     }()
 
-    let apiModel = ApiModel()
-    var celestialBodyName: String?
-    weak var viewController: UIViewController?
+    var collectionController: CelestialBodyImagesCollectionController? {
+        didSet {
+            collectionConfiguration()
+            imagesCollectionView.reloadData()
+        }
+    }
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        imagesCollectionView.delegate = self
-        imagesCollectionView.dataSource = self
-        self.contentView.isUserInteractionEnabled = false
-        self.isSelected = false
-        self.backgroundColor = .clear
-        imagesCollectionView.register(
-            CelestialBodyImagesCollectionViewCell.self,
-            forCellWithReuseIdentifier: "imagesCell" )
-        setupImageCollection()
+
+        layoutConfigurations()
+        setupImageCollectionConstraint()
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func setupImageCollection() {
+    private func setupImageCollectionConstraint() {
         self.addSubview(imagesCollectionView)
         imagesCollectionView.translatesAutoresizingMaskIntoConstraints = false
         let heightConstat = self.imagesCollectionView.heightAnchor.constraint(equalToConstant: 260)
@@ -58,5 +55,19 @@ class CelestialBodyImagesTableViewCell: UITableViewCell {
                                                                 constant: 0),
             heightConstat
         ])
+    }
+
+    private func collectionConfiguration() {
+        imagesCollectionView.delegate = collectionController
+        imagesCollectionView.dataSource = collectionController
+        imagesCollectionView.register(
+            CelestialBodyImagesCollectionViewCell.self,
+            forCellWithReuseIdentifier: "imagesCell" )
+    }
+
+    private func layoutConfigurations() {
+        self.contentView.isUserInteractionEnabled = false
+        self.isSelected = false
+        self.backgroundColor = .clear
     }
 }

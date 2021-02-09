@@ -23,9 +23,9 @@ class Repository {
 
     func save(_ imageUrl: String) -> Bool {
         do {
-            var celestialBodyImageURL: CelestialBodyImages
+            var celestialBodyImageURL: CelestialBodyImagesUrls
             if !FileManager.default.fileExists(atPath: urlPath.path) {
-                celestialBodyImageURL = CelestialBodyImages(urlOfCelestialBodyImages: [imageUrl])
+                celestialBodyImageURL = CelestialBodyImagesUrls(urlOfCelestialBodyImages: [imageUrl])
             } else {
                 celestialBodyImageURL = self.load()!
                 celestialBodyImageURL.urlOfCelestialBodyImages.append(imageUrl)
@@ -39,11 +39,11 @@ class Repository {
         }
     }
 
-    func load() -> CelestialBodyImages? {
-        var celestialBodiesImageUrl: CelestialBodyImages?
+    func load() -> CelestialBodyImagesUrls? {
+        var celestialBodiesImageUrl: CelestialBodyImagesUrls?
         do {
             let jsonData = try Data(contentsOf: urlPath)
-            celestialBodiesImageUrl = try JSONDecoder().decode(CelestialBodyImages.self, from: jsonData)
+            celestialBodiesImageUrl = try JSONDecoder().decode(CelestialBodyImagesUrls.self, from: jsonData)
             return celestialBodiesImageUrl
         } catch {
             print(error)

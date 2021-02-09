@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct Response: Codable {
+struct ApiResponse: Codable {
     let collection: Collection
 }
 

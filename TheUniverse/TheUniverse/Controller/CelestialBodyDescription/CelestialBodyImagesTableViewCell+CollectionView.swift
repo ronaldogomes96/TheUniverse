@@ -11,9 +11,8 @@ import UIKit
 
 extension CelestialBodyImagesTableViewCell: UICollectionViewDelegate,
     UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 25
+        return 50
     }
 
     func collectionView(_ collectionView: UICollectionView,
@@ -22,7 +21,7 @@ extension CelestialBodyImagesTableViewCell: UICollectionViewDelegate,
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imagesCell",
                                                       for: indexPath) as? CelestialBodyImagesCollectionViewCell
 
-        let repository = Repository(filename: celestialBodyName!)
+        let repository = Repository(filename: viewModel?.getCelestialBodyName())
         let urlImage = repository.load()
 
         if let urlImages = urlImage, urlImages.urlOfCelestialBodyImages.count > indexPath.row {
@@ -48,11 +47,13 @@ extension CelestialBodyImagesTableViewCell: UICollectionViewDelegate,
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let celestialBodyImageController = CelestialBodyImageViewController()
-        celestialBodyImageController.celestialBodyName = celestialBodyName
-        guard let cell = collectionView.cellForItem(at: indexPath)
-                as? CelestialBodyImagesCollectionViewCell else { return }
-        celestialBodyImageController.celestialBodyImage = cell.celestialBodyImage
-        viewController?.navigationController?.pushViewController(celestialBodyImageController, animated: true)
+        handler(celestialBodyImageController)
+//        let celestialBodyImageController = CelestialBodyImageViewController()
+//        celestialBodyImageController.celestialBodyName = celestialBodyName
+//        guard let cell = collectionView.cellForItem(at: indexPath)
+//                as? CelestialBodyImagesCollectionViewCell else { return }
+//        celestialBodyImageController.celestialBodyImage = cell.celestialBodyImage
+//
+//        viewController?.navigationController?.pushViewController(celestialBodyImageController, animated: true)
     }
 }
