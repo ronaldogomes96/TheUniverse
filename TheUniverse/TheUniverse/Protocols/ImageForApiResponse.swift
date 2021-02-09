@@ -11,7 +11,7 @@ import UIKit
 
 protocol ImageForApiResponse {
     var celestialBodyName: String { get }
-    var apiModel: ApiModel { get }
+    var apiModel: ApiModel { get set }
     var repository: Repository { get }
 
     func imageForApi(index: Int, completion: @escaping (UIImage?) -> Void)

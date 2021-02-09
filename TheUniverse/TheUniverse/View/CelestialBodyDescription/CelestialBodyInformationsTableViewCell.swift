@@ -43,12 +43,10 @@ class CelestialBodyInformationsTableViewCell: UITableViewCell {
 
     var viewModel: CelestialBodyInformationsViewModel! {
         didSet {
-            celestialBodyTittleLabel.text = viewModel.getCelestialBodyDescriptionTittleFor(
-                indexPath: viewModel.indexPathForCell)
-            celestialBodyDescriptionLabel.text = viewModel.getCelestialBodyDescriptionStringFor(
-                indexPath: viewModel.indexPathForCell)
+            celestialBodyTittleLabel.text = viewModel.getCelestialBodyDescriptionTittle()
+            celestialBodyDescriptionLabel.text = viewModel.getCelestialBodyDescriptionString()
             CelestialBodyInformationsTableViewCell.celestialBodyInformationForSpeech +=
-                viewModel.getCelestialBodyDescriptionStringFor(indexPath: viewModel.indexPathForCell)
+                viewModel.getCelestialBodyDescriptionString()
 
             viewModel.imageForApi(index: viewModel.indexPathForCell) { image in
                 DispatchQueue.main.async {

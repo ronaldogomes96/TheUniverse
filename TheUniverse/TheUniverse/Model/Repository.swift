@@ -11,7 +11,7 @@ import UIKit
 
 class Repository {
 
-    private var urlPath: URL
+    var urlPath: URL
 
     init(filename: String) {
 

@@ -10,25 +10,23 @@ import Foundation
 
 class CelestialBodyDataViewModel {
     
-    private let indexOfCelestialBody: Int
     private let celestialBodyName: String
     private var celestialBodyDescription: CelestialBodyInformations?
     private let model = CelestialBodyModel()
 
-    init(indexOf: Int, celestialBodyName: String) {
-        self.indexOfCelestialBody = indexOf
+    init(celestialBodyName: String) {
         self.celestialBodyName = celestialBodyName
         self.celestialBodyDescription = getCelestialBodyDescription()
     }
-    
+
     func getCelestialBodyDescription() -> CelestialBodyInformations? {
         return model.getCelestialBodyDescription(celestialBody: celestialBodyName)
     }
-    
+
     func numberOfDescriptions() -> Int? {
         return celestialBodyDescription?.info.count
     }
-    
+
     func getCelestialBodyName() -> String {
         return celestialBodyName
     }

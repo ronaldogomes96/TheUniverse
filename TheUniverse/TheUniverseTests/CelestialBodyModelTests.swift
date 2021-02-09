@@ -89,7 +89,7 @@ class CelestialBodyModelTests: XCTestCase {
         //Then
         XCTAssertEqual(marsDescriptionFromJson?.info[0].description, marsDescription)
     }
-    
+
     func test_getCelestialBodyDescription_celestialBodyNotExists_structNil() {
 
         //Given

@@ -58,6 +58,9 @@
 		7751B6F224F7DA1200833E58 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7751B6F124F7DA1200833E58 /* OnBoardingView.swift */; };
 		7751B6F424F7E5DC00833E58 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7751B6F324F7E5DC00833E58 /* OnBoardingViewController.swift */; };
 		775237912530F954001DC0BB /* CelestialBodyImagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775237902530F954001DC0BB /* CelestialBodyImagesTableViewCell.swift */; };
+		776653FB25D2AB9500D02D2E /* TabBarViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776653FA25D2AB9500D02D2E /* TabBarViewModelTests.swift */; };
+		7766540325D2ADD200D02D2E /* CelestialBodyDataViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7766540225D2ADD200D02D2E /* CelestialBodyDataViewModelTests.swift */; };
+		7766540E25D2B2E500D02D2E /* CelestialBodyInformationsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7766540D25D2B2E500D02D2E /* CelestialBodyInformationsViewModelTests.swift */; };
 		77682AA3252FE4A300572839 /* CelestialBodyDataController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77682AA2252FE4A300572839 /* CelestialBodyDataController+TableView.swift */; };
 		77682AA8252FE72500572839 /* CelestialBodyInformationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77682AA7252FE72500572839 /* CelestialBodyInformationsTableViewCell.swift */; };
 		7775FE66259D41B30094AE06 /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7775FE65259D41B30094AE06 /* RepositoryTests.swift */; };
@@ -78,6 +81,7 @@
 		77D828E9258174E700E97882 /* ApiModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D828E8258174E600E97882 /* ApiModelTests.swift */; };
 		77DC2D6724EAC6A4004275A4 /* CelestialBodyModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DC2D6624EAC6A4004275A4 /* CelestialBodyModelTests.swift */; };
 		77DC2D6924EAFECF004275A4 /* CelestialBodyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DC2D6824EAFECF004275A4 /* CelestialBodyTableViewCell.swift */; };
+		77F96F5A25D1F26D0090A07D /* CelestialBodyImagesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F96F5925D1F26D0090A07D /* CelestialBodyImagesViewModelTests.swift */; };
 		77F9760724EC3F830051E8BC /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77F9760624EC3F830051E8BC /* TabBar.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -152,6 +156,9 @@
 		7751B6F124F7DA1200833E58 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		7751B6F324F7E5DC00833E58 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		775237902530F954001DC0BB /* CelestialBodyImagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialBodyImagesTableViewCell.swift; sourceTree = "<group>"; };
+		776653FA25D2AB9500D02D2E /* TabBarViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModelTests.swift; sourceTree = "<group>"; };
+		7766540225D2ADD200D02D2E /* CelestialBodyDataViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialBodyDataViewModelTests.swift; sourceTree = "<group>"; };
+		7766540D25D2B2E500D02D2E /* CelestialBodyInformationsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialBodyInformationsViewModelTests.swift; sourceTree = "<group>"; };
 		77682AA2252FE4A300572839 /* CelestialBodyDataController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CelestialBodyDataController+TableView.swift"; sourceTree = "<group>"; };
 		77682AA7252FE72500572839 /* CelestialBodyInformationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialBodyInformationsTableViewCell.swift; sourceTree = "<group>"; };
 		7775FE65259D41B30094AE06 /* RepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTests.swift; sourceTree = "<group>"; };
@@ -177,6 +184,7 @@
 		77DC2D6024EAC61E004275A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77DC2D6624EAC6A4004275A4 /* CelestialBodyModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialBodyModelTests.swift; sourceTree = "<group>"; };
 		77DC2D6824EAFECF004275A4 /* CelestialBodyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialBodyTableViewCell.swift; sourceTree = "<group>"; };
+		77F96F5925D1F26D0090A07D /* CelestialBodyImagesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialBodyImagesViewModelTests.swift; sourceTree = "<group>"; };
 		77F9760624EC3F830051E8BC /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -277,6 +285,7 @@
 				77397C2424BCD6BB005EEF22 /* Controller */,
 				77B1230425CC256A0011FF32 /* ViewModel */,
 				77397C2524BCD6C3005EEF22 /* Model */,
+				7739DC3824E8F07800C51E70 /* Data */,
 				774DE3E225CD7D75001A1B15 /* Protocols */,
 				770A633E24E6CA390072A235 /* Utils */,
 				77F96F4C25D1ED6B0090A07D /* Shared */,
@@ -313,7 +322,6 @@
 			isa = PBXGroup;
 			children = (
 				77FCEF9525D1E0900093FC3B /* Entities */,
-				7739DC3824E8F07800C51E70 /* Data */,
 				7739DC4024E8FCF300C51E70 /* CelestialBodyModel.swift */,
 				774EC1EF250449A200152774 /* Repository.swift */,
 				777A350524ED660900B4874E /* ApiModel.swift */,
@@ -494,8 +502,12 @@
 				77DC2D6624EAC6A4004275A4 /* CelestialBodyModelTests.swift */,
 				77B103B824F21B7800AFEB55 /* CelestialBodyNamesTests.swift */,
 				77D828E8258174E600E97882 /* ApiModelTests.swift */,
-				77DC2D6024EAC61E004275A4 /* Info.plist */,
 				7775FE65259D41B30094AE06 /* RepositoryTests.swift */,
+				776653FA25D2AB9500D02D2E /* TabBarViewModelTests.swift */,
+				7766540225D2ADD200D02D2E /* CelestialBodyDataViewModelTests.swift */,
+				77F96F5925D1F26D0090A07D /* CelestialBodyImagesViewModelTests.swift */,
+				7766540D25D2B2E500D02D2E /* CelestialBodyInformationsViewModelTests.swift */,
+				77DC2D6024EAC61E004275A4 /* Info.plist */,
 			);
 			path = TheUniverseTests;
 			sourceTree = "<group>";
@@ -586,7 +598,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = "Ronaldo Gomes";
 				TargetAttributes = {
 					77397BEF24BCD47A005EEF22 = {
@@ -748,15 +760,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				776653FB25D2AB9500D02D2E /* TabBarViewModelTests.swift in Sources */,
 				773BD2C2257ED172003D78BF /* URLSessionMock.swift in Sources */,
 				773BD2D2257ED18D003D78BF /* DataTaskMock.swift in Sources */,
 				7723D9F5258FD9A200CDDF4A /* TestDownloadTaskDataMock.swift in Sources */,
 				7775FE66259D41B30094AE06 /* RepositoryTests.swift in Sources */,
 				77DC2D6724EAC6A4004275A4 /* CelestialBodyModelTests.swift in Sources */,
+				7766540E25D2B2E500D02D2E /* CelestialBodyInformationsViewModelTests.swift in Sources */,
 				773BD2D7257ED1AB003D78BF /* TestDataTaskDataMock.swift in Sources */,
 				77D828E9258174E700E97882 /* ApiModelTests.swift in Sources */,
 				77A2BB22258D8550002E4C4B /* ApiModelMock.swift in Sources */,
 				77B103B924F21B7800AFEB55 /* CelestialBodyNamesTests.swift in Sources */,
+				77F96F5A25D1F26D0090A07D /* CelestialBodyImagesViewModelTests.swift in Sources */,
+				7766540325D2ADD200D02D2E /* CelestialBodyDataViewModelTests.swift in Sources */,
 				7701024A258C138600B3CEB1 /* DownloadTaskMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -814,6 +830,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -874,6 +891,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

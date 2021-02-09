@@ -13,12 +13,9 @@ class CelestialBodyImagesViewModel: ImageForApiResponse {
     internal var celestialBodyName: String
     internal var apiModel: ApiModel = ApiModel()
     internal var repository: Repository
-    
+
     init(celestialBodyName: String) {
         self.celestialBodyName = celestialBodyName
         self.repository = Repository(filename: self.celestialBodyName)
     }
-
 }
-
-

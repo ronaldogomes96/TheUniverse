@@ -11,7 +11,7 @@ import UIKit
 
 class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
 
-   var viewModel = TabBarViewModel()
+   private var viewModel = TabBarViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         updateTableViewController()
     }
 
-    func updateTableViewController() {
+    private func updateTableViewController() {
         for (index, viewController) in viewControllers!.enumerated() {
             guard let navigation = viewController as? UINavigationController,
                   let tableViewController = navigation.viewControllers.first as? CelestialBodyTableViewController else {
@@ -34,7 +34,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         }
     }
 
-    func configureLayout() {
+    private func configureLayout() {
         view.backgroundColor = .clear
         self.tabBar.isTranslucent = false
         self.tabBar.barTintColor = .defaultBlack

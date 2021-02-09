@@ -23,12 +23,12 @@ class CelestialBodyInformationsViewModel: ImageForApiResponse {
         self.celestialBody = model.getCelestialBodyDescription(celestialBody: celestialBodyName)
         self.indexPathForCell = indexPathForCell
     }
- 
-    func getCelestialBodyDescriptionTittleFor(indexPath: Int) -> String {
-        return celestialBody?.info[indexPath].title ?? ""
+
+    func getCelestialBodyDescriptionTittle() -> String {
+        return celestialBody?.info[indexPathForCell].title ?? ""
     }
 
-    func getCelestialBodyDescriptionStringFor(indexPath: Int) -> String {
-        return celestialBody?.info[indexPath].description ?? ""
+    func getCelestialBodyDescriptionString() -> String {
+        return celestialBody?.info[indexPathForCell].description ?? ""
     }
 }
