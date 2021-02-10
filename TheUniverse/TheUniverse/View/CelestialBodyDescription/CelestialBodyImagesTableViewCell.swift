@@ -41,7 +41,7 @@ class CelestialBodyImagesTableViewCell: UITableViewCell {
     private func setupImageCollectionConstraint() {
         self.addSubview(imagesCollectionView)
         imagesCollectionView.translatesAutoresizingMaskIntoConstraints = false
-        let heightConstat = self.imagesCollectionView.heightAnchor.constraint(equalToConstant: 260)
+        let heightConstat = self.imagesCollectionView.heightAnchor.constraint(equalToConstant: 360)
         heightConstat.priority = .defaultLow
 
         NSLayoutConstraint.activate([

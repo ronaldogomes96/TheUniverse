@@ -18,6 +18,14 @@ class CelestialBodyImagesCollectionViewCell: UICollectionViewCell {
         return image
     }()
 
+    var numberOfCells: UILabel = {
+        let label = UILabel()
+        label.textColor = .defaultGreen
+        label.font = UIFont.SFProRoundedTitle
+        label.font = UIFont.systemFont(ofSize: 15, weight: .bold)
+        return label
+    }()
+
     var celestialBodyImage: UIImage? {
         didSet {
             celestialBodyImageView.image = celestialBodyImage
@@ -26,7 +34,9 @@ class CelestialBodyImagesCollectionViewCell: UICollectionViewCell {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+        numberOfCells.text = "7/50"
         setupConstraintsCelestialBodyImageView()
+        setupConstraintsForNumberOfCells()
     }
 
     required init?(coder: NSCoder) {
@@ -47,6 +57,18 @@ class CelestialBodyImagesCollectionViewCell: UICollectionViewCell {
             self.celestialBodyImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
             self.celestialBodyImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0),
             self.celestialBodyImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0)
+        ])
+    }
+
+    func setupConstraintsForNumberOfCells() {
+        self.addSubview(numberOfCells)
+        numberOfCells.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            self.numberOfCells.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0),
+            self.numberOfCells.topAnchor.constraint(equalTo: self.bottomAnchor, constant: -50),
+            self.numberOfCells.leadingAnchor.constraint(equalTo: self.trailingAnchor, constant: -50),
+            self.numberOfCells.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0)
         ])
     }
 }
