@@ -20,10 +20,24 @@ class CelestialBodyImagesTableViewCell: UITableViewCell {
         return collec
     }()
 
+    static let numberOfCellsLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .defaultGreen
+        label.font = UIFont.SFProRoundedTitle
+        label.font = UIFont.systemFont(ofSize: 15, weight: .bold)
+        return label
+    }()
+
     var collectionController: CelestialBodyImagesCollectionController? {
         didSet {
             collectionConfiguration()
             imagesCollectionView.reloadData()
+        }
+    }
+
+    static var numberOfCells: Int? {
+        didSet {
+            numberOfCellsLabel.text = "\(self.numberOfCells ?? 0)/50"
         }
     }
 
@@ -32,6 +46,7 @@ class CelestialBodyImagesTableViewCell: UITableViewCell {
 
         layoutConfigurations()
         setupImageCollectionConstraint()
+        setupConstraintsForNumberOfCells()
     }
 
     required init?(coder: NSCoder) {
@@ -54,6 +69,22 @@ class CelestialBodyImagesTableViewCell: UITableViewCell {
             self.imagesCollectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor,
                                                                 constant: 0),
             heightConstat
+        ])
+    }
+
+    func setupConstraintsForNumberOfCells() {
+        self.addSubview(CelestialBodyImagesTableViewCell.numberOfCellsLabel)
+        CelestialBodyImagesTableViewCell.numberOfCellsLabel.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            CelestialBodyImagesTableViewCell.numberOfCellsLabel.bottomAnchor.constraint(
+                equalTo: self.bottomAnchor, constant: 0),
+            CelestialBodyImagesTableViewCell.numberOfCellsLabel.topAnchor.constraint(
+                equalTo: self.bottomAnchor, constant: -50),
+            CelestialBodyImagesTableViewCell.numberOfCellsLabel.leadingAnchor.constraint(
+                equalTo: self.trailingAnchor, constant: -50),
+            CelestialBodyImagesTableViewCell.numberOfCellsLabel.trailingAnchor.constraint(
+                equalTo: self.trailingAnchor, constant: 0)
         ])
     }
 
