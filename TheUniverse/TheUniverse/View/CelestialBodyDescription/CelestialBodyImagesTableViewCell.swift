@@ -22,7 +22,7 @@ class CelestialBodyImagesTableViewCell: UITableViewCell {
 
     static let numberOfCellsLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .defaultGreen
+        label.textColor = .defaultGrey
         label.font = UIFont.SFProRoundedTitle
         label.font = UIFont.systemFont(ofSize: 15, weight: .bold)
         return label

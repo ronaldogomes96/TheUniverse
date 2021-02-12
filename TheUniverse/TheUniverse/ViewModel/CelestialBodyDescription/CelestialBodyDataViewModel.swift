@@ -9,7 +9,7 @@
 import Foundation
 
 class CelestialBodyDataViewModel {
-    
+
     private let celestialBodyName: String
     private var celestialBodyDescription: CelestialBodyInformations?
     private let model = CelestialBodyModel()

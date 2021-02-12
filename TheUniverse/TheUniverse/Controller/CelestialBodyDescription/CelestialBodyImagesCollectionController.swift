@@ -67,7 +67,9 @@ class CelestialBodyImagesCollectionController: UICollectionViewController, UICol
         }
     }
 
-    override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+    override func collectionView(_ collectionView: UICollectionView,
+                                 willDisplay cell: UICollectionViewCell,
+                                 forItemAt indexPath: IndexPath) {
 
         CelestialBodyImagesTableViewCell.numberOfCells = indexPath.row + 1
     }

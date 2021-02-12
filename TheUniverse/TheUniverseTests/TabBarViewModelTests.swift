@@ -14,7 +14,7 @@ class TabBarViewModelTests: XCTestCase {
     func test_getInformationsFromCelestialBody_forIndexZero_returnNinePlanets() {
         //Given
         let sut = TabBarViewModel()
-        
+
         //When
         let tupleForPlanets = sut.getInformationsFromCelestialBody(indexOf: 0)
 

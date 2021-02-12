@@ -14,7 +14,7 @@ class CelestialBodyInformationsViewModelTests: XCTestCase {
     func test_getCelestialBodyDescriptionTittle_forEarthPlanetAndFirstIndex_returnsIntrodução() {
         //Given
         let sut = CelestialBodyInformationsViewModel(celestialBodyName: "Terra", indexPathForCell: 0)
-        
+
         //When
         let celestialBodyDescriptionTittle = sut.getCelestialBodyDescriptionTittle()
 
