@@ -11,11 +11,13 @@ import UIKit
 extension CelestialBodyDataViewController: UITableViewDelegate, UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
+            return 1
+        } else if section == 1 {
             return 1
         } else {
             return viewModel?.numberOfDescriptions() ?? 0
@@ -35,6 +37,13 @@ extension CelestialBodyDataViewController: UITableViewDelegate, UITableViewDataS
 
             return cell
 
+        } else if indexPath.section ==  1 {
+            guard let cell = tableView.dequeueReusableCell(
+                    withIdentifier: "ARButtonSection",
+                    for: indexPath) as? ARButtonSection  else {
+                fatalError()
+            }
+            return cell
         } else {
             guard let cell = tableView.dequeueReusableCell(
                     withIdentifier: "celestialBodyDescriptionCell", for: indexPath) as?
