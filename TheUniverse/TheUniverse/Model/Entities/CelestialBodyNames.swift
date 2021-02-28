@@ -78,7 +78,7 @@ enum CelestialBodyNames: String {
             return "sun"
         }
     }
-    
+
     var nameof3Dassert: String? {
         switch self {
         case .mercury:

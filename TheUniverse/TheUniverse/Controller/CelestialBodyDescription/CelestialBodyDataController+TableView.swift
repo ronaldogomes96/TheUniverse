@@ -18,7 +18,10 @@ extension CelestialBodyDataViewController: UITableViewDelegate, UITableViewDataS
         if section == 0 {
             return 1
         } else if section == 1 {
-            return 1
+            if viewModel!.have3DAssert() {
+                return 1
+            }
+            return 0
         } else {
             return viewModel?.numberOfDescriptions() ?? 0
         }
@@ -43,7 +46,11 @@ extension CelestialBodyDataViewController: UITableViewDelegate, UITableViewDataS
                     for: indexPath) as? ARButtonSection  else {
                 fatalError()
             }
+            
+            cell.celestialBodyName = viewModel?.getCelestialBodyName()
+
             return cell
+
         } else {
             guard let cell = tableView.dequeueReusableCell(
                     withIdentifier: "celestialBodyDescriptionCell", for: indexPath) as?
