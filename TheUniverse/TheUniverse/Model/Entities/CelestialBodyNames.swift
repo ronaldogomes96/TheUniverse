@@ -78,4 +78,29 @@ enum CelestialBodyNames: String {
             return "sun"
         }
     }
+    
+    var nameof3Dassert: String? {
+        switch self {
+        case .mercury:
+            return "mercury3D"
+        case .venus:
+            return "venus3D"
+        case .earth:
+            return "earth3D"
+        case .mars:
+            return "mars3D"
+        case .jupiter:
+            return "jupiter3D"
+        case .uranus:
+            return "uranus3D"
+        case .neptune:
+            return "neptune3D"
+        case .moon:
+            return "moon3D"
+        case .sun:
+            return "sun3D"
+        default:
+            return nil
+        }
+    }
 }

@@ -61,6 +61,7 @@
 		776653FB25D2AB9500D02D2E /* TabBarViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776653FA25D2AB9500D02D2E /* TabBarViewModelTests.swift */; };
 		7766540325D2ADD200D02D2E /* CelestialBodyDataViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7766540225D2ADD200D02D2E /* CelestialBodyDataViewModelTests.swift */; };
 		7766540E25D2B2E500D02D2E /* CelestialBodyInformationsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7766540D25D2B2E500D02D2E /* CelestialBodyInformationsViewModelTests.swift */; };
+		7766C6C225EB345C00885AC9 /* Assets.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 7766C6C125EB345C00885AC9 /* Assets.scnassets */; };
 		77682AA3252FE4A300572839 /* CelestialBodyDataController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77682AA2252FE4A300572839 /* CelestialBodyDataController+TableView.swift */; };
 		77682AA8252FE72500572839 /* CelestialBodyInformationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77682AA7252FE72500572839 /* CelestialBodyInformationsTableViewCell.swift */; };
 		7772968325D736D300B1848E /* CelestialBodyNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772968225D736D300B1848E /* CelestialBodyNode.swift */; };
@@ -161,6 +162,7 @@
 		776653FA25D2AB9500D02D2E /* TabBarViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModelTests.swift; sourceTree = "<group>"; };
 		7766540225D2ADD200D02D2E /* CelestialBodyDataViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialBodyDataViewModelTests.swift; sourceTree = "<group>"; };
 		7766540D25D2B2E500D02D2E /* CelestialBodyInformationsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialBodyInformationsViewModelTests.swift; sourceTree = "<group>"; };
+		7766C6C125EB345C00885AC9 /* Assets.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Assets.scnassets; sourceTree = "<group>"; };
 		77682AA2252FE4A300572839 /* CelestialBodyDataController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CelestialBodyDataController+TableView.swift"; sourceTree = "<group>"; };
 		77682AA7252FE72500572839 /* CelestialBodyInformationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialBodyInformationsTableViewCell.swift; sourceTree = "<group>"; };
 		7772968225D736D300B1848E /* CelestialBodyNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialBodyNode.swift; sourceTree = "<group>"; };
@@ -521,6 +523,7 @@
 			isa = PBXGroup;
 			children = (
 				77397BFC24BCD47B005EEF22 /* Assets.xcassets */,
+				7766C6C125EB345C00885AC9 /* Assets.scnassets */,
 				77397BF324BCD47A005EEF22 /* AppDelegate.swift */,
 				77397BF524BCD47A005EEF22 /* SceneDelegate.swift */,
 			);
@@ -652,6 +655,7 @@
 				770E995624EE9D0500C59F30 /* enceladus.json in Resources */,
 				770E994E24EE9CDC00C59F30 /* moon.json in Resources */,
 				773BFA4024E58DDA0099B855 /* Stars.storyboard in Resources */,
+				7766C6C225EB345C00885AC9 /* Assets.scnassets in Resources */,
 				770E996424EE9D4800C59F30 /* sun.json in Resources */,
 				770E996024EE9D3600C59F30 /* triton.json in Resources */,
 				770E994A24EE9CC600C59F30 /* neptune.json in Resources */,
