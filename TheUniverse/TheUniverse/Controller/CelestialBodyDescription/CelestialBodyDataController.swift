@@ -33,13 +33,11 @@ class CelestialBodyDataViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         celestialBodyDescriptionTableView.rowHeight = UITableView.automaticDimension
-        //CelestialBodyInformationsTableViewCell.celestialBodyInformationForSpeech = ""
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.celestialBodyDescriptionTableView.reloadData()
-        //CelestialBodyInformationsTableViewCell.celestialBodyInformationForSpeech = ""
         CelestialBodyInformationsTableViewCell.speechSynthesizer.stopSpeaking(at: AVSpeechBoundary(rawValue: 0)!)
     }
 
@@ -72,6 +70,8 @@ class CelestialBodyDataViewController: UIViewController {
             CelestialBodyInformationsTableViewCell.self, forCellReuseIdentifier: "celestialBodyDescriptionCell")
         celestialBodyDescriptionTableView.register(
             CelestialBodyImagesTableViewCell.self, forCellReuseIdentifier: "celestialBodyImageCollectionCell")
+        celestialBodyDescriptionTableView.register(
+            ARButtonSection.self, forCellReuseIdentifier: "ARButtonSection")
     }
 
     private func speakConfigurations() {
