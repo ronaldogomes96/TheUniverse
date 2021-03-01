@@ -22,6 +22,7 @@ class ARButtonSection: UITableViewCell {
     }()
 
     var celestialBodyName: String?
+    var handler: ((Image3DViewController) -> Void)?
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -39,13 +40,12 @@ class ARButtonSection: UITableViewCell {
     }
 
     @objc private func buttonAction(_ sender: UIButton!) {
-        guard let controller = UIStoryboard(name: "image3d",
-                                    bundle: nil).instantiateInitialViewController() as? Image3DViewController else {
+        guard let controller = UIStoryboard(name: "3DView",
+                                    bundle: nil).instantiateViewController(identifier: "image3d") as? Image3DViewController else {
             fatalError("Unexpected Error; \(String(describing: Error.self))")
         }
         controller.viewModel = Image3DViewModel(name: celestialBodyName ?? "")
-        // FAZER UM HANNDLER!!!!
-        navigationController?.pushViewController(controller, animated: true)
+        handler!(controller)
     }
 
     private func setupArButtonConstraints() {

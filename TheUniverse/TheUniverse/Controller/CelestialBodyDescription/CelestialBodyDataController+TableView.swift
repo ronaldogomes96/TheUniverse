@@ -46,8 +46,11 @@ extension CelestialBodyDataViewController: UITableViewDelegate, UITableViewDataS
                     for: indexPath) as? ARButtonSection  else {
                 fatalError()
             }
-            
+
             cell.celestialBodyName = viewModel?.getCelestialBodyName()
+            cell.handler = { [weak self] controller in
+                self?.navigationController?.pushViewController(controller, animated: true)
+            }
 
             return cell
 

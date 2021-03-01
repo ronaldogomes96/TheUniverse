@@ -32,7 +32,7 @@ class Image3DViewController: UIViewController, ARSCNViewDelegate {
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
+
         sceneView.session.pause()
     }
 
@@ -40,7 +40,7 @@ class Image3DViewController: UIViewController, ARSCNViewDelegate {
         let sphere = SCNSphere(radius: 0.4)
 
         let materials = SCNMaterial()
-        materials.diffuse.contents = UIImage(named: viewModel?.getAssertName() ?? "")
+        materials.diffuse.contents = UIImage(named: "Assets.scnassets/3DPlanets/\(viewModel?.getAssertName() ?? "")")
 
         sphere.materials = [materials]
 
