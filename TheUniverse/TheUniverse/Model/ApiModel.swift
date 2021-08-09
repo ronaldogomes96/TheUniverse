@@ -28,7 +28,7 @@ class ApiModel {
         let celestialBodyEnglishName = CelestialBodyNames(rawValue: celestialBodyNames)!.englishNameOfCelestialBody
         let repository = Repository(filename: celestialBodyNames)
 
-        let requestURL = requestUrl(url:
+        let requestURL = requestUrl(pathUrl:
             "https://images-api.nasa.gov/search?q=\(celestialBodyEnglishName)&media_type=image")
 
         let task = session.dataTask(with: requestURL) { (data,_, error) in
@@ -71,7 +71,7 @@ class ApiModel {
     func fetchImage(urlString: String,
                     completion: @escaping (UIImage?) -> Void) {
 
-        let requestURL = requestUrl(url: urlString)
+        let requestURL = requestUrl(pathUrl: urlString)
 
         if let cachedImage = imageCache.object(forKey: requestURL.absoluteString as NSString) {
             let image = cachedImage
@@ -79,13 +79,13 @@ class ApiModel {
             return
         } else {
             let task = session.downloadTask(with: requestURL) { (urlResponse, _, error) in
-                guard let url = urlResponse, error == nil else {
+                guard let pathUrl = urlResponse, error == nil else {
                     completion(nil)
                     return
                 }
 
                 do {
-                    let data = try Data(contentsOf: url)
+                    let data = try Data(contentsOf: pathUrl)
                     let imagePlanet = UIImage(data: data)
                     self.imageCache.setObject(imagePlanet!, forKey: requestURL.absoluteString as NSString)
                     completion(imagePlanet!)
@@ -98,9 +98,9 @@ class ApiModel {
         }
     }
 
-    func requestUrl (url: String) -> URL {
-        let url = URL(string: url)
-        guard let requestUrl = url else {fatalError()}
+    func requestUrl (pathUrl: String) -> URL {
+        let pathUrl = URL(string: pathUrl)
+        guard let requestUrl = pathUrl else {fatalError()}
         return requestUrl
     }
 }
