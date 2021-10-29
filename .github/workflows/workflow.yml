@@ -1,0 +1,26 @@
+name: Swift
+
+on:
+  push:
+    branches: [ master, dev, testflight ]
+  pull_request:
+    branches: [ master, dev, testflight ]
+
+jobs:
+  build:
+
+    runs-on: macOS-latest
+    strategy:
+        matrix:
+          destination: ['platform=iOS Simulator,OS=14.4,name=iPhone 12']
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: Build and Test
+      run: |
+        xcrun simctl list
+        xcodebuild clean test -project TheUniverse/TheUniverse.xcodeproj -scheme TheUniverse -destination "${destination}"
+        bash <(curl -s https://codecov.io/bash)
+      env: 
+        destination: ${{ matrix.destination }}
