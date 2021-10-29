@@ -30,4 +30,12 @@ class CelestialBodyDataViewModel {
     func getCelestialBodyName() -> String {
         return celestialBodyName
     }
+    
+    func have3DAssert() -> Bool {
+        let name = CelestialBodyNames(rawValue: celestialBodyName)
+        guard let _ = name?.nameof3Dassert else {
+            return false
+        }
+        return true
+    }
 }

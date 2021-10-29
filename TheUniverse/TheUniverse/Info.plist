@@ -20,6 +20,8 @@
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Vamos acessar sua câmera para mostrar planetas no ambiente. Você permite?</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>Permisão para salvar fotos</string>
 	<key>UIApplicationSceneManifest</key>

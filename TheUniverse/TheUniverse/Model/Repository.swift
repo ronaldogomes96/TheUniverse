@@ -15,8 +15,8 @@ class Repository {
 
     init(filename: String) {
 
-        let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        var fileUrl = url.appendingPathComponent(filename)
+        let urlPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        var fileUrl = urlPath.appendingPathComponent(filename)
         fileUrl = fileUrl.appendingPathExtension("json")
         self.urlPath = fileUrl
     }
