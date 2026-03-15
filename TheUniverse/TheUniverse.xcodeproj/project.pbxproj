@@ -89,6 +89,24 @@
 		77DC2D6924EAFECF004275A4 /* CelestialBodyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DC2D6824EAFECF004275A4 /* CelestialBodyTableViewCell.swift */; };
 		77F96F5A25D1F26D0090A07D /* CelestialBodyImagesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F96F5925D1F26D0090A07D /* CelestialBodyImagesViewModelTests.swift */; };
 		77F9760724EC3F830051E8BC /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77F9760624EC3F830051E8BC /* TabBar.storyboard */; };
+		90AA00010000000000000000 /* UniverseDesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AA10010000000000000000 /* UniverseDesignSystem.swift */; };
+		90AA00020000000000000000 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AA10020000000000000000 /* LocationService.swift */; };
+		90AA00030000000000000000 /* AstronomyAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AA10030000000000000000 /* AstronomyAPIClient.swift */; };
+		90AA00040000000000000000 /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AA10040000000000000000 /* DiskCache.swift */; };
+		90AA00050000000000000000 /* UserCollectionsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AA10050000000000000000 /* UserCollectionsStore.swift */; };
+		90AA00060000000000000000 /* CelestialBodyID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AA10060000000000000000 /* CelestialBodyID.swift */; };
+		90AA00070000000000000000 /* CelestialContentModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AA10070000000000000000 /* CelestialContentModels.swift */; };
+		90AA00080000000000000000 /* CuratedContentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AA10080000000000000000 /* CuratedContentStore.swift */; };
+		90AA00090000000000000000 /* CelestialContentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AA10090000000000000000 /* CelestialContentService.swift */; };
+		90AA00100000000000000000 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AA10100000000000000000 /* HomeView.swift */; };
+		90AA00110000000000000000 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AA10110000000000000000 /* HomeViewModel.swift */; };
+		90AA00120000000000000000 /* LiveSkyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AA10120000000000000000 /* LiveSkyModels.swift */; };
+		90AA00130000000000000000 /* LiveSkyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AA10130000000000000000 /* LiveSkyService.swift */; };
+		90AA00140000000000000000 /* LiveSkyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AA10140000000000000000 /* LiveSkyView.swift */; };
+		90AA00150000000000000000 /* CelestialDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AA10150000000000000000 /* CelestialDetailView.swift */; };
+		90AA00160000000000000000 /* CelestialDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AA10160000000000000000 /* CelestialDetailViewModel.swift */; };
+		90AA00170000000000000000 /* CosmicAudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AA10170000000000000000 /* CosmicAudioService.swift */; };
+		90AA00180000000000000000 /* OnboardingFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AA10180000000000000000 /* OnboardingFlowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -198,6 +216,24 @@
 		77DC2D6824EAFECF004275A4 /* CelestialBodyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialBodyTableViewCell.swift; sourceTree = "<group>"; };
 		77F96F5925D1F26D0090A07D /* CelestialBodyImagesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialBodyImagesViewModelTests.swift; sourceTree = "<group>"; };
 		77F9760624EC3F830051E8BC /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		90AA10010000000000000000 /* UniverseDesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniverseDesignSystem.swift; sourceTree = "<group>"; };
+		90AA10020000000000000000 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		90AA10030000000000000000 /* AstronomyAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyAPIClient.swift; sourceTree = "<group>"; };
+		90AA10040000000000000000 /* DiskCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskCache.swift; sourceTree = "<group>"; };
+		90AA10050000000000000000 /* UserCollectionsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionsStore.swift; sourceTree = "<group>"; };
+		90AA10060000000000000000 /* CelestialBodyID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialBodyID.swift; sourceTree = "<group>"; };
+		90AA10070000000000000000 /* CelestialContentModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialContentModels.swift; sourceTree = "<group>"; };
+		90AA10080000000000000000 /* CuratedContentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuratedContentStore.swift; sourceTree = "<group>"; };
+		90AA10090000000000000000 /* CelestialContentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialContentService.swift; sourceTree = "<group>"; };
+		90AA10100000000000000000 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		90AA10110000000000000000 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		90AA10120000000000000000 /* LiveSkyModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveSkyModels.swift; sourceTree = "<group>"; };
+		90AA10130000000000000000 /* LiveSkyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveSkyService.swift; sourceTree = "<group>"; };
+		90AA10140000000000000000 /* LiveSkyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveSkyView.swift; sourceTree = "<group>"; };
+		90AA10150000000000000000 /* CelestialDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialDetailView.swift; sourceTree = "<group>"; };
+		90AA10160000000000000000 /* CelestialDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialDetailViewModel.swift; sourceTree = "<group>"; };
+		90AA10170000000000000000 /* CosmicAudioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CosmicAudioService.swift; sourceTree = "<group>"; };
+		90AA10180000000000000000 /* OnboardingFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFlowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +329,8 @@
 		77397BF224BCD47A005EEF22 /* TheUniverse */ = {
 			isa = PBXGroup;
 			children = (
+				90AA20000000000000000000 /* Core */,
+				90AA26000000000000000000 /* Features */,
 				77397C2324BCD6B2005EEF22 /* View */,
 				77397C2424BCD6BB005EEF22 /* Controller */,
 				77B1230425CC256A0011FF32 /* ViewModel */,
@@ -576,6 +614,119 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
+
+		90AA20000000000000000000 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				90AA21000000000000000000 /* Content */,
+				90AA22000000000000000000 /* DesignSystem */,
+				90AA23000000000000000000 /* Location */,
+				90AA24000000000000000000 /* Networking */,
+				90AA25000000000000000000 /* Persistence */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		90AA21000000000000000000 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				90AA10060000000000000000 /* CelestialBodyID.swift */,
+				90AA10070000000000000000 /* CelestialContentModels.swift */,
+				90AA10080000000000000000 /* CuratedContentStore.swift */,
+				90AA10090000000000000000 /* CelestialContentService.swift */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		90AA22000000000000000000 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				90AA10010000000000000000 /* UniverseDesignSystem.swift */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		90AA23000000000000000000 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				90AA10020000000000000000 /* LocationService.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		90AA24000000000000000000 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				90AA10030000000000000000 /* AstronomyAPIClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		90AA25000000000000000000 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				90AA10040000000000000000 /* DiskCache.swift */,
+				90AA10050000000000000000 /* UserCollectionsStore.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		90AA26000000000000000000 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				90AA26100000000000000000 /* AudioExperience */,
+				90AA26200000000000000000 /* CelestialDetail */,
+				90AA26300000000000000000 /* Home */,
+				90AA26400000000000000000 /* LiveSky */,
+				90AA26500000000000000000 /* Onboarding */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		90AA26100000000000000000 /* AudioExperience */ = {
+			isa = PBXGroup;
+			children = (
+				90AA10170000000000000000 /* CosmicAudioService.swift */,
+			);
+			path = AudioExperience;
+			sourceTree = "<group>";
+		};
+		90AA26200000000000000000 /* CelestialDetail */ = {
+			isa = PBXGroup;
+			children = (
+				90AA10150000000000000000 /* CelestialDetailView.swift */,
+				90AA10160000000000000000 /* CelestialDetailViewModel.swift */,
+			);
+			path = CelestialDetail;
+			sourceTree = "<group>";
+		};
+		90AA26300000000000000000 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				90AA10100000000000000000 /* HomeView.swift */,
+				90AA10110000000000000000 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		90AA26400000000000000000 /* LiveSky */ = {
+			isa = PBXGroup;
+			children = (
+				90AA10120000000000000000 /* LiveSkyModels.swift */,
+				90AA10130000000000000000 /* LiveSkyService.swift */,
+				90AA10140000000000000000 /* LiveSkyView.swift */,
+			);
+			path = LiveSky;
+			sourceTree = "<group>";
+		};
+		90AA26500000000000000000 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				90AA10180000000000000000 /* OnboardingFlowView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -791,6 +942,24 @@
 				774DE3DE25CD79EE001A1B15 /* CelestialBodyImagesViewModel.swift in Sources */,
 				7751B6F424F7E5DC00833E58 /* OnBoardingViewController.swift in Sources */,
 				77682AA3252FE4A300572839 /* CelestialBodyDataController+TableView.swift in Sources */,
+				90AA00010000000000000000 /* UniverseDesignSystem.swift in Sources */,
+				90AA00020000000000000000 /* LocationService.swift in Sources */,
+				90AA00030000000000000000 /* AstronomyAPIClient.swift in Sources */,
+				90AA00040000000000000000 /* DiskCache.swift in Sources */,
+				90AA00050000000000000000 /* UserCollectionsStore.swift in Sources */,
+				90AA00060000000000000000 /* CelestialBodyID.swift in Sources */,
+				90AA00070000000000000000 /* CelestialContentModels.swift in Sources */,
+				90AA00080000000000000000 /* CuratedContentStore.swift in Sources */,
+				90AA00090000000000000000 /* CelestialContentService.swift in Sources */,
+				90AA00100000000000000000 /* HomeView.swift in Sources */,
+				90AA00110000000000000000 /* HomeViewModel.swift in Sources */,
+				90AA00120000000000000000 /* LiveSkyModels.swift in Sources */,
+				90AA00130000000000000000 /* LiveSkyService.swift in Sources */,
+				90AA00140000000000000000 /* LiveSkyView.swift in Sources */,
+				90AA00150000000000000000 /* CelestialDetailView.swift in Sources */,
+				90AA00160000000000000000 /* CelestialDetailViewModel.swift in Sources */,
+				90AA00170000000000000000 /* CosmicAudioService.swift in Sources */,
+				90AA00180000000000000000 /* OnboardingFlowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -903,7 +1072,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+                IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -958,7 +1127,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+                IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1014,7 +1183,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69Y77S7YQP;
 				INFOPLIST_FILE = TheUniverseUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+                IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1034,7 +1203,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69Y77S7YQP;
 				INFOPLIST_FILE = TheUniverseUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+                IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1056,7 +1225,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69Y77S7YQP;
 				INFOPLIST_FILE = TheUniverseTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+                IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1079,7 +1248,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69Y77S7YQP;
 				INFOPLIST_FILE = TheUniverseTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+                IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

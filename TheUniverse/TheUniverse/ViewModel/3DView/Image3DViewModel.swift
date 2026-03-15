@@ -18,6 +18,6 @@ class Image3DViewModel {
 
     func getAssertName() -> String? {
         let modelName = CelestialBodyNames(rawValue: celestialBodyName)
-        return modelName?.nameof3Dassert
+        return modelName?.modelAssetName
     }
 }

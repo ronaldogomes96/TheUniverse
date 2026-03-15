@@ -1,15 +1,8 @@
-//
-//  CelestialBodyNames.swift
-//  TheUniverse
-//
-//  Created by Ronaldo Gomes on 19/08/20.
-//  Copyright © 2020 Ronaldo Gomes. All rights reserved.
-// swiftlint:disable identifier_name
-
 import Foundation
 
-enum CelestialBodyNames: String {
+// swiftlint:disable identifier_name
 
+enum CelestialBodyNames: String {
     case mercury = "Mercúrio"
     case venus = "Vênus"
     case earth = "Terra"
@@ -34,73 +27,36 @@ enum CelestialBodyNames: String {
 
     var englishNameOfCelestialBody: String {
         switch self {
-        case .mercury:
-            return "mercury"
-        case .venus:
-            return "venus"
-        case .earth:
-            return "earth"
         case .mars:
             return "mars-planet"
-        case .jupiter:
-            return "jupiter"
-        case .saturn:
-            return "saturn"
-        case .uranus:
-            return "uranus"
         case .neptune:
             return "neptune"
-        case .pluto:
-            return "pluto"
-        case .moon:
-            return "moon"
-        case .phobos:
-            return "phobos"
-        case .titan:
-            return "titan"
-        case .rhea:
-            return "rhea"
-        case .enceladus:
-            return "enceladus"
-        case .ganymede:
-            return "ganymede"
-        case .callisto:
-            return "callisto"
-        case .io:
-            return "io"
-        case .titania:
-            return "titania"
-        case .triton:
-            return "triton"
-        case .charon:
-            return "charon"
-        case .sun:
-            return "sun"
+        default:
+            return String(describing: self)
         }
     }
 
-    var nameof3Dassert: String? {
+    var correctedDisplayName: String {
+        self == .neptune ? "Netuno" : rawValue
+    }
+
+    var modelAssetName: String? {
         switch self {
-        case .mercury:
-            return "mercury3D.jpg"
-        case .venus:
-            return "venus3D.jpg"
-        case .earth:
-            return "earth3D.jpg"
-        case .mars:
-            return "mars3D.jpg"
-        case .jupiter:
-            return "jupiter3D.jpg"
-        case .uranus:
-            return "uranus3D.jpg"
-        case .neptune:
-            return "neptune3D.jpg"
-        case .moon:
-            return "moon3D.jpg"
-        case .sun:
-            return "sun3D.jpg"
-        default:
-            return nil
+        case .mercury: return "mercury3D.jpg"
+        case .venus: return "venus3D.jpg"
+        case .earth: return "earth3D.jpg"
+        case .mars: return "mars3D.jpg"
+        case .jupiter: return "jupiter3D.jpg"
+        case .uranus: return "uranus3D.jpg"
+        case .neptune: return "neptune3D.jpg"
+        case .moon: return "moon3D.jpg"
+        case .sun: return "sun3D.jpg"
+        default: return nil
         }
+    }
+
+    @available(*, deprecated, renamed: "modelAssetName")
+    var nameof3Dassert: String? {
+        modelAssetName
     }
 }

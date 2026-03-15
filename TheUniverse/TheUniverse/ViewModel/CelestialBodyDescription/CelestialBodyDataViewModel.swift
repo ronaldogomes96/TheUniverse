@@ -1,15 +1,6 @@
-//
-//  CelestialBodyDataViewModel.swift
-//  TheUniverse
-//
-//  Created by Ronaldo Gomes on 05/02/21.
-//  Copyright © 2021 Ronaldo Gomes. All rights reserved.
-//
-
 import Foundation
 
 class CelestialBodyDataViewModel {
-
     private let celestialBodyName: String
     private var celestialBodyDescription: CelestialBodyInformations?
     private let model = CelestialBodyModel()
@@ -20,22 +11,18 @@ class CelestialBodyDataViewModel {
     }
 
     func getCelestialBodyDescription() -> CelestialBodyInformations? {
-        return model.getCelestialBodyDescription(celestialBody: celestialBodyName)
+        model.getCelestialBodyDescription(celestialBody: celestialBodyName)
     }
 
     func numberOfDescriptions() -> Int? {
-        return celestialBodyDescription?.info.count
+        celestialBodyDescription?.info.count
     }
 
     func getCelestialBodyName() -> String {
-        return celestialBodyName
+        celestialBodyName
     }
-    
+
     func have3DAssert() -> Bool {
-        let name = CelestialBodyNames(rawValue: celestialBodyName)
-        guard let _ = name?.nameof3Dassert else {
-            return false
-        }
-        return true
+        CelestialBodyNames(rawValue: celestialBodyName)?.modelAssetName != nil
     }
 }
